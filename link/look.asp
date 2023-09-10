@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>OpenHao123网址之家 - 网友留言</title>
+<title>hao123网址之家 - 网友留言</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 <!--
@@ -83,7 +83,7 @@ set conn=nothing
 
 <table width="768" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
-    <td height="20" bgcolor="#A0A4AC"><div align="center">OpenHao123网址之家 - 网友留言</div></td>
+    <td height="20" bgcolor="#A0A4AC"><div align="center">hao123网址之家 - 网友留言</div></td>
   </tr>
 </table>
 
@@ -136,7 +136,7 @@ next
 </table>
 <table width="768" height="25" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
-    <td bgcolor="#A0A4AC"><div align="center"><a href="http://www.OpenHao123.cc" target="_blank"> OpenHao123.cc</a> </div></td>
+    <td bgcolor="#A0A4AC"><div align="center"><a href="http://www.hao123.cc" target="_blank"> hao123.cc</a> </div></td>
   </tr>
 </table>
 </body>

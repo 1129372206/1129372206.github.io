@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>OpenHao123网址之家 - 网友留言</title>
+<title>hao123网址之家 - 网友留言</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 <!--
@@ -83,7 +83,7 @@ set conn=nothing
 
 <table width="768" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
-    <td height="20" bgcolor="#A0A4AC"><div align="center">OpenHao123网址之家 - 网友留言</div></td>
+    <td height="20" bgcolor="#A0A4AC"><div align="center">hao123网址之家 - 网友留言</div></td>
   </tr>
 </table>
 
@@ -119,7 +119,7 @@ tt="<font color=red>审核中</font>"
 elseif ars(9,i)="Y" then 
 tt="已认证"
 end if
-txt="项目名称："&t&"<BR>网站名称："&server.HTMLEncode(ars(2,i))&"<BR>网站网址：<a href="&server.HTMLEncode(ars(3,i))&" target=_blank>"&server.HTMLEncode(ars(3,i))&"</a><BR>网站分类："&server.HTMLEncode(ars(4,i))&"<BR>联系ＱＱ：<a href=http://wpa.qq.com/msgrd?V=1&Uin="&server.HTMLEncode(ars(5,i))&"&Site=OpenHao123网址之家-www.OpenHao123.cc&Menu=yes target=_blank>"&server.HTMLEncode(ars(5,i))&"</a><BR>给我意见："&server.HTMLEncode(ars(6,i))&"<BR>网站简介："&server.HTMLEncode(ars(7,i))&"<BR>申请时间："&ars(8,i)&"<BR>状  态："&tt&"------<a href=?flag=1&id="&ars(0,i)&">通过</a> - <a href=?flag=2&id="&ars(0,i)&">未通过</a> - <a href=?flag=3&id="&ars(0,i)&">删除</a>"&chr(13)
+txt="项目名称："&t&"<BR>网站名称："&server.HTMLEncode(ars(2,i))&"<BR>网站网址：<a href="&server.HTMLEncode(ars(3,i))&" target=_blank>"&server.HTMLEncode(ars(3,i))&"</a><BR>网站分类："&server.HTMLEncode(ars(4,i))&"<BR>联系ＱＱ：<a href=http://wpa.qq.com/msgrd?V=1&Uin="&server.HTMLEncode(ars(5,i))&"&Site=hao123网址之家-www.hao123.cc&Menu=yes target=_blank>"&server.HTMLEncode(ars(5,i))&"</a><BR>给我意见："&server.HTMLEncode(ars(6,i))&"<BR>网站简介："&server.HTMLEncode(ars(7,i))&"<BR>申请时间："&ars(8,i)&"<BR>状  态："&tt&"------<a href=?flag=1&id="&ars(0,i)&">通过</a> - <a href=?flag=2&id="&ars(0,i)&">未通过</a> - <a href=?flag=3&id="&ars(0,i)&">删除</a>"&chr(13)
 
 Response.Write("<p>"&txt&"</p><HR>")
 next
@@ -136,7 +136,7 @@ next
 </table>
 <table width="768" height="25" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
-    <td bgcolor="#A0A4AC"><div align="center"><a href="http://www.OpenHao123.cc" target="_blank"> OpenHao123.cc</a> </div></td>
+    <td bgcolor="#A0A4AC"><div align="center"><a href="http://www.hao123.cc" target="_blank"> hao123.cc</a> </div></td>
   </tr>
 </table>
 </body>

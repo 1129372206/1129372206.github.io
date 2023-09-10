@@ -29,7 +29,7 @@ end if
 
 <% 
 if errer="" then
-Response.Write("<SCRIPT>alert('谢谢你的保贵意见！');top.location.href = 'http://www.OpenHao123.cc/'; </SCRIPT> ")
+Response.Write("<SCRIPT>alert('谢谢你的保贵意见！');top.location.href = 'http://www.hao123.cc/'; </SCRIPT> ")
 else
 Response.Write(errer)
 

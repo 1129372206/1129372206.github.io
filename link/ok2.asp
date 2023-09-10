@@ -49,7 +49,7 @@ end if
 
 <% 
 if errer="" then
-Response.Write("<SCRIPT>alert('您的网站已提交，请等待管理员审核！');top.location.href = 'http://www.OpenHao123.cc/'; </SCRIPT> ")
+Response.Write("<SCRIPT>alert('您的网站已提交，请等待管理员审核！');top.location.href = 'http://www.hao123.cc/'; </SCRIPT> ")
 else
 Response.Write(errer)
 

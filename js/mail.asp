@@ -10,7 +10,7 @@ url="<script>location.href='https://reg.163.com/logins.jsp?type=1&url=http://ent
 else if mail="126" Then
 url="<script>location.href='https://reg.163.com/logins.jsp?type=1&product=mail126&url=http://entry.mail.126.com/cgi/ntesdoor?hid%3D10010102%26lightweight%3D1%26&username="+username+"&password="+password+"'</script>"
 else 
-url="<script>location.href='http://www.OpenHao123.cc/'</script>"
+url="<script>location.href='http://www.hao123.cc/'</script>"
 end if
 end if
 response.write(url)
