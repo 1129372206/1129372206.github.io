@@ -1,0 +1,531 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+ td,body {  font-size: 16px; font-family:arial,sans-serif,宋体;}body{margin-top:0px;margin-left:0px;margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;}
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg{border-color:#8AB78A; width:898px}
+.f9pt{font-size: 12px;}
+#sfont a,#sfont b{font-size:13px;}
+.highlight_1 a:link,.highlight_1 a:visited{color:red}
+.wr{text-align:right}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+--> </style>
+<base target="_blank">
+<title>OpenHao123网址之家－－硬件</title>
+</head>
+<body>
+<script src="js/base.js"></script>
+<script src="js/userdata.js"></script>
+<script src="js/record.js"></script>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="OpenHao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		f.boxpos.value="OpenHao123-hardware"
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="900" height="51">
+    <tr>
+      <td width="290" height="51"><a href="/" target="_self" class="m"><img src="images/logo.gif" alt="把OpenHao123设为主页"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18> </td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()" onMouseDown="ClickMonkey.log('haoweb');" >网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()" onMouseDown="ClickMonkey.log('haomp3');" >MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()" onMouseDown="ClickMonkey.log('haoimg');" >图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()" onMouseDown="ClickMonkey.log('haopost');" >贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" onMouseDown="ClickMonkey.log('haozhidao');" >知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()" onMouseDown="ClickMonkey.log('haonews');" >新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()" onMouseDown="ClickMonkey.log('haovideo');">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action=http://www.baidu.com/s name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=OpenHao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=boxpos><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=900 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=900 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.OpenHao123.cc" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.OpenHao123.cc/');return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="images/home.gif" width="15" height="15" border="0" align="absmiddle"> 把OpenHao123设为主页</a>　　<a href="inc/"><img src="images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="/" target=_self style="color:#424242 ">首页</a> > 硬件</td></tr></table>
+</center></div>
+<div align="center" onMouseDown="bdRecord.scope(event)"><center>
+<div class="t1 bgg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">硬件资讯</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.pconline.com.cn/">太平洋电脑网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.zol.com.cn/">中关村在线</a></td>
+		
+											<td  width="20%"    ><a href="http://www.it168.com/">IT168</a></td>
+		
+											<td  width="20%"    ><a href="http://www.pchome.net/">PCHome</a></td>
+		
+											<td  width="20%"    ><a href="http://www.cfan.com.cn/">电脑爱好者</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.pcpop.com/">泡泡网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.beareyes.com.cn/">小熊在线</a></td>
+		
+											<td  width="20%"    ><a href="http://www.it.com.cn/diy/">IT世界硬件</a></td>
+		
+											<td  width="20%"    ><a href="http://www.enet.com.cn/hardwares/">eNet硬件</a></td>
+		
+											<td  width="20%"    ><a href="http://bbs.cfanclub.net/">电脑论坛</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://tech.sina.com.cn/hardware/">新浪硬件</a></td>
+		
+											<td  width="20%"    ><a href="http://www.intozgc.com/">走进中关村</a></td>
+		
+											<td  width="20%"    ><a href="http://www.9ihp.cn/">惠普笔记本论坛</a></td>
+		
+											<td  width="20%"    ><a href="http://club.pc3w.com/forum.php">武汉电脑沙龙</a></td>
+		
+											<td  width="20%"    ><a href="http://detail.zol.com.cn/">中关村在线报价</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.ncdiy.com/">小刀在线</a></td>
+		
+											<td  width="20%"    ><a href="http://www.bios.net.cn/">BIOS之家</a></td>
+		
+											<td  width="20%"    ><a href="http://www.yesky.com/">天极网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.shudoo.com/">电脑报</a></td>
+		
+											<td  width="20%"    ><a href="http://we.pcinlife.com/">电脑新生代</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.chinafix.com.cn/">中国主板维修基地</a></td>
+		
+											<td  width="20%"    ><a href="http://benyouhui.it168.com/">本友会</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">软件下载</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.skycn.com/">天空软件站</a></td>
+		
+											<td  width="20%"    ><a href="http://www.onlinedown.net/">华军软件园</a></td>
+		
+											<td  width="20%"    ><a href="http://dl.pconline.com.cn/">太平洋下载</a></td>
+		
+											<td  width="20%"    ><a href="http://tech.sina.com.cn/down/">新浪下载</a></td>
+		
+											<td  width="20%"    ><a href="http://www.win7china.com/">win7之家</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.xtzj.com/index.php">系统之家</a></td>
+		
+											<td  width="20%"    ><a href="http://www.mydrivers.com/">驱动之家</a></td>
+		
+											<td  width="20%"    ><a href="http://www.crsky.com/">非凡软件</a></td>
+		
+											<td  width="20%"    ><a href="http://download.pchome.net/">PChome下载</a></td>
+		
+											<td  width="20%"    ><a href="http://zhidao.baidu.com/browse/864">百度知道-常用软件</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://xiazai.zol.com.cn/">中关村下载</a></td>
+		
+											<td  width="20%"    ><a href="http://www.OpenHao123.cc/soft/shouji/default.htm">手机常用软件</a></td>
+		
+											<td  width="20%"    ><a href="http://www.ylmf.net/">雨林木风</a></td>
+		
+											<td  width="20%"    ><a href="http://www.OpenHao123.cc/soft/default.htm">常用软件下载</a></td>
+		
+											<td  width="20%"    ><a href="http://www.updrv.com/">驱动人生</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://bbs.pcbeta.com/">远景论坛</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">数码</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://dcdv.zol.com.cn/">中关村数码</a></td>
+		
+											<td  width="20%"    ><a href="http://tech.sina.com.cn/digi/">新浪数码</a></td>
+		
+											<td  width="20%"    ><a href="http://dc.pconline.com.cn/">太平洋数码</a></td>
+		
+											<td  width="20%"    ><a href="http://cn.engadget.com/">瘾科技</a></td>
+		
+											<td  width="20%"    ><a href="http://www.xitek.com/">色影无忌</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.fengniao.com/">蜂鸟在线</a></td>
+		
+											<td  width="20%"    ><a href="http://bbs.mydigit.cn/">数码之家</a></td>
+		
+											<td  width="20%"    ><a href="http://bbs.imp3.net/">imp3数码论坛</a></td>
+		
+											<td  width="20%"    ><a href="http://digi.tech.qq.com/">腾讯数码</a></td>
+		
+											<td  width="20%"    ><a href="http://digi.it.sohu.com/">搜狐数码</a></td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">常用软件</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://dl.xunlei.com/index.htm?tag=1">迅雷</a></td>
+		
+											<td  width="20%"    ><a href="http://cu003.www.duba.net/duba/tools/dubatools/kws/kwsgui_mini.exe">金山网盾OpenHao123专版</a></td>
+		
+											<td  width="20%"    ><a href="http://www.drivergenius.com/">驱动精灵</a></td>
+		
+											<td  width="20%"    ><a href="http://dl.pps.tv/">PPS</a></td>
+		
+											<td  width="20%"    ><a href="http://www.OpenHao123.cc/soft/winrar/default.htm">WinRAR</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://pinyin.sogou.com/">搜狗输入法</a></td>
+		
+											<td  width="20%"    ><a href="http://www.gw.com.cn/download/level1/index.htm">大智慧</a></td>
+		
+											<td  width="20%"    ><a href="http://im.qq.com/">腾讯QQ</a></td>
+		
+											<td  width="20%"    ><a href="http://www.windowslive.cn/">MSN</a></td>
+		
+											<td  width="20%"    ><a href="http://ttplayer.qianqian.com/">千千静听</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.baofeng.com/">暴风影音</a></td>
+		
+											<td  width="20%"    ><a href="http://www.kugou.com/">酷狗</a></td>
+		
+											<td  width="20%"    ><a href="http://www.360.cn/">360安全卫士</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">品牌官网</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.lenovo.com.cn/">联想</a></td>
+		
+											<td  width="20%"    ><a href="http://www.sony.com.cn/">索尼Sony</a></td>
+		
+											<td  width="20%"    ><a href="http://www.apple.com.cn/">苹果Apple</a></td>
+		
+											<td  width="20%"    ><a href="http://www.dell.com.cn/">戴尔Dell</a></td>
+		
+											<td  width="20%"    ><a href="http://cn.nvidia.com/">NVIDIA</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.hp.com.cn/">惠普Hp</a></td>
+		
+											<td  width="20%"    ><a href="http://www.acer.com.cn/">宏碁Acer</a></td>
+		
+											<td  width="20%"    ><a href="http://www.asus.com.cn/">华硕Asus</a></td>
+		
+											<td  width="20%"    ><a href="http://www.canon.com.cn/">佳能Canon</a></td>
+		
+											<td  width="20%"    ><a href="http://www.digitalchina.com/Public/Home.aspx">神州数码</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.msi-china.com.cn/">微星</a></td>
+		
+											<td  width="20%"    ><a href="http://www.ggv.com.cn/">文曲星</a></td>
+		
+											<td  width="20%"    ><a href="http://www.samsung.com/cn/">三星Samsung</a></td>
+		
+											<td  width="20%"    ><a href="http://www.hasee.com/">神舟</a></td>
+		
+											<td  width="20%"    ><a href="http://www.cisco.com.cn/">思科</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.teclast.com/">台电</a></td>
+		
+											<td  width="20%"    ><a href="http://www.tcl.com/">TCL</a></td>
+		
+											<td  width="20%"    ><a href="http://www.foundertech.com/">方正</a></td>
+		
+											<td  width="20%"    ><a href="http://www.usb-mp3.com/">纽曼</a></td>
+		
+											<td  width="20%"    ><a href="http://www.ramos.com.cn/">蓝魔</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.aigo.com/">aigo爱国者</a></td>
+		
+											<td  width="20%"    ><a href="http://www.meizu.com/">魅族</a></td>
+		
+											<td  width="20%"    ><a href="http://www.ainol.com/">艾诺</a></td>
+		
+											<td  width="20%"    ><a href="http://cn.olympus.com/">奥林巴斯Olympus</a></td>
+		
+											<td  width="20%"    ><a href="http://www.sennheiser.com.cn/">森海塞尔</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.tongfangpc.com/">清华同方</a></td>
+		
+											<td  width="20%"    ><a href="http://www.nikon.com.cn/">尼康Nikon</a></td>
+		
+											<td  width="20%"    ><a href="http://www.onda.cn/">昂达</a></td>
+		
+											<td  width="20%"    ><a href="http://www.foxconn.com.cn/">富士康</a></td>
+		
+											<td  width="20%"    ><a href="http://www.logitech.com.cn/">罗技</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.epson.com.cn/">爱普生Epson</a></td>
+		
+											<td  width="20%"    ><a href="http://www.amd.com.cn/">AMD</a></td>
+		
+											<td  width="20%"    ><a href="http://www.colorful.cn/">七彩虹</a></td>
+		
+											<td  width="20%"    ><a href="http://www.tp-link.cn/">tp link官网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.huawei.com.cn/">华为</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.kingston.com/china/">金士顿</a></td>
+		
+											<td  width="20%"><a href="http://www.leleq.com/">品牌之家</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<!--无内容-->
+</table>
+</div>
+</center></div>
+<DIV align=center><br><a href="/" target="_self"><img src="images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="OpenHao123-hardware";</script><script src="js/monitor.js"></script>
+<span style="display:none"><script src="js/tj.js"></script></span>
+</body>
+</html>

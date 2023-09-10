@@ -1,0 +1,388 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+ td,body {  font-size:15px; font-family:arial,sans-serif,宋体;}body{margin-top:0px; margin-left:0px; margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;} 
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.bgg{width:766px; background:#D9EDDA;border:1px solid #8AB78A}
+.bgg table{ margin:5px 5px 5px 5px}
+.zb table{ margin:0px 5px 0px 5px}
+.zbfont{color:#2E6D4A; text-align:center}
+.zbfont a:link,.zbfont a:visited{color:#2E6D4A}
+.zbfont a:hover{color:red}
+.f9pt{font-size: 12px;}
+.f14{font-size: 15px;}
+#sfont a,#sfont b{font-size:13px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg2{width:776px; background:#D9EDDA;border:1px solid #8AB78A}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+--> </style>
+<base target="_blank">
+<title>OpenHao123网址之家－－地方服务-天津</title>
+</head>
+<body>
+<script src="../js/base.js"></script>
+<script src="../js/userdata.js"></script>
+<script src="../js/record.js"></script>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="OpenHao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="778" height="51">
+    <tr>
+      <td width="230" height="51"><a href="/" target="_self" class="m"><img src="../images/logo.gif" alt="设为主页"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18> </td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()" onMouseDown="ClickMonkey.log('haoweb');" >网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()" onMouseDown="ClickMonkey.log('haomp3');" >MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()" onMouseDown="ClickMonkey.log('haoimg');" >图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()" onMouseDown="ClickMonkey.log('haopost');" >贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" onMouseDown="ClickMonkey.log('haozhidao');" >知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()" onMouseDown="ClickMonkey.log('haonews');" >新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()" onMouseDown="ClickMonkey.log('haovideo');">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action=http://www.baidu.com/s name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=OpenHao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=778 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=778 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.OpenHao123.cc" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.OpenHao123.cc/');return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="../images/home.gif" width="15" height="15" border="0" align="absmiddle"> 设为主页</a>　　<a href="/inc"><img src="../images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="/" target=_self style="color:#424242 ">首页</a> >  <a href="http://www.OpenHao123.cc/daquan/defangsite.htm" style="color:#424242 ">地方服务</a> > 天津</td></tr></table>
+</center></div>
+<div align="center" onMouseDown="bdRecord.scope(event)"><center>
+<div class="bgg" >
+<table width="100%"  border="0" cellspacing="1" cellpadding="5">
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<tr bgcolor="EFF7F0">
+                <td  rowspan="2" width="12%" bgcolor="EFF7F0" class="zbfont">综合</td>
+                <td width="22%" ><a href="http://www.online.tj.cn/" target="_blank">天津热线</a></td>
+            <td width="22%"><a href="http://www.tianjinwe.com/" target="_blank">天津网</a></td>
+            <td width="22%"><a href="http://www.tjtv.com.cn/" target="_blank">天津电视台</a></td>
+            <td width="22%"><a href="http://www.radiotj.com/" target="_blank">天津人民广播电台</a></td>
+              </tr>		
+              <tr bgcolor="EFF7F0">
+             <td><a href="http://www.enorth.com.cn/" target="_blank">北方网</a></td>
+            <td><a href="http://www.jwb.com.cn/" target="_blank">今晚报</a></td>
+            <td></td>
+            <td></td>
+              </tr>			
+              <tr bgcolor="E5F2E5">
+                <td rowspan="1"  width="12%" bgcolor="E5F2E5" class="zbfont">彩票</td>
+                <td width="22%"><a href="http://www.tjflcpw.com/">天津福利彩票</a></td>
+                <td width="22%"></td>
+                <td width="22%">&nbsp;</td>
+                <td width="22%">&nbsp;</td>
+              </tr>
+              <tr bgcolor="EFF7F0">
+                <td rowspan="1" bgcolor="EFF7F0" class="zbfont">交通</td>
+                <td><a href="http://www.weather.com.cn/html/weather/101030100.shtml">天津天气预报</a></td>
+                <td><a href="http://map.baidu.com/?newmap=1&l=12&t=B_NORMAL_MAP&c=13047990,4715083.22&s=cur%26curtp%3D2%26wd%3D%25E5%25A4%25A9%25E6%25B4%25A5
+">百度地图天津</a></td>
+                <td><a href="http://www.tjits.cn/">天津智能交通网</a></td>
+                <td><a href="http://www.kutj.com/bus/">天津公交</a></td>
+              </tr>
+        
+              <tr bgcolor="#E5F2E5">
+                <td rowspan="1" class="zbfont">通信</td>
+                <td><a href="http://www.tj.10086.cn/">天津移动</a></td>
+                <td><a href="http://info2.10010.com/lt/plugin/portal/arealevel/queryCityInfo.do?arno=000100030001&id=1042">天津联通</a></td>
+                <td><a href="http://tj.ct10000.com/">天津电信</a></td>
+                <td></td>				
+              </tr>
+
+              <tr bgcolor="EFF7F0">
+                <td rowspan="1" bgcolor="EFF7F0" class="zbfont">人才</td>
+                <td><a href="http://www.tjpnet.gov.cn/">天津人事局</a></td>
+                <td><a href="http://www.zhaopin.com/jobseeker/index_tj.html">智联招聘天津</a></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+
+              <tr bgcolor="#E5F2E5">
+                <td rowspan="1" bgcolor="#E5F2E5" class="zbfont">房产</td>
+                <td><a href="http://tj.ganji.com/">赶集网天津</a></td>
+                <td><a href="http://tj.soufun.com/">搜房网天津</a></td>
+                <td><a href="http://tianjin.tg.com.cn/">齐家家居</a></td>
+                <td align="right"><a href=http://www.OpenHao123.cc/fangchan/tjfc.htm style="padding-right:10px">更多&nbsp;&raquo;</a></td>
+              </tr>            
+              <tr bgcolor="EFF7F0">
+                <td rowspan="1" bgcolor="EFF7F0" class="zbfont">美食</td>                
+                <td><a href="http://www.dianping.com/tianjin/food">大众点评网</a></td>
+                <td ><a href="http://www.kutj.com/">酷天津</a></td>
+				<td><a href="http://www.022ms.com/">天津美食网</a></td>
+                <td></td>
+              </tr>
+              <tr bgcolor="#E5F2E5">
+                <td rowspan="2" bgcolor="#E5F2E5"  class="zbfont">教育</td>
+                <td ><a href="http://www.zhaokao.net/">天津招考信息网</a></td>
+                <td ><a href="http://www.nankai.edu.cn/">南开大学</a></td>
+                <td><a href="http://www.tju.edu.cn/">天津大学</a></td>
+                <td ><a href="http://www.tjpu.edu.cn/">天津工业大学</a></td>
+              </tr>
+              <tr bgcolor="#E5F2E5">
+                <td ><a href="http://www.tjkpzx.com/">天津人事考试网</a></td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td align="right"><a href=http://www.OpenHao123.cc/eduhtm/edutj.htm style="padding-right:10px">更多&nbsp;&raquo;</a></td>
+              </tr>     
+              <tr bgcolor="EFF7F0">
+                <td rowspan="3" bgcolor="EFF7F0"  class="zbfont">论坛</td>
+                <td><a href="http://forum.enorth.com.cn/">北方论坛</a></td>
+                <td><a href="http://bbs.kutj.com/">天津论坛</a></td>
+                <td><a href="http://post.baidu.com/f?kw=%CC%EC%BD%F2">天津贴吧</a></td>
+                <td><a href="http://www.bohaibbs.org/">渤海论坛</a></td>
+              </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.belle8.com/">百丽吧</a></td>
+                <td><a href="http://www.qvbuy.com/bbs/">趣拜网</a></td>
+                <td><a href="http://bbs.xbaodi.com/">宝坻论坛</a></td>
+                <td><a href="http://tieba.baidu.com/f?kw=%CC%C1%B9%C1&fr=ala0">塘沽吧</a></td>
+              </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.tjmama.com/">天津妈妈网</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+
+              <tr bgcolor="#E5F2E5">
+                <td rowspan="2" bgcolor="#E5F2E5"  class="zbfont">政府</td>
+                <td ><a href="http://www.tj.gov.cn/">天津政务网</a></td>
+                <td ><a href="http://www.tjsat.gov.cn/">天津国税</a></td>
+                <td ><a href="http://www.tjcs.gov.cn/">天津财税网</a></td>
+                <td ><a href="http://www.bh.gov.cn/">天津滨海新区</a></td>
+              </tr>
+              <tr bgcolor="#E5F2E5">
+                <td><a href="http://www.tjkj.gov.cn/">天津会计网</a></td>
+                <td><a href="http://www.tjgxw.gov.cn/">天津公选网</a></td>
+                <td></td>
+                <td></td>
+              </tr>
+
+			  <tr bgcolor="EFF7F0">
+                <td rowspan="2" bgcolor="EFF7F0"  class="zbfont">其他</td>
+                <td><a href="http://www.tjfaw.com/">天津一汽夏利</a></td>
+                <td><a href="http://www.tj2shou.com/">天津二手网</a></td>
+                <td><a href="http://sports.enorth.com.cn/teda/">天津泰达</a></td>
+                <td><a href="http://www.tjgxw.gov.cn/">天津公选网</a></td>
+			  </tr>  
+			  <tr bgcolor="EFF7F0">
+                <td><a href="http://tianjin.baixing.com/">百姓网天津</a></td>
+                <td></td>
+                <td></td>
+                <td>&nbsp;</td>
+			  </tr> 
+</table>
+</div>
+</center></div>
+<br>
+<DIV align=center><br><a href="http://www.OpenHao123.cc/" target="_self"><img src="../images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="OpenHao123-navhtm-navtj";</script><script src="../js/monitor.js"></script>
+<span style="display:none"><script src="/js/tj.js"></script></span></body>
+</html>

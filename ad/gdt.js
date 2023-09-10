@@ -1,0 +1,1 @@
+var hot_news=[["新闻","http://OpenHao123.cc/","OpenHao123怀旧珍藏版"],["新闻","http://news.qq.com/a/20111119/000793.htm","美军试飞超高音速武器 一小时内可打击全球目标"],["网络","http://OpenHao123.cc/","OpenHao123怀旧珍藏版"],["博客","http://OpenHao123.cc","高哥博客"]];l();function l(){}

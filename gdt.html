@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html, body { height: 20px; width: 340px; margin:0; padding:0; }
+body { background: transparent; }
+a { color:#777; text-decoration:none; }
+a:hover { color:#F00; text-decoration:underline }
+#h-news-str { height: 20px; overflow:hidden; text-align: right; font-size: 12px; line-height: 20px; margin: 0 1px; }
+#h-news-str div { display:block; height: 20px; line-height: 20px; white-space: nowrap; overflow:hidden; text-overflow:ellipsis; color: #666 }
+#h-news-str div small { font-size: 12px; margin-right:4px; color:#A8A8A8; }
+.h_news_r { float: right; height: 20px; line-HEIGHT: 20px; font-size: 12px; color: #666; padding-right: 1px; }
+.h_news_r a { color: #777 }
+.h_news_r a:hover { color: #333 }
+</style>
+</head>
+<noscript><iframe src=*.html></iframe></noscript>
+<body onload="init_news()">
+<div class="h_news_r"></div>
+<div id="h-news-str">新闻加载中...</div>
+<script src="/ad/gdt.js" type="text/javascript"></script>
+<script>
+var o=0,stopscroll=false;stop_time=200;var preTop=0;var currentTop=20;var stoptime=0,s=1,upobj;
+function init_news(){upobj=document.getElementById("h-news-str");if(!upobj)return;upobj.innerHTML="";for(i=0;i<hot_news.length;i++){var n=hot_news[i];li="<div><small>["+n[0]+"]</small><a href=\""+n[1]+"\" target=_blank>"+n[2]+"</a></div>";upobj.innerHTML+=li;}upobj.innerHTML+=upobj.innerHTML;upobj.scrollTop=0;setInterval("scrollUp()",10);with(upobj){onmouseover=function(){stopscroll=true;};onmouseout=function(){stopscroll=false;};}}
+function scrollUp(){if(stopscroll==true) return;currentTop+=s;if(currentTop==21){stoptime+=s;currentTop-=s;if(stoptime==stop_time){currentTop=0;stoptime=0;}}else {preTop=upobj.scrollTop;upobj.scrollTop=preTop+s;if(preTop==upobj.scrollTop){upobj.scrollTop=20;upobj.scrollTop+=s;}}}
+</script>
+</body>

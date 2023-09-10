@@ -1,0 +1,445 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+ td,body {  font-size: 16px; font-family:arial,sans-serif,宋体;}body{margin-top:0px;margin-left:0px;margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;}
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg{border-color:#8AB78A; width:898px}
+.f9pt{font-size: 12px;}
+#sfont a,#sfont b{font-size:13px;}
+.highlight_1 a:link,.highlight_1 a:visited{color:red}
+.wr{text-align:right}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+.mm{ color:#636870; padding:0px 0 0 65px; font-size: 15px;}
+.mm a:link,.mm a:visited{color:#538753;}
+.mm a:hover{color:red;}
+--> </style>
+<base target="_blank">
+<title>OpenHao123网址之家－－明星</title>
+</head>
+<body>
+<script src="js/base.js"></script>
+<script src="js/userdata.js"></script>
+<script src="js/record.js"></script>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="OpenHao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="900" height="51">
+    <tr>
+      <td width="290" height="51"><a href="/" target="_self" class="m"><img src="images/logo.gif" alt="把OpenHao123设为主页"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18> </td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()" onMouseDown="ClickMonkey.log('haoweb');" >网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()" onMouseDown="ClickMonkey.log('haomp3');" >MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()" onMouseDown="ClickMonkey.log('haoimg');" >图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()" onMouseDown="ClickMonkey.log('haopost');" >贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" onMouseDown="ClickMonkey.log('haozhidao');" >知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()" onMouseDown="ClickMonkey.log('haonews');" >新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()" onMouseDown="ClickMonkey.log('haovideo');">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action=http://www.baidu.com/s name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=OpenHao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=900 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=900 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.OpenHao123.cc" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.OpenHao123.cc/');return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="images/home.gif" width="15" height="15" border="0" align="absmiddle"> 把OpenHao123设为主页</a>　　<a href="inc/"><img src="images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="/" target=_self style="color:#424242 ">首页</a> > 明星</td></tr></table>
+</center></div>
+<div align="center" onMouseDown="bdRecord.scope(event)"><center>
+<div class="t1 bgg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">娱乐综合</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://ent.sina.com.cn/">新浪娱乐</a></td>
+		
+											<td  width="20%"    ><a href="http://ent.qq.com/">腾讯娱乐</a></td>
+		
+											<td  width="20%"    ><a href="http://yule.baidu.com/">百度娱乐</a></td>
+		
+											<td  width="20%"    ><a href="http://www.67.com/">中国娱乐网</a></td>
+		
+											<td  width="20%"    ><a href="http://data.yule.baidu.com/f">明星档案</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://yule.sohu.com/">搜狐娱乐</a></td>
+		
+											<td  width="20%"    ><a href="http://www.tianya.cn/publicforum/articleslist/0/funinfo.shtml">天涯娱乐八卦</a></td>
+		
+											<td  width="20%"    ><a href="http://ent.163.com/">网易娱乐</a></td>
+		
+											<td  width="20%"    ><a href="http://ent.ifeng.com/">凤凰网娱乐</a></td>
+		
+											<td  width="20%"    ><a href="http://ent.mop.com/">猫扑娱乐</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://ent.sina.com.cn/star/">明星全接触-新浪网</a></td>
+		
+											<td  width="20%"    ><a href="http://ent.cn.yahoo.com/">雅虎娱乐</a></td>
+		
+											<td  width="20%"    ><a href="http://ent.tom.com/">TOM娱乐</a></td>
+		
+											<td  width="20%"    ><a href="http://www.ifensi.com/">粉丝网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.ewang.com/">E视网娱乐</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://tieba.baidu.com/f?ct=536870912&rn=200&pn=0&cm=1101&tn=simpleCategory&sn=%C3%F7%D0%C7%C8%CB%CE%EF">百度贴吧-明星大全</a></td>
+		
+											<td  width="20%"    ><a href="http://blog.sina.com.cn/lm/search/ent/index.html">明星博客</a></td>
+		
+											<td  width="20%"    ><a href="http://www.tvb.com/">香港TVB娱乐</a></td>
+		
+											<td  width="20%"    ><a href="http://www.chinabug.net/">穿帮网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.eemedia.cn/">天娱传媒</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://ent.joy.cn/">激动网-娱乐</a></td>
+		
+											<td  width="20%"    ><a href="http://www.piaowutong.com/">中演票务通</a></td>
+		
+											<td  width="20%"    ><a href="http://top.baidu.com/buzz/ymingxing.html">女明星排行榜</a></td>
+		
+											<td  width="20%"    ><a href="http://top.baidu.com/buzz/nmingxing.html">男明星排行榜</a></td>
+		
+											<td  width="20%"    ><a href="http://ent.youku.com/">优酷娱乐</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.qq668.com">快播电影网</a></td>
+		
+											<td  width="20%"><a href="http://www.686s.com/">美女写真</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">综艺节目</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://fcwr.jstv.com/">非诚勿扰</a></td>
+		
+											<td  width="20%"    ><a href="http://video.baidu.com/v?word=%BF%EC%C0%D6%B4%F3%B1%BE%D3%AA&ct=301989888&rn=20&pn=0&db=0&s=0&fbl=800">快乐大本营</a></td>
+		
+											<td  width="20%"    ><a href="http://video.baidu.com/v?word=%D0%D2%B8%A3%C4%A7%B7%BD&ct=301989888&rn=20&pn=0&db=0&s=0&fbl=800">幸福魔方</a></td>
+		
+											<td  width="20%"    ><a href="http://video.baidu.com/v?word=%CC%EC%CC%EC%CF%F2%C9%CF&ct=301989888&rn=20&pn=0&db=0&s=0&fbl=800">天天向上</a></td>
+		
+											<td  width="20%"    ><a href="http://video.baidu.com/v?word=%BF%B5%CE%F5%C0%B4%C1%CB&ct=301989888&rn=20&pn=0&db=0&s=0&fbl=800">康熙来了</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://video.baidu.com/v?word=%B9%FA%B9%E2%B0%EF%B0%EF%C3%A6&ct=301989888&rn=20&pn=0&db=0&s=0&fbl=800">国光帮帮忙</a></td>
+		
+											<td  width="20%"    ><a href="http://www.qiyi.com/zongyi/ylxc.html">娱乐现场</a></td>
+		
+											<td  width="20%"    ><a href="http://www.youku.com/show_page/id_z7e25495200f311df97c0.html">娱乐百分百</a></td>
+		
+											<td  width="20%"    ><a href="http://www.qiyi.com/zongyi/zgdrx2011.html">中国达人秀</a></td>
+		
+											<td  width="20%"    ><a href="http://www.qiyi.com/zongyi/bkqs.html">百科全说</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://ent.cntv.cn/chunwan/">我要上春晚</a></td>
+		
+											<td  width="20%"    ><a href="http://bt.hliang.com/">黑亮综艺</a></td>
+		
+											<td  width="20%"    ><a href="http://video.baidu.com/childchannal/tvshow/tvshow.html">更多综艺视频</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">热门明星</font></td>
+</tr>
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    >姚晨<div class=mm><a href="http://tieba.baidu.com/f?kw=%D2%A6%B3%BF">贴吧</a>　<a href="http://weibo.com/yaochen">微博</a></div></td>
+		
+											<td  width="20%"    >小S<div class=mm><a href="http://tieba.baidu.com/f?kw=%D0%A1S">贴吧</a>　<a href="http://weibo.com/dees">微博</a></div></td>
+		
+											<td  width="20%"    >赵薇<div class=mm><a href="http://tieba.baidu.com/f?kw=%D5%D4%DE%B1">贴吧</a>　<a href="http://weibo.com/zhaowei">微博</a></div></td>
+		
+											<td  width="20%"    > 杨幂
+  <div class=mm><a href="http://tieba.baidu.com/f?kw=%D1%EE%C3%DD&fr=wwwt">贴吧</a>　<a href="http://weibo.com/yangmiblog">微博</a></div></td><td  width="20%"    >谢娜<div class=mm><a href="http://tieba.baidu.com/f?kw=%D0%BB%C4%C8">贴吧</a>　<a href="http://weibo.com/xiena">微博</a></div></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    >何炅<div class=mm><a href="http://tieba.baidu.com/f?kw=%BA%CE%EA%C1">贴吧</a>　<a href="http://weibo.com/hejiong">微博</a></div></td>
+		
+											<td  width="20%"    >李冰冰<div class=mm><a href="http://tieba.baidu.com/f?kw=%C0%EE%B1%F9%B1%F9">贴吧</a>　<a href="http://weibo.com/libingbing">微博</a></div></td>
+		
+											<td  width="20%"    >陈坤<div class=mm><a href="http://tieba.baidu.com/f?kw=%B3%C2%C0%A4">贴吧</a>　<a href="http://weibo.com/chenkun">微博</a>　</div></td>
+		
+											<td  width="20%"    >蔡卓妍<div class=mm><a href="http://tieba.baidu.com/f?kw=%B2%CC%D7%BF%E5%FB">贴吧</a>　<a href="http://weibo.com/choicharlene">微博</a></div></td>
+		
+											<td  width="20%"    >蔡依林<div class=mm><a href="http://tieba.baidu.com/f?kw=%B2%CC%D2%C0%C1%D67">贴吧</a>　<a href="http://weibo.com/1742727537">微博</a></div></td>
+		
+				</tr>
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    >武艺<div class=mm><a href="http://tieba.baidu.com/f?kw=%CE%E4%D2%D5">贴吧</a>　<a href="http://weibo.com/wuyi">微博</a></div></td>
+		
+											<td  width="20%"    >super junior<div class=mm><a href="http://tieba.baidu.com/f?kw=superjunior">贴吧</a>　</div></td>
+		
+											<td  width="20%"    >东方神起<div class=mm><a href="http://tieba.baidu.com/f?kw=%B6%AB%B7%BD%C9%F1%C6%F0">贴吧</a>　</div></td>
+		
+											<td  width="20%"    >快男陈翔<div class=mm><a href="http://tieba.baidu.com/f?kw=%BF%EC%C4%D0%B3%C2%CF%E8">贴吧</a>　<a href="http://weibo.com/kuainanchenxiang">微博</a></div></td>
+		
+											<td  width="20%"    >韩庚<div class=mm><a href="http://tieba.baidu.com/f?kw=%BA%AB%B8%FD">贴吧</a>　<a href="http://weibo.com/hangeng">微博</a></div></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    >李宇春<div class=mm><a href="http://tieba.baidu.com/f?kw=%C0%EE%D3%EE%B4%BA">贴吧</a>　<a href="http://weibo.com/liyuchun">微博</a></div></td>
+		
+											<td  width="20%"    >张杰<div class=mm><a href="http://tieba.baidu.com/f?kw=%D5%C5%BD%DC">贴吧</a>　<a href="http://weibo.com/jasonzhangjie">微博</a></div></td>
+		
+											<td  width="20%"    >冯绍峰<div class=mm><a href="http://tieba.baidu.com/f?kw=%B7%EB%C9%DC%B7%E5&fr=wwwt">贴吧</a>　<a href="http://weibo.com/fengshaofeng">微博</a>　</div></td>
+		
+											<td  width="20%"    >李炜<div class=mm><a href="http://tieba.baidu.com/f?kw=%C0%EE%EC%BF">贴吧</a>　<a href="http://weibo.com/liwei1206">微博</a></div></td>
+		
+											<td  width="20%"    >何晟铭<div class=mm><a href="http://tieba.baidu.com/f?kw=%BA%CE%EA%C9%C3%FA">贴吧</a>　<a href="http://weibo.com/hemin">微博</a></div></td>
+		
+				</tr>			
+				<tr bgcolor="#EFF7F0">					
+				  <td  width="20%"    > 张柏芝
+  <div class=mm><a href="http://tieba.baidu.com/f?kw=%D5%C5%B0%D8%D6%A5">贴吧</a></div></td><td  width="20%"    >范冰冰<div class=mm><a href="http://tieba.baidu.com/f?kw=%B7%B6%B1%F9%B1%F9">贴吧</a>　</div></td>
+		
+											<td  width="20%"    > 汤唯
+  <div class=mm><a href="http://tieba.baidu.com/f?kw=%CC%C0%CE%A8">贴吧</a>　　</div></td>
+											<td  width="20%"    > 景甜
+  <div class=mm><a href="http://tieba.baidu.com/f?kw=%BE%B0%CC%F0">贴吧</a>　<a href="http://weibo.com/jingtian/">微博</a></div></td>
+											<td  width="20%"    > 高晓松
+  <div class=mm><a href="http://tieba.baidu.com/f?kw=%B8%DF%CF%FE%CB%C9">贴吧</a>　<a href="http://weibo.com/gaoxiaosong">微博</a></div></td></tr>			
+				<tr bgcolor="#EFF7F0">					
+				  <td  width="20%"    > 刘德华
+  <div class=mm><a href="http://tieba.baidu.com/f?kw=%C1%F5%B5%C2%BB%AA">贴吧</a>　</div></td>
+				  <td  width="20%"    > 周杰伦
+  <div class=mm><a href="http://tieba.baidu.com/f?kw=%D6%DC%BD%DC%C2%D7">贴吧</a>　</div></td><td  width="20%"    ></td>
+		
+											<td  width="20%"    ></td>
+											<td  width="20%"    ></td>
+				</tr>			
+					
+			</table>
+	</td>
+</tr>
+<!--无内容-->
+</table>
+</div>
+</center></div>
+<DIV align=center><br><a href="/" target="_self"><img src="images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="OpenHao123-mm";</script><script src="js/monitor.js"></script>
+<span style="display:none"><script src="js/tj.js"></script></span>
+</body>
+</html>

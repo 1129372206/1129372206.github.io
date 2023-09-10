@@ -1,0 +1,502 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+ td,body {  font-size: 16px; font-family:arial,sans-serif,宋体;}body{margin-top:0px;margin-left:0px;margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;}
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg{border-color:#8AB78A; width:898px}
+.f9pt{font-size: 12px;}
+#sfont a,#sfont b{font-size:13px;}
+.highlight_1 a:link,.highlight_1 a:visited{color:red}
+.wr{text-align:right}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+--> </style>
+<base target="_blank">
+<title>OpenHao123网址之家－－招聘</title>
+</head>
+<body>
+<script src="js/base.js"></script>
+<script src="js/userdata.js"></script>
+<script src="js/record.js"></script>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="OpenHao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="900" height="51">
+    <tr>
+      <td width="290" height="51"><a href="/" target="_self" class="m"><img src="images/logo.gif" alt="把OpenHao123设为主页"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18> </td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()" onMouseDown="ClickMonkey.log('haoweb');" >网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()" onMouseDown="ClickMonkey.log('haomp3');" >MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()" onMouseDown="ClickMonkey.log('haoimg');" >图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()" onMouseDown="ClickMonkey.log('haopost');" >贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" onMouseDown="ClickMonkey.log('haozhidao');" >知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()" onMouseDown="ClickMonkey.log('haonews');" >新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()" onMouseDown="ClickMonkey.log('haovideo');">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action=http://www.baidu.com/s name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=OpenHao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=900 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=900 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.OpenHao123.cc" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.OpenHao123.cc/');return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="images/home.gif" width="15" height="15" border="0" align="absmiddle"> 把OpenHao123设为主页</a>　　<a href="inc/"><img src="images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="/" target=_self style="color:#424242 ">首页</a> > 招聘</td></tr></table>
+</center></div>
+<div align="center" onMouseDown="bdRecord.scope(event)"><center>
+<div class="t1 bgg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">综合人才网站</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.51job.com/">51job前程无忧</a></td>
+		
+											<td  width="20%"    ><a href="http://www.zhaopin.com/">智联招聘网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.58.com/?path=job.shtml">58同城招聘</a></td>
+		
+											<td  width="20%"    ><a href="http://www.chinahr.com">中华英才网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.cjol.com/">中国人才热线</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"  class="gg_b"  ><a href="http://www.jianzhi8.com/">兼职网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.528.cn/">528招聘网</a></td>
+		
+											<td  width="20%"  class="gg_nb"  ><a href="http://open.baidu.com/zhaopin/s?tn=zhaopinhui&rn=20&wd=%D5%D0%C6%B8%BB%E1">招聘会信息</a></td>
+		
+											<td  width="20%"    ><a href="http://rencai.baidu.com/">百度人才</a></td>
+		
+											<td  width="20%"    ><a href="http://www.baicai.com/">百才招聘网</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.lietou.com/">猎头网</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">毕业生招聘网站</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.yingjiesheng.com/">应届生求职网</a></td>
+		
+											<td  width="20%"    ><a href="http://wenku.baidu.com/view/9923c5bff121dd36a32d8202.html">面试技巧和注意事项</a></td>
+		
+											<td  width="20%"    ><a href="http://bbs.yingjiesheng.com/">应届生bbs</a></td>
+		
+											<td  width="20%"    ><a href="http://www.OpenHao123.cc/rencai/jiuye.htm">各地毕业生就业信息网</a></td>
+		
+											<td  width="20%"    ><a href="http://wenku.baidu.com/view/b799cfd7c1c708a1284a44fa.html">简历模板</a></td>
+		
+				</tr>
+<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://job.dajie.com/">大街校园招聘网</a></td>
+		
+											<td  width="20%"    ></td>
+		
+											<td  width="20%"    ></td>
+		
+											<td  width="20%"    ></td>
+		
+											<td  width="20%"    ></td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="C5D5C5">
+        <td bgcolor="#D9EDDA" class="f9pt" height="20"><p align="center"><font color="#346F0E">各地人才网站</font></td>
+      </tr>
+<tr bgcolor="C5D5C5">
+<td width="100%" colspan="4" align="center" bgcolor="#EFF7F0"><img src="images/rencai_map.gif" border="0" usemap="#Map"><map name="Map">
+<area shape="rect" coords="344,137,372,152" href="rencai/bjrc.htm" alt="北京人才网址"></area>
+<area shape="rect" coords="405,59,449,75" href="rencai/hljrc.htm" alt="黑龙江人才网址"></area>
+<area shape="rect" coords="385,123,415,138" href="rencai/lnrc.htm" alt="辽宁人才网址"></area>
+<area shape="rect" coords="364,156,391,169" href="rencai/tjrc.htm" alt="天津人才网址"></area>
+<area shape="rect" coords="408,95,436,110" href="rencai/jlrc.htm" alt="吉林人才网址"></area>
+<area shape="rect" coords="327,163,356,180" href="rencai/hbrc.htm" alt="河北人才网址"></area>
+<area shape="rect" coords="300,183,329,198" href="rencai/sxrc.htm" alt="山西人才网址"></area>
+<area shape="rect" coords="351,184,381,201" href="rencai/sdrc.htm" alt="山东人才网址"></area>
+<area shape="rect" coords="315,212,344,232" href="rencai/hnrc.htm" alt="河南人才网址"></area>
+<area shape="rect" coords="379,208,408,224" href="rencai/jsrc.htm" alt="江苏人才网址"></area>
+<area shape="rect" coords="412,235,445,251" href="rencai/shrc.htm" alt="上海人才网址"></area>
+<area shape="rect" coords="357,233,386,249" href="rencai/ahrc.htm" alt="安徽人才网址"></area>
+<area shape="rect" coords="309,244,344,261" href="rencai/hubrc.htm" alt="湖北人才网址"></area>
+<area shape="rect" coords="344,268,375,290" href="rencai/jxrc.htm" alt="江西人才网址"></area>
+<area shape="rect" coords="368,293,401,309" href="rencai/fjrc.htm" alt="福建人才网址"></area>
+<area shape="rect" coords="331,317,368,337" href="rencai/gdrc.htm" alt="广东人才网址"></area>
+<area shape="rect" coords="279,324,317,347" href="rencai/gxrc.htm" alt="广西人才网址"></area>
+<area shape="rect" coords="208,313,246,343" href="rencai/ynrc.htm" alt="云南人才网址"></area>
+<area shape="rect" coords="212,248,249,272" href="rencai/scrc.htm" alt="四川人才网址"></area>
+<area shape="rect" coords="254,263,289,285" href="rencai/cqrc.htm" alt="重庆人才网址"></area>
+<area shape="rect" coords="262,293,295,313" href="rencai/gzrc.htm" alt="贵州人才网址"></area>
+<area shape="rect" coords="306,277,336,299" href="rencai/hunrc.htm" alt="湖南人才网址"></area>
+<area shape="rect" coords="271,214,303,234" href="rencai/shxrc.htm" alt="陕西人才网址"></area>
+<area shape="rect" coords="245,181,270,197" href="rencai/nxrc.htm" alt="宁夏人才网址"></area>
+<area shape="rect" coords="354,374,351,362,357,356,381,358,391,349,393,335,421,331,418,314,394,317,376,335,362,343,346,355,326,356,318,361,323,370,337,373" href="rencai/gatrc.htm" alt="港澳台人才网址"></area>
+<area shape="rect" coords="154,187,208,227" href="rencai/qhrc.htm" alt="青海人才网址"></area>
+<area shape="rect" coords="266,141,311,157" href="rencai/nmgrc.htm" alt="内蒙古人才网址"></area>
+<area shape="rect" coords="168,148,198,168" href="rencai/gsrc.htm" alt="甘肃人才网址"></area>
+<area shape="rect" coords="278,372,312,391" href="rencai/hanrc.htm" alt="海南人才网址"></area>
+<area shape="rect" coords="386,257,416,274" href="rencai/zjrc.htm" alt="浙江人才网址"></area>
+<area shape="rect" coords="344,137,372,152" href="rencai/bjrc.htm" alt="北京人才网址"></area>
+<area shape="poly" coords="318,362,343,358,359,360,359,344,375,342,389,345,391,323,402,318,421,318,425,332,423,342,382,357,365,367,339,375,328,373" href="rencai/gatrc.htm" alt="港澳台"></area>
+<area shape="rect" coords="318,362,343,358,359,360,359,344,375,342,389,345,391,323,402,318,421,318,425,332,423,342,382,357,365,367,339,375,328,373" href="rencai/gatrc.htm" alt="港澳台"></area>
+</map>
+</td>
+</tr>
+
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">地方人才网站精选</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.jobcn.com/">卓博人才网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.gxrc.com/">广西人才网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.szhr.com.cn/">深圳人才网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.gdrc.com/">广东人才网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.job5156.com/">智通人才网</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.job168.com/">南方人才网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.xmrc.com.cn/">厦门人才网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.siphrd.com/">苏州人才新干线</a></td>
+		
+											<td  width="20%"    ><a href="http://www.hnrcsc.com/">湖南人才网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.hzrc.com/">杭州人才网</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.wzjob.gov.cn/">温州人才网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.kshr.com.cn/">昆山人才网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.goodjobs.cn/">新安人才网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.nbrc.com.cn/">宁波人才网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.zjrc.com/">浙江人才网</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.xajob.com/">西安人才网</a></td>
+		
+											<td  width="20%"    ><a href="http://new.hxrc.com/">福建海峡人才网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.jxrencai.com/">江西人才网</a></td>
+		
+											<td  width="20%"    ><a href="http://jobs.12333sh.gov.cn/">上海公共招聘网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.qlrc.com/">齐鲁人才</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.hbsc.cn/">河北搜才网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.cqjob.com/">重庆人才网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.qzrc.com/">泉州人才网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.sjrc.com.cn/">山西人才网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.njrsrc.com/">南京人才网</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.jobhb.com/">湖北人才网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.nmrc.com.cn/">内蒙古人才网</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">行业人才网站</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+				<tr bgcolor="#EFF7F0">
+				  <td width="20%"    ><a href="http://www.21wecan.com/">中国卫生人才网</a></td>
+				  <td width="20%"    ><a href="http://www.buildhr.com/">建筑英才网</a></td>
+				  <td width="20%"    ><a href="http://www.veryeast.cn/">最佳东方酒店人才</a></td>
+				  <td width="20%"    ><a href="http://www.1010jz.com/">1010兼职网</a></td>
+				  <td width="20%"><a href="http://www.shifansheng.com/">师范生教师招聘网</a></td>
+			  </tr>
+				<tr bgcolor="#EFF7F0">
+				  <td    ><a href="http://www.doctorjob.com.cn/">中国医疗人才网</a></td>
+				  <td    ><a href="http://www.triphr.com/">中国酒店人才网</a></td>
+				  <td    ><a href="http://www.carjob.com.cn/">中国汽车人才网</a></td>
+				  <td    ><a href="http://www.chinajob.gov.cn/">中国就业网</a></td>
+				  <td><a href="http://www.job910.com/">万行教师人才网</a></td>
+			  </tr>
+				<tr bgcolor="#EFF7F0">
+				  <td    ><a href="http://www.healthr.com/">医药英才网</a></td>
+				  <td    ><a href="http://www.jobeast.com/">中国外语人才网</a></td>
+				  <td    ><a href="http://www.gaoxiaojob.com/">高校人才网</a></td>
+				  <td    ><a href="http://www.cphr.com.cn/">中国电力人才网</a></td>
+				  <td><a href="http://z.paidai.com/">派代电商招聘</a></td>
+			  </tr>
+				<tr bgcolor="#EFF7F0">
+				  <td    ><a href="http://www.chenhr.com/">化工英才网</a></td>
+				  <td    ><a href="http://www.epjob88.com/">电力英才网</a></td>
+				  <td    ><a href="http://www.chinalao.com/">中劳网</a></td>
+				  <td    ><a href="http://www.jobui.com/">职友集</a></td>
+				  <td><a href="http://hr.bjx.com.cn/">北极星电力英才网</a></td>
+			  </tr>
+				<tr bgcolor="#EFF7F0">
+				  <td    ><a href="http://job.aweb.com.cn/">农博人才网</a></td>
+				  <td    ><a href="http://www.hiall.com.cn/">hiall 求职社区</a></td>
+				  <td    ><a href="http://hr.wtojob.com/">世贸人才网</a></td>
+				  <td    ><a href="http://job.zhulong.com/">筑龙英才网</a></td>
+				  <td><a href="http://www.pcbjob.com/">pcb人才网</a></td>
+			  </tr>
+				<tr bgcolor="#EFF7F0">
+				  <td    ><a href="http://www.guolairen.com/">过来人</a></td>
+				  <td    ><a href="http://www.tourjob.net/">中国旅游人才网</a></td>
+				  <td    ><a href="http://www.lqjob88.com/">路桥英才网</a></td>
+				  <td    ><a href="http://www.oilhr.com/">石油英才网</a></td>
+				  <td><a href="http://www.fenzhi.com/">分智网</a></td>
+			  </tr>
+				<tr bgcolor="#EFF7F0">
+				  <td    ><a href="http://www.vikecn.com/">威客中国</a></td>
+				  <td    ><a href="http://www.pjob.net/">中国印刷人才网</a></td>
+				  <td    ><a href="http://www.138job.com/">138美容人才网</a></td>
+				  <td    ><a href="http://www.zhubajie.com/">猪八戒威客网</a></td>
+				  <td><a href="http://www.taskcn.com/">任务中国</a></td>
+			  </tr>				</table>
+	</td>
+</tr>
+</table>
+</div>
+</center></div>
+<DIV align=center><br><a href="/" target="_self"><img src="images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="OpenHao123-rencai";</script><script src="js/monitor.js"></script>
+<span style="display:none"><script src="js/tj.js"></script></span>
+</body>
+</html>

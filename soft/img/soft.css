@@ -1,0 +1,65 @@
+body {text-align:center;margin:0px;padding-top:2px;}
+ul,ul li,dl,dd,dt,form,p,h1,h2,h3,h4,h5 {margin:0;padding:0;font-size:12px;}
+ul,ol,li {list-style:none;}
+a {text-decoration:none;}
+a,a:visited {color:#333;}
+a:hover {color:#f00;}
+a img {border:none;}
+label {cursor:pointer;}
+.none {display:none;}
+.hidden {visibility:hidden;}
+
+#Wrap {width:930px;margin:0px auto;text-align:left;}
+div.PBlock {width:100%;clear:both;}
+
+/*TopBar*/
+#TopBar {padding:0 5px;clear:both;height:20px;line-height:20px;background:#5dc0f9 url(img/topbar.gif) repeat-x 0 50%;}
+#TopBar ul {float:right;}
+#TopBar ul li {float:left;padding:0 5px;}
+
+/*主体*/
+.modTab,modBox {clear:both;}
+div.SCol {float:left;border:1px solid #b7dbe9;border-top:none;display:inline;}
+div.MCol {float:right;width:720px;}
+div.MCol .titBar,
+div.MCol .txtBox {width:718px;}
+
+div.SCol .modBox {width:196px;overflow:hidden;}
+.SCol .titBar {line-height:25px;background:#eff8fd;border-top:1px solid #b7dbe9;border-bottom:1px solid #b7dbe9;text-align:center;}
+.SCol .txtBox {padding:5px 14px;float:left;clear:both;}
+.SCol ul.cateData li {float:left;width:80px;height:24px;line-height:24px;text-align:center;overflow:hidden;}
+
+/*名站导航*/
+ul.c_fam {margin-left:25px;}
+ul.c_fam li {float:left;height:26px;line-height:26px;width:135px;font-size:14px;}
+.c_game {font-size:14px;}
+.g1 {float:left;width:470px;}
+.g2 {float:left;width:230px;}
+.g3 {clear:both;padding-left:12px;}
+.g1 li {float:left;padding:0 3px 0 1px;height:86px;}
+.g1 li img {border:1px solid #ccc;}
+.g1 ul {clear:both;margin-left:10px;}
+.g2 li,
+.g3 li {float:left;width:115px;}
+.g2 li {line-height:28px;}
+.g3 li {line-height:24px;}
+
+.c_so {width:99%;padding:8px 0 8px 3px;}
+.c_so dl {clear:both;float:left;border-bottom:1px dotted #ccc;width:100%;}
+.c_so dt,
+.c_so dd {float:left;height:31px;line-height:31px;font-size:14px;overflow:hidden;}
+.c_so dt {width:12.4%;color:#900; text-align:center;}
+.c_so dd {width:12.4%;}
+.c_soft {overflow:hidden;width: 100%;margin-left:0px; font-family:tahoma,"宋体",Geneva,Arial,sans-serif;font-size:14px;padding-top:18px;}
+.c_soft div.s {width:16.63%;float:left;display:inline;}
+.c_soft legend { font-size:14px;}
+.c_soft fieldset {border:1px solid #ccc;display:block;margin:0 2px 0 6px;padding:5px 6px 5px;}
+.c_soft fieldset img {margin-right:3px;vertical-align:middle;}
+.c_soft .c1 {width:100%;float:left;height:255px;}
+.c_soft .c1 li { font-size:12px;height:28px;line-height:28px; padding-left:4px; text-align:left;overflow:hidden;font-family:"宋体",Geneva,Arial,sans-serif;}
+.c_soft .c1 li a {background:none;}
+.c_soft .c2 {float:left;width:35%;}
+.c_soft .c2 ul{width:100%;}
+.c_soft .c2 li {float:left; font-size:14px; height:23px; line-height:23px; text-align:left; width:30%; overflow:hidden;padding-left:18%;}
+.c_soft .c3 {clear:both;height:48px;overflow:hidden;padding-left:5px;}
+.c_soft .c3 li {float:left;font-size:12px; height:24px; line-height:24px; text-align:left; width:14.25%; }

@@ -1,0 +1,401 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+ td,body {  font-size:15px; font-family:arial,sans-serif,宋体;}body{margin-top:0px; margin-left:0px; margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;} 
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.bgg{width:766px; background:#D9EDDA;border:1px solid #8AB78A}
+.bgg table{ margin:5px 5px 5px 5px}
+.zb table{ margin:0px 5px 0px 5px}
+.zbfont{color:#2E6D4A; text-align:center}
+.zbfont a:link,.zbfont a:visited{color:#2E6D4A}
+.zbfont a:hover{color:red}
+.f9pt{font-size: 12px;}
+.f14{font-size: 15px;}
+#sfont a,#sfont b{font-size:13px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg2{width:776px; background:#D9EDDA;border:1px solid #8AB78A}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+--> </style>
+<base target="_blank">
+<title>OpenHao123网址之家－－地方服务-黑龙江</title>
+</head>
+<body>
+<script src="../js/base.js"></script>
+<script src="../js/userdata.js"></script>
+<script src="../js/record.js"></script>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="OpenHao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="778" height="51">
+    <tr>
+      <td width="230" height="51"><a href="/" target="_self" class="m"><img src="../images/logo.gif" alt="设为主页"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18> </td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()" onMouseDown="ClickMonkey.log('haoweb');" >网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()" onMouseDown="ClickMonkey.log('haomp3');" >MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()" onMouseDown="ClickMonkey.log('haoimg');" >图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()" onMouseDown="ClickMonkey.log('haopost');" >贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" onMouseDown="ClickMonkey.log('haozhidao');" >知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()" onMouseDown="ClickMonkey.log('haonews');" >新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()" onMouseDown="ClickMonkey.log('haovideo');">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action=http://www.baidu.com/s name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=OpenHao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=778 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=778 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.OpenHao123.cc" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.OpenHao123.cc/');return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="../images/home.gif" width="15" height="15" border="0" align="absmiddle"> 设为主页</a>　　<a href="/inc"><img src="../images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="/" target=_self style="color:#424242 ">首页</a> >  <a href="http://www.OpenHao123.cc/daquan/defangsite.htm" style="color:#424242 ">地方服务</a> > 黑龙江</td></tr></table>
+</center></div>
+<div align="center" onMouseDown="bdRecord.scope(event)"><center>
+<div class="bgg" >
+<table width="100%"  border="0" cellspacing="1" cellpadding="5">
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<tr bgcolor="E5F2E5">
+                <td rowspan="2" bgcolor="E5F2E5" class="zbfont">新闻</td>
+                <td><A href="http://www.hlj.net/">黑龙江信息港</A></td>
+                <td><a href="http://www.dbw.cn/">东北网</a></td>
+                <td><a href="http://www.hljtv.com/">黑龙江电视台</a></td>
+                <td><a href="http://www.hrbtv.net/">哈尔滨电视台</a></td>
+        </tr>
+              <tr bgcolor="E5F2E5">
+                <td><a href="http://www.hljradio.com/">龙广在线</a></td>
+                <td></td>
+                <td></td>
+                <td align="right"></td>
+              </tr>  		
+              <tr bgcolor="#EFF7F0">
+                <td rowspan="2" bgcolor="#EFF7F0"  class="zbfont">各地</td>
+                <td ><a href="http://www.shzhidao.cn/">生活知道网</a></td>
+                <td><a href="http://www.96963.com/">哈尔滨信息港</a></td>
+                <td><a href="http://sh.hlj.net/">绥化信息港</a></td>
+                <td ><a href="http://www.bingchengwang.com/">冰城网</a></td>
+              </tr>
+              <tr bgcolor="#EFF7F0">
+                <td ><a href="http://www.dqdaily.com/">大庆网</a></td>
+                <td ><a href="http://www.dqt.com.cn">大庆油田信息港</a></td>
+                <td ><a href="http://yc.hlj.net/">伊春信息港</a></td>
+                <td ><a href="http://www.0454e.com/">佳木斯信息网</a></td>
+              </tr>  		
+ 
+		
+              <tr bgcolor="E5F2E5">
+                <td rowspan="1"  class="zbfont">论坛</td>
+                <td><a href="http://www.0452e.com/">齐齐哈尔网民论坛</a></td>
+                <td><a href="http://tieba.baidu.com/f?kw=东北">东北贴吧</a></td>
+                <td><a href="http://tieba.baidu.com/f?kw=哈尔滨">哈尔滨贴吧</a></td>
+                <td>&nbsp;</td>
+              </tr>
+     		
+		
+		
+              <tr bgcolor="EFF7F0">
+                <td width="12%" bgcolor="EFF7F0" class="zbfont">彩票</td>
+                <td width="22%" bgcolor="EFF7F0"><a href="http://www.lottost.cn/">龙江风采</a></td>
+                <td width="22%" bgcolor="EFF7F0"><a href="http://www.hljtcp.com/">黑龙江体彩网</a></td>
+                <td width="22%" bgcolor="EFF7F0">&nbsp;</td>
+                <td width="22%" bgcolor="EFF7F0">&nbsp;</td>
+              </tr>
+              <tr bgcolor="E5F2E5">
+                <td rowspan="2" class="zbfont">交通</td>
+                <td><a href="http://www.hljjt.gov.cn/">黑龙江交通</a></td>
+                <td><a href="http://map.baidu.com/?newmap=1&l=12&t=B_NORMAL_MAP&c=14099625.96,5713172.75&s=cur%26curtp%3D2%26wd%3D%25E5%2593%2588%25E5%25B0%2594%25E6%25BB%25A8
+">百度地图哈尔滨</a></td>
+                <td><a href="http://www.OpenHao123.cc/ss/lccx.htm">列车时刻</a></td>
+                <td><a href="http://www.jsy998.com/">驾驶员之家</a></td>
+              </tr>   
+              <tr bgcolor="E5F2E5">
+                <td><a href="http://www.hljjj.gov.cn/">龙江交警网</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr> 
+             
+              <tr bgcolor="#EFF7F0">
+                <td rowspan="1" class="zbfont">通信</td>
+                <td><a href="http://www.hl.10086.cn/">黑龙江移动</a></td>
+                <td><a href="http://info2.10010.com/lt/plugin/portal/arealevel/queryCityInfo.do?arno=00010013&id=3798">黑龙江联通</a></td>
+                <td><a href="http://hl.ct10000.com/">黑龙江电信</a></td>
+				<td>&nbsp;</td>
+              </tr>
+
+              <tr bgcolor="E5F2E5">
+                <td rowspan="1" bgcolor="E5F2E5" class="zbfont">人才</td>
+                <td><a href="http://www.hrbrc.com/">哈尔滨人才网</a></td>
+                <td><a href="http://www.hl.lss.gov.cn/">黑龙江人力资源社会保障厅</a></td>
+                <td></td>
+                <td align="right"><a href=http://www.OpenHao123.cc/rencai/hljrc.htm style="padding-right:10px ">更多&nbsp;&raquo;</a></td>
+              </tr>
+                 
+              <tr bgcolor="#EFF7F0">
+                <td rowspan="1" bgcolor="#EFF7F0" class="zbfont">房产</td>
+                <td><a href="http://fc.mdj.cn/">牡丹江房产网</a></td>
+                <td></td>
+                <td></td>
+				 <td align="right"><a href=http://www.OpenHao123.cc/fangchan/hljfc.htm style="padding-right:10px ">更多&nbsp;&raquo;</a></td>
+              </tr>
+
+    
+              <tr bgcolor="#E5F2E5">
+                <td rowspan="2" bgcolor="#E5F2E5"  class="zbfont">教育</td>
+                <td><a href="http://www.hlju.edu.cn/">黑龙江大学</a></td>
+                <td><a href="http://www.lzk.hl.cn/lzk/">黑龙江招生考试信息港</a></td>
+                <td><a href="http://www.nefu.edu.cn/">东北林业大学</a></td>
+                <td><a href="http://www.hit.edu.cn/">哈尔滨工业大学</a></td>
+              </tr>
+              <tr bgcolor="#E5F2E5">
+                <td ><a href="http://www.hrbeu.edu.cn/">哈尔滨工程大学</a></td>
+                <td ><a href="http://www.rsks.gov.cn/">黑龙江人事考试网</a></td>
+                <td ><a href="http://xxt.hl.chinamobile.com/">黑龙江家长网校</a></td>
+                <td align="right"><a href=http://www.OpenHao123.cc/eduhtm/eduhab.htm style="padding-right:10px ">更多&nbsp;&raquo;</a></td>
+              </tr>               
+    
+              <tr bgcolor="#EFF7F0">
+                <td rowspan="4"  class="zbfont">政府</td>
+                <td><a href="http://www.hlj.gov.cn/">黑龙江省政府</a></td>
+                <td><a href="http://www.hljagri.gov.cn/">黑龙江农业信息网</a></td>
+                <td><a href="http://www.harbin.gov.cn/">哈尔滨</a></td>
+                <td><a href="http://www.qqhr.gov.cn/">齐齐哈尔</a></td>
+              </tr>
+              <tr bgcolor="#EFF7F0">
+                <td><a href="http://www.daqing.gov.cn/">大庆</a></td>
+                <td><a href="http://www.jixi.gov.cn/">鸡西</a></td>
+                <td><a href="http://www.heihe.gov.cn/">黑河</a></td>
+                <td><a href="http://www.shuangyashan.gov.cn/">双鸭山</a></td>
+              </tr>
+              <tr bgcolor="#EFF7F0">
+                <td><a href="http://www.qth.gov.cn/">七台河</a></td>
+                <td><a href="http://www.hegang.gov.cn/">鹤岗</a></td>
+                <td><a href="http://www.jms.gov.cn/">佳木斯</a></td>
+                <td><a href="http://www.hljjs.gov.cn/">黑龙江建设网</a></td>
+              </tr>
+              <tr bgcolor="#EFF7F0">
+                <td><a href="http://www.hljaic.gov.cn/">黑龙江红盾信息网</a></td>
+                <td><a href="http://www.hrbgs.gov.cn/">哈尔滨市工商局</a></td>
+                <td></td>
+                <td></td>
+              </tr>
+
+			  <tr bgcolor="E5F2E5">
+                <td rowspan="1"  class="zbfont">其他</td>
+                <td><a href="http://www.nsns.cn/">男生女生杂志</a></td>
+                <td><a href="http://www.2sche.cn/">龙江二手车</a></td>
+                <td><a href="http://www.hljbb.com/bbs/">冰城宝宝论坛</a></td>
+                <td ></td>
+			  </tr>
+</table>
+</div>
+</center></div>
+<br>
+<DIV align=center><br><a href="http://www.OpenHao123.cc/" target="_self"><img src="../images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="OpenHao123-navhtm-navhlj";</script><script src="../js/monitor.js"></script>
+<span style="display:none"><script src="/js/tj.js"></script></span></body>
+</html>

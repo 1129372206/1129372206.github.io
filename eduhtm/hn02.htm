@@ -1,0 +1,458 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+ td,body {  font-size: 15px; font-family:arial,sans-serif,宋体;}body{margin-top:0px;margin-left:0px;margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;}
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg{border-color:#8AB78A; width:776px}
+.f9pt{font-size: 12px;}
+#sfont a,#sfont b{font-size:13px;}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+.highlight_3 {color:#666666;padding-left:9px;}
+--> </style>
+<base target="_blank">
+<title>OpenHao123网址之家－－各地大学-河南高职院校</title>
+</head>
+<body>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="OpenHao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="778" height="51">
+    <tr>
+      <td width="230" height="51"><a href="/" target="_self" class="m"><img src="../images/logo.gif" alt="设为主页"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18> </td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()" onMouseDown="ClickMonkey.log('haoweb');" >网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()" onMouseDown="ClickMonkey.log('haomp3');" >MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()" onMouseDown="ClickMonkey.log('haoimg');" >图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()" onMouseDown="ClickMonkey.log('haopost');" >贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" onMouseDown="ClickMonkey.log('haozhidao');" >知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()" onMouseDown="ClickMonkey.log('haonews');" >新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()" onMouseDown="ClickMonkey.log('haovideo');">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action=http://www.baidu.com/s name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=OpenHao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=778 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=778 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.OpenHao123.cc" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.OpenHao123.cc/');return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="../images/home.gif" width="15" height="15" border="0" align="absmiddle"> 设为主页</a>　　<a href="/inc"><img src="../images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="/" target=_self style="color:#424242 ">首页</a> > <a href="http://www.OpenHao123.cc/edu.htm" style="color:#424242 ">各地大学</a> > 河南高职院校</td></tr></table>
+</center></div>
+<div align="center"><center>
+<div class="t1 bgg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">河南 高职院校 (62所)</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="0" cellpadding="7">
+		<tr bgcolor="#EFF7F0">
+            <td align="right" bgcolor="#EFF7F0" class="f9pt" style="color:#666666; padding:0 30px 0 0;">信息来源于<a href="http://gaokao.chsi.com.cn/z/2010gxmd/">阳光高考</a></td>
+          </tr>
+						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.tdjg.com.cn/">铁道警官高等专科学校</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.lhmc.edu.cn/">漯河医学高等专科学校</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.hneeu.edu.cn/">河南机电高等专科学校</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.zepc.edu.cn/">郑州电力高等专科学校</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.xyac.edu.cn/">信阳农业高等专科学校</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.zzcah.edu.cn/mainweb/">郑州牧业工程高等专科学校</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.shuqing.org/">郑州澍青医学高等专科学校</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.nymc.cn/">南阳医学高等专科学校</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.sqyx.edu.cn/">商丘医学高等专科学校</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.jzsz.cn/">焦作师范高等专科学校</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td  class="highlight_3"  ><p> 　　 河南财政税务高等专科学校</p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td  class="highlight_3"  ><p> 　　 河南商业高等专科学校</p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.jzu.edu.cn/">焦作大学</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.lhvtc.edu.cn/">漯河职业技术学院</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.yrcti.edu.cn/">黄河水利职业技术学院</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.zzrvtc.com/">郑州铁路职业技术学院</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.kfu.edu.cn/">开封大学</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.zhzhu.edu.cn/">中州大学</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.smxpt.cn/smxptsite/index.asp">三门峡职业技术学院</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.hnzj.ha.cn/">河南职业技术学院</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.hbzy.edu.cn/">鹤壁职业技术学院</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.zzyedu.cn/">郑州职业技术学院</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.shaolinkungfu.edu.cn/">嵩山少林武术职业学院</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://baike.baidu.com/view/583759.htm">郑州工业安全职业学院</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.zjtu.edu.cn/">郑州交通职业学院</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.sstvc.com/">商丘科技职业学院</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://tech.open.ha.cn/">郑州信息科技职业学院</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.xxvtc.com/">新乡职业技术学院</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.lsgx.com.cn/">漯河食品职业学院</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.pzxy.edu.cn/">平顶山工业职业技术学院</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.brenda.edu.cn/">郑州布瑞达理工职业学院</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.hnjmxy.cn/">河南经贸职业学院</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td  class="highlight_3"  ><p> 　　 河南农业职业学院</p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.jyvtc.com/">济源职业技术学院</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.hnjs.com.cn/">河南建筑职业技术学院</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.zkkjxy.edu.cn/">周口科技职业学院</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.zlxy.cn/">河南质量工程职业学院</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.zmdvtc.cn/">驻马店职业技术学院</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://baike.baidu.com/view/444409.htm">河南检察职业学院</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.xyvtc.cn/">信阳职业技术学院</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.zzjm.edu.cn/">郑州经贸职业学院</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.hnpi.cn:8084/">河南工业职业技术学院</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://jsxy.anyangedu.com/">安阳职业技术学院</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.zzdl.com/">郑州电力职业技术学院</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td  class="highlight_3"  ><p> 　　 郑州旅游职业学院</p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.hngm.cn/">河南工业贸易职业学院</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.hncc.net/">河南交通职业技术学院</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.sqzy.com.cn/">商丘职业技术学院</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.xcitc.edu.cn/">许昌职业技术学院</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://218.28.84.54/web/">濮阳职业技术学院</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.zyfb.com/">郑州电子信息职业技术学院</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.zkvtc.edu.cn/">周口职业技术学院</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.yczyxy.com/">永城职业学院</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td  class="highlight_3"  ><p> 　　 河南司法警官职业学院</p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.jzgmxy.com/">焦作工贸职业学院</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td  class="highlight_3"  ><p> 　　 许昌陶瓷职业学院</p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td  class="highlight_3"  ><p> 　　 郑州理工职业学院</p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.dfxx.com.cn/">郑州信息工程职业学院</a></p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td  class="highlight_3"  ><p> 　　 长垣烹饪职业技术学院</p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td  class="highlight_3"  ><p> 　　 开封文化艺术职业学院</p></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.haict.edu.cn/">河南化工职业学院</a></p></td>
+		
+								<tr bgcolor="#EFF7F0">				
+		<td    ><p> 　　 <a href="http://www.hnarti.com/">河南艺术职业学院</a></p></td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+</table>
+</div>
+</center></div>
+<DIV align=center><br><a href="http://www.OpenHao123.cc/" target="_self"><img src="../images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="OpenHao123-eduhtm-henan";</script><script src="../js/monitor.js"></script>
+<span style="display:none"><script src="/js/tj.js"></script></span></body>
+</html>

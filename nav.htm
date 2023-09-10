@@ -1,0 +1,377 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+ td,body {  font-size: 15px; font-family:arial,sans-serif,宋体;}body{margin-top:0px;margin-left:0px;margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;}
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg{border-color:#8AB78A; width:779px}
+.f9pt{font-size: 12px;}
+#sfont a,#sfont b{font-size:13px;}
+.highlight_1 a:link,.highlight_1 a:visited{color:red}
+.wr{text-align:right}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+--> </style>
+<base target="_blank">
+<title>OpenHao123网址之家－－地方服务</title>
+</head>
+<body>
+<script src="js/base.js"></script>
+<script src="js/userdata.js"></script>
+<script src="js/record.js"></script>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="OpenHao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="778" height="51">
+    <tr>
+      <td width="230" height="51"><a href="/" target="_self" class="m"><img src="images/logo.gif" alt="把OpenHao123设为主页"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18>&nbsp;</td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()" onMouseDown="ClickMonkey.log('haoweb');" >网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()" onMouseDown="ClickMonkey.log('haomp3');" >MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()" onMouseDown="ClickMonkey.log('haoimg');" >图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()" onMouseDown="ClickMonkey.log('haopost');" >贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" onMouseDown="ClickMonkey.log('haozhidao');" >知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()" onMouseDown="ClickMonkey.log('haonews');" >新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()" onMouseDown="ClickMonkey.log('haovideo');">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action=http://www.baidu.com/s name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=OpenHao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>&nbsp;
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=778 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=778 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.OpenHao123.cc" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.OpenHao123.cc/');return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="images/home.gif" width="15" height="15" border="0" align="absmiddle"> 把OpenHao123设为主页</a>　　<a href="inc/"><img src="images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="/" target=_self style="color:#424242 ">首页</a> > 地方服务</td></tr></table>
+</center></div>
+<div align="center" onMouseDown="bdRecord.scope(event)"><center>
+<div class="t1 bgg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<tr bgcolor="C5D5C5">
+        <td bgcolor="#D9EDDA" class="f9pt" height="20"><p align="center"><font color="#346F0E">各地地方服务</font></td>
+      </tr>
+<tr bgcolor="C5D5C5">
+<td width="100%" colspan="4" align="center" bgcolor="#EFF7F0"><img src="images/rencai_map.gif" border="0" usemap="#Map"><map name="Map">
+<area shape="rect" coords="351,186,379,199" href="navhtm/navsd.htm" alt="山东"></area>
+<area shape="rect" coords="73,119,146,165" href="navhtm/navxj.htm" alt="新疆"></area>
+<area shape="rect" coords="240,179,272,199" href="navhtm/navnx.htm" alt="宁夏"></area>
+<area shape="rect" coords="161,188,204,221" href="navhtm/navqh.htm" alt="青海"></area>
+<area shape="rect" coords="167,149,198,168" href="navhtm/navgs.htm" alt="甘肃"></area>
+<area shape="rect" coords="95,237,128,256" href="navhtm/navxz.htm" alt="西藏"></area>
+<area shape="rect" coords="211,317,240,340" href="navhtm/navyn.htm" alt="云南"></area>
+<area shape="rect" coords="265,294,291,313" href="navhtm/navgz.htm" alt="贵州"></area>
+<area shape="rect" coords="278,373,309,395" href="navhtm/navhain.htm" alt="海南"></area>
+<area shape="rect" coords="280,323,313,346" href="navhtm/navgx.htm" alt="广西"></area>
+<area shape="rect" coords="345,270,373,284" href="navhtm/navjx.htm" alt="江西"></area>
+<area shape="rect" coords="265,138,312,160" href="navhtm/navnmg.htm" alt="内蒙古"></area>
+<area shape="rect" coords="326,164,357,180" href="navhtm/navhb.htm" alt="河北"></area>
+<area shape="rect" coords="316,215,342,230" href="navhtm/navhn.htm" alt="河南"></area>
+<area shape="rect" coords="368,292,399,308" href="navhtm/navfj.htm" alt="福建"></area>
+<area shape="rect" coords="405,93,437,111" href="navhtm/navjl.htm" alt="吉林"></area>
+<area shape="rect" coords="301,181,330,199" href="navhtm/navsx.htm" alt="山西"></area>
+<area shape="rect" coords="354,233,385,249" href="navhtm/navah.htm" alt="安徽"></area>
+<area shape="poly" coords="319,371,318,359,325,353,341,354,355,361,361,346,375,340,386,342,388,329,395,318,413,318,417,323,415,331,398,341,388,352,347,371" href="navhtm/navgat.htm" alt="港澳台"></area>
+<area shape="rect" coords="319,371,318,359,325,353,341,354,355,361,361,346,375,340,386,342,388,329,395,318,413,318,417,323,415,331,398,341,388,352,347,371" href="navhtm/navgat.htm" alt="港澳台"></area>
+<area shape="rect" coords="303,276,337,299" href="navhtm/navhun.htm" alt="湖南"></area>
+<area shape="rect" coords="400,54,453,79" href="navhtm/navhlj.htm" alt="黑龙江"></area>
+<area shape="rect" coords="385,121,415,138" href="navhtm/navln.htm" alt="辽宁"></area>
+<area shape="rect" coords="254,264,283,283" href="navhtm/navcq.htm" alt="重庆"></area>
+<area shape="rect" coords="211,249,249,272" href="navhtm/navsc.htm" alt="四川"></area>
+<area shape="rect" coords="274,215,303,233" href="navhtm/navshanx.htm" alt="陕西"></area>
+<area shape="rect" coords="330,320,362,338" href="navhtm/navgd.htm" alt="广东"></area>
+<area shape="rect" coords="309,243,340,263" href="navhtm/navhub.htm" alt="湖北"></area>
+<area shape="rect" coords="385,257,416,275" href="navhtm/navzj.htm" alt="浙江"></area>
+<area shape="rect" coords="379,206,408,224" href="navhtm/navjs.htm" alt="江苏"></area>
+<area shape="rect" coords="414,237,440,251" href="navhtm/navsh.htm" alt="上海"></area>
+<area shape="rect" coords="362,156,393,170" href="navhtm/navtj.htm" alt="天津"></area>
+<area shape="rect" coords="344,137,373,152" href="navhtm/navbj.htm" alt="北京"></area>
+</map>
+</td>
+</tr><tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">综合地方网站</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="5">
+						<tr bgcolor="#EFF7F0">					<td  width="25%"><a href="http://www.beijing.gov.cn/">首都之窗</a></td>
+		
+											<td  width="25%"><a href="http://www.enorth.com.cn/">天津北方网</a></td>
+		
+											<td  width="25%"><a href="http://www.online.sh.cn/">上海热线</a></td>
+		
+											<td  width="25%"><a href="http://www.online.cq.cn/">重庆热线</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="25%"><a href="http://www.inhe.net/">河北银河网</a></td>
+		
+											<td  width="25%"><a href="http://www.daynews.com.cn/">山西新闻网</a></td>
+		
+											<td  width="25%"><a href="http://www.nx.cninfo.net/">宁夏信息港</a></td>
+		
+											<td  width="25%"><a href="http://www.nen.com.cn/">东北新闻网</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="25%"><a href="http://www.xaonline.com/">陕西古城热线</a></td>
+		
+											<td  width="25%"><a href="http://www.hlj.net/">黑龙江信息港</a></td>
+		
+											<td  width="25%"><a href="http://www.jschina.com.cn/">中国江苏网</a></td>
+		
+											<td  width="25%"><a href="http://www.zjol.com.cn/">浙江在线</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="25%"><a href="http://www.anhuinews.com/">安徽中安在线</a></td>
+		
+											<td  width="25%"><a href="http://www.fjsen.com/">福建东南新闻网</a></td>
+		
+											<td  width="25%"><a href="http://www.jxnews.com.cn/">江西大江网</a></td>
+		
+											<td  width="25%"><a href="http://www.sd.cninfo.net/">齐鲁热线</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="25%"><a href="http://www.shangdu.com/">河南商都网</a></td>
+		
+											<td  width="25%"><a href="http://www.rednet.cn/">湖南红网</a></td>
+		
+											<td  width="25%"><a href="http://www.gznet.com/">广州视窗</a></td>
+		
+											<td  width="25%"><a href="http://www.qhnews.com/">青海新闻网</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="25%"><a href="http://www.gxnews.com.cn/">广西新闻网</a></td>
+		
+											<td  width="25%"><a href="http://www.hainan.net/">海南在线</a></td>
+		
+											<td  width="25%"><a href="http://www.scol.com.cn/">四川在线</a></td>
+		
+											<td  width="25%"><a href="http://www.gz163.cn/">贵州信息港</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="25%"><a href="http://www.yninfo.com/">云南信息港</a></td>
+		
+											<td  width="25%"><a href="http://www.tibet.cn/">中国西藏网</a></td>
+		
+											<td  width="25%"><a href="http://www.gov.hk/">香港特别行政区政府</a></td>
+		
+											<td  width="25%"><a href="http://www.gov.mo/">澳门特别行政区政府</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="25%"><a href="http://www.58.com/">58同城</a></td>
+		
+											<td  width="25%"><a href="http://www.ganji.com/">赶集网</a></td>
+		
+											<td  width="25%">&nbsp;</td>
+		
+											<td  width="25%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+</table>
+</div>
+</center></div>
+<DIV align=center><br><a href="/" target="_self"><img src="images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="OpenHao123-nav";</script><script src="js/monitor.js"></script>
+<span style="display:none"><script src="js/tj.js"></script></span>
+</body>
+</html>

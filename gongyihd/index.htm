@@ -1,0 +1,537 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+ td,body {  font-size: 16px; font-family:arial,sans-serif,宋体;}body{margin-top:0px;margin-left:0px;margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;}
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg{border-color:#8AB78A; width:900px}
+.f9pt{font-size: 12px;}
+.font1{font-size:9pt; line-height:16pt}
+#sfont a,#sfont b{font-size:13px;}
+.highlight_1 a:link {color:#ff0000}
+.highlight_1 a:link,.highlight_1 a:visited{color:red}
+.f14pt{font-size: 14px;}
+a.highlight_2:link{ color:#2F3743; text-decoration:none;padding-left:4px;}
+a.highlight_2:visited{COLOR: #2F3743; TEXT-DECORATION: none;padding-left:4px;}
+a.highlight_2:active{color:green;text-decoration:none;padding-left:4px;}
+a.highlight_2:hover{color:red;text-decoration:underline;padding-left:4px;}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+--> </style>
+<base target="_blank">
+<title>OpenHao123网址之家－公益宣传</title>
+</head>
+<body>
+<script src="/js/base.js"></script>
+<script src="/js/userdata.js"></script>
+<script src="/js/record.js"></script>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="OpenHao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+			
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+			
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+			
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+			
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+			
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+			
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+			
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="900" height="51">
+    <tr>
+      <td width="290" height="51"><a href="http://www.OpenHao123.cc" target="_self" class="m"><img src="http://www.OpenHao123.cc/images/logo.gif" alt="设为主页"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18> </td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()">网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()">MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()">图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()">贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()">知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()">新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action=http://www.baidu.com/s name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=OpenHao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>  
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){	
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=900 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=900 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.OpenHao123.cc" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.OpenHao123.cc/');return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="http://www.OpenHao123.cc/images/home.gif" width="15" height="15" border="0" align="absmiddle"> 设为主页</a>　　<a href="/inc"><img src="http://www.OpenHao123.cc/images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px">
+<a href="/" target=_self style="color:#424242 ">首页</a> > 公益宣传</td>
+  </tr></table>
+</center></div>
+<div align="center" onMouseDown="bdRecord.scope(event)"><center>
+<div class="t1 bgg">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+  <tr bgcolor="#D9EDDA">
+
+    <td width="100%" height="20" align="middle" class="f9pt"><p align="center"><font color="#346F0E">公益志愿</font></a></td>
+  </tr>
+
+  <tr bgcolor="C5D5C5">
+    <td ><table width="100%"  border="0" cellspacing="1" cellpadding="7">
+      <tr bgcolor="#EFF7F0">
+        <td width="20%" ><a href="http://www.crcf.org.cn/">中国红十字基金会</a></td>
+        <td width="20%" ><a href="http://www.onefoundation.cn/">壹基金</a></td>
+        <td width="20%" ><a href="http://www.cydf.org.cn/">中国青少年发展基金会</a></td>
+        <td width="20%" ><a href="http://www.cwfh.org.cn/">中国残疾人福利基金会</a></td>
+		<td width="20%"><a href="http://www.chinacharity.cn/">中华慈善总会</a></td>       
+      </tr>
+      <tr bgcolor="#EFF7F0">
+        <td ><a href="http://www.sclf.org/">中国宋庆龄基金会</a></td>
+        <td ><a href="http://www.fupin.org.cn/">中国扶贫基金会</a></td>
+        <td ><a href="http://www.cedf.org.cn/">中国教育发展基金会</a></td>
+        <td  ><a href="http://www.cwdf.org.cn/">中国妇女发展基金会</a></td>
+        <td ><a href="http://www.owecn.com/">感恩中国</a></td>		
+      </tr>
+      <tr bgcolor="#EFF7F0">
+        <td ><a href="http://www.cepf.org.cn/">中华环保基金会</a></td>
+        <td ><a href="http://www.icrc.org/chi">国际红十字会</a></td>
+        <td ><a href="http://www.unicef.org/chinese/">联合国儿童基金会</a></td>
+        <td  ><a href="http://www.wwfchina.org/">世界自然基金会</a></td>
+        <td ><a href="http://tieba.baidu.com/f?ct=536870912&sn=%BF%C6%BD%CC%C8%CB%CE%C4&bs=%B9%AB%D2%E6%BB%A5%D6%FA&rn=200&pn=0&cm=1101&tn=simpleCategory">公益互助目录</a></td>		
+      </tr>
+      <tr bgcolor="#EFF7F0">
+        <td ><a href="http://www.cctf.org.cn/">中国儿童少年基金会</a></td>
+        <td><a href="http://gongyi.qq.com/">腾讯公益</a></td>
+        <td ><a href="http://www.redcross.org.cn/">中国红十字会</a></td>
+        <td  ><a href="http://www.zgzyz.org.cn/">中国志愿者网</a></td>
+        <td ><a href="http://light.baidu.com/join.html">小桔灯助学捐书</a></td>		
+      </tr>
+
+      <tr bgcolor="#EFF7F0">
+        <td ><a href="http://gongyi.sohu.com/">搜狐公益</a></td>
+        <td ><a href="http://gongyi.ifeng.com/">凤凰网公益</a></td>
+        <td ><a href="http://gongyi.163.com/">网易公益</a></td>
+        <td><a href="http://gongyi.baidu.com/">百度公益</a></td>
+        <td ><a href="http://gongyi.sina.com.cn/">新浪公益</a></td>		
+      </tr>     
+      <tr bgcolor="#EFF7F0">
+        <td ><a href="http://www.baobeihuijia.com/">宝贝回家寻子网</a></td>
+        <td ></td>
+        <td ></td>
+        <td></td>
+        <td ></td>		
+      </tr>     
+
+
+  
+
+      </table></td>
+  </tr>
+  <tr bgcolor="#D9EDDA">
+
+    <td width="100%" height="20" align="middle" class="f9pt"><p align="center"><font color="#346F0E">环保</font></a></td>
+  </tr>
+
+  <tr bgcolor="C5D5C5">
+    <td ><table width="100%"  border="0" cellspacing="1" cellpadding="7">
+      <tr bgcolor="#EFF7F0">
+        <td width="20%" ><a href="http://www.wwfchina.org/">世界自然基金会</a></td>
+        <td width="20%" ><a href="http://www.cwca.org.cn/">中国野生动物保护协会</a></td>
+        <td width="20%" ><a href="http://www.12369.gov.cn/">中国环保热线</a></td>
+        <td width="20%" ></td>
+        <td width="20%" ></td>		
+      </tr>
+      </table></td>
+  </tr>
+</table>
+
+
+<table width="890" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" 
+
+height="2px">.............................................................................
+
+..........................................................................................
+
+.......................</td>
+  </tr>
+  <tr>
+    <td align="center"><table width="780" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td rowspan="2" align="center" valign="top"><table width="200" border="0" 
+
+cellspacing="0" cellpadding="0">
+            <tr>
+              <td bgcolor="#7BD676">&nbsp;</td>
+              <td width="17" rowspan="2"><img height=192 
+
+src="http://www.OpenHao123.cc/gongyihd/images/gy_r3_c2.jpg" 
+            width=9></td>
+            </tr>
+            <tr>
+              <td align="center"><a href="http://www.crcf.org.cn/" target="_blank"><IMG 
+
+src="http://www.OpenHao123.cc/gongyihd/images/hong.gif" 
+            width=146 height=149 border="0" alt="点击访问中国红十字基金会"></a></td>
+            </tr>
+        </table></td>
+        <td width="556" valign="top"><table width="556" border="0" cellspacing="0" 
+
+cellpadding="0">
+            <tr>
+              <td><img src="http://www.OpenHao123.cc/gongyihd/images/gy_crcf_01.gif" 
+
+width="556" height="62"  border="0"></td>
+            </tr>
+            <tr>
+              <td><img src="http://www.OpenHao123.cc/gongyihd/images/gy_crcf_02.gif" 
+
+width="556" height="38"  border="0"></td>
+            </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td background="http://www.OpenHao123.cc/gongyihd/images/gy_bg_0604.jpg"><TABLE height=113 cellSpacing=0 
+
+cellPadding=8 width=556 
+             border=0>
+            <TBODY>
+              <TR>
+                <TD width="529" height=3 colSpan=4><span class="font1">中国红十字基金会（简称中国红基会）是中国红十字会总会主管、经民政部登记注册的具有独立法人地位的全国性公募基金会，其宗旨是弘扬人道、博爱、奉献的红十字精神，致力于改善人的生存与发展境况，保护人的生命与健康，促进世界和平与社会进步。2008年，中国红基会被民政部授予“5A级基金会”。<A 
+
+href="http://www.crcf.org.cn/" 
+            target=_blank>了解更多》</A>
+</span></TD>
+              </TR>
+              <TR>
+                <TD colSpan=4 height=3></TD>
+              </TR>
+            </TBODY>
+        </TABLE></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td 
+
+align="center">...........................................................................
+
+..........................................................................................
+
+.........................</td>
+  </tr>
+  <tr>
+    <td align="center"><table width="780" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td rowspan="2" align="center"><table width="200" border="0" cellspacing="0" 
+
+cellpadding="0">
+      <tr>
+        <td bgcolor="#7BD676">&nbsp;</td>
+        <td width="17" rowspan="2"><A href="http://www.cydf.org.cn/" 
+            target=_blank><img height="192" 
+
+src="http://www.OpenHao123.cc/gongyihd/images/gy_r3_c2.jpg" 
+            width="9" / border="0"></A></td>
+      </tr>
+      <tr>
+        <td align="center"><a href="http://www.cydf.org.cn/" target="_blank"><img 
+
+src="http://www.OpenHao123.cc/gongyihd/images/qing.gif" 
+            width="181" height="115" border="0" alt="点击访问中国青少年发展基金会" 
+
+/></a></td>
+      </tr>
+    </table></td>
+    <td width="556" valign="top"><table width="556" border="0" cellspacing="0" 
+
+cellpadding="0">
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><img src="images/gy_r10_c4.jpg" width="556" 
+            height="67" border="0" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td valign="top" background="gongyihd/images/gy_bg_0604.jpg"><table cellspacing="0" 
+
+cellpadding="8" width="556" 
+             border="0">
+      <tbody>
+        <tr>
+          <td width="529" ><span class="font1">中国青基会的使命是：通过资助服务、利益表达和社会倡导，帮助青少年提高能力，改善青少年成长环境。中国青基会倡导“社会责任、创造进取、以人为本、追求卓越”的价值观。其发起实施的希望工程是我国社会参与最广泛、最富影响的民间公益事业。</span></td>
+        </tr>
+        <tr>
+          <td ><a href="http://www.cydf.org.cn/" 
+            target=_blank><img src="http://www.OpenHao123.cc/gongyihd/images/3.gif" 
+
+width="53" height="20" border="0"></a></td>
+        </tr>
+      </tbody>
+    </table></td>
+  </tr>
+</table>
+      </td>
+  </tr>
+  <tr>
+    <td 
+
+align="center">...........................................................................
+
+..........................................................................................
+
+.........................</td>
+  </tr>
+  <tr>
+    <td align="center"><table width="780" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td rowspan="2" align="center"><table width="200" border="0" cellspacing="0" 
+
+cellpadding="0">
+            <tr>
+              <td bgcolor="#7BD676">&nbsp;</td>
+              <td width="17" rowspan="2"><img height=192 
+
+src="http://www.OpenHao123.cc/gongyihd/images/gy_r3_c2.jpg" 
+            width=9></td>
+            </tr>
+            <tr>
+              <td align="center"><a href="http://www.sclf.org/" target="_blank"><IMG 
+
+src="http://www.OpenHao123.cc/gongyihd/images/song.gif" 
+            width=180 height=126 border="0" alt="点击访问中国宋庆龄基金会"></a></td>
+            </tr>
+        </table></td>
+        <td width="556" valign="top"><table width="556" border="0" cellspacing="0" 
+
+cellpadding="0">
+            <tr>
+              <td><A href="http://www.sclf.org/" 
+            target=_blank><IMG height=67 
+
+src="images/gy_r13_c4.jpg" width=556 
+            border=0></A></td>
+            </tr>
+
+        </table></td>
+      </tr>
+      <tr>
+        <td valign="top" background="gongyihd/images/gy_bg_0604.jpg"><TABLE height=113 
+
+cellSpacing=0 cellPadding=8 width=556 
+             border=0>
+            <TBODY>
+              <TR>
+                <TD width="529" height=3 colSpan=4><span class="font1">继承和发扬宋庆龄毕生致力的增进国际友好，维护世界和平；开展两岸交流，促进祖国统一；关注民族未来，培育少年儿童的未竟事业。</span></TD>
+              </TR>
+              <TR>
+                <TD colSpan=4 height=3>&nbsp;&nbsp;<a 
+            href="http://www.sclf.org/" target=_blank><img 
+
+src="http://www.OpenHao123.cc/gongyihd/images/3.gif" width="53" height="20" 
+
+border=0></a>&nbsp;&nbsp;</TD>
+              </TR>
+            </TBODY>
+        </TABLE></td>
+      </tr>
+    </table></td>
+  </tr>
+    <tr>
+<TD bgColor=#f0f7ff height=10> </TD></tr>
+</table>
+</div>
+</center></div>
+<br>
+  <DIV align=center><br><a href="/" target="_self"><img src="http://www.OpenHao123.cc/images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="OpenHao123-gongyihd-index";</script><script src="http://www.OpenHao123.cc/js/monitor.js"></script>
+</body>
+</html>

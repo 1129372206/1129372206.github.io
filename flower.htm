@@ -1,0 +1,462 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+ td,body {  font-size: 16px; font-family:arial,sans-serif,宋体;}body{margin-top:0px;margin-left:0px;margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;}
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg{border-color:#8AB78A; width:900px}
+.f9pt{font-size: 12px;}
+#sfont a,#sfont b{font-size:13px;}
+.highlight_1 a:link,.highlight_1 a:visited{color:red}
+.wr{text-align:right}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+.vi_title {clear:both;margin:10px 20px 5px 0px;background:url(images/shenghuo_title_bg.gif) repeat-x 10px 6px;height:12px; width:97%}
+.vi_title li.left{float:left;padding-left:-20px;height:12px;font-weight:bold; color:#346F0E; font-size:12px}
+--> </style>
+<base target="_blank">
+<title>OpenHao123网址之家－－宠物</title>
+</head>
+<body>
+<script src="js/base.js"></script>
+<script src="js/userdata.js"></script>
+<script src="js/record.js"></script>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="OpenHao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="900" height="51">
+    <tr>
+      <td width="290" height="51"><a href="/" target="_self" class="m"><img src="images/logo.gif" alt="把OpenHao123设为主页"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18>&nbsp;</td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()" onMouseDown="ClickMonkey.log('haoweb');" >网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()" onMouseDown="ClickMonkey.log('haomp3');" >MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()" onMouseDown="ClickMonkey.log('haoimg');" >图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()" onMouseDown="ClickMonkey.log('haopost');" >贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" onMouseDown="ClickMonkey.log('haozhidao');" >知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()" onMouseDown="ClickMonkey.log('haonews');" >新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()" onMouseDown="ClickMonkey.log('haovideo');">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action=http://www.baidu.com/s name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=OpenHao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>&nbsp;
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=900 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=900 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.OpenHao123.cc" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.OpenHao123.cc/');return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="images/home.gif" width="15" height="15" border="0" align="absmiddle"> 把OpenHao123设为主页</a>　　<a href="inc/"><img src="images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="/" target=_self style="color:#424242 ">首页</a> > 宠物</td></tr></table>
+</center></div>
+<div align="center" onMouseDown="bdRecord.scope(event)"><center>
+<div class="t1 bgg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">宠物综合</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.chinapet.com/">宠物中国</a></td>
+		
+											<td  width="20%"><a href="http://www.chinapet.net/bbs/">CPN宠物论坛</a></td>
+		
+											<td  width="20%"><a href="http://list.image.baidu.com/t/image_category/image_animal.html">动物植物图片搜索</a></td>
+		
+											<td  width="20%"><a href="http://top.baidu.com/buzz/pet.html">百度宠物排行榜</a></td>
+		
+											<td  width="20%"><a href="http://zhidao.baidu.com/browse/151">宠物知识问答</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.mypethome.com/">宠物之家</a></td>
+		
+											<td  width="20%"><a href="http://pet.sina.com.cn/index.shtml">新浪宠物</a></td>
+		
+											<td  width="20%"><a href="http://pet.pclady.com.cn/">太平洋宠物</a></td>
+		
+											<td  width="20%"><a href="http://www.chinapet.net/vet/card.html">中国宠物医师</a></td>
+		
+											<td  width="20%"    ><a href="http://t.sina.com.cn/mengchongwu">萌宠集中营</a></td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">猫猫狗狗</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.goumin.com/">狗民网</a></td>
+		
+											<td  width="20%"><a href="http://www.aigou.com/">爱狗网</a></td>
+		
+											<td  width="20%"><a href="http://www.bandog.cn/">猛犬俱乐部</a></td>
+		
+											<td  width="20%"><a href="http://www.cndog.net/">宠物狗</a></td>
+		
+											<td  width="20%"><a href="http://www.aiao.cn/">藏獒在线</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.dog126.com/">淘狗网</a></td>
+		
+											<td  width="20%"><a href="http://tieba.baidu.com/f?kw=%B9%B7">百度狗吧</a></td>
+		
+											<td  width="20%"><a href="http://bbs.sgou.com/">sgou论坛</a></td>
+		
+											<td  width="20%"><a href="http://bbs.csvclub.org/">黑背论坛</a></td>
+		
+											<td  width="20%"><a href="http://www.hashiqi.com.cn/">哈士奇俱乐部</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.OpenHao123.cc/daquan/maogou.htm">猫狗百科</a></td>
+		
+											<td  width="20%"><a href="http://tieba.baidu.com/f?kw=%C3%A8">百度猫吧</a></td>
+		
+											<td  width="20%"><a href="http://bbs.movshow.com/">猫咪有约</a></td>
+		
+											<td  width="20%"> </td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">水族</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://bbs.cnfish.com/">观赏鱼之家</a></td>
+		
+											<td  width="20%"><a href="http://bbs.myluohan.com/">罗汉天下</a></td>
+		
+											<td  width="20%"><a href="http://www.lanshou.net/">中国兰寿网</a></td>
+		
+											<td  width="20%"><a href="http://www.arowanahome.com/index.asp">龙鱼之家</a></td>
+		
+											<td  width="20%"><a href="http://tieba.baidu.com/f?kw=%CE%DA%B9%EA">百度乌龟吧</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://tieba.baidu.com/f?kw=%BD%F0%D3%E3">百度金鱼吧</a></td>
+		
+											<td  width="20%"><a href="http://tieba.baidu.com/f?kw=%B9%DB%C9%CD%D3%E3">百度观赏鱼吧</a></td>
+		
+											<td  width="20%"><a href="http://bbs.myarowanas.com/">虎跃龙潭</a></td>
+		
+											<td  width="20%"><a href="http://bbs.koiclub.net/">中锦之家</a></td>
+		
+											<td  width="20%"><a href="http://www.zeixihuan.com/">罗汉鱼论坛</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.reptilesworld.net/bbs/">灵龟之家</a></td>
+		
+											<td  width="20%"><a href="http://www.cngui.com/">龟友之家</a></td>
+		
+											<td  width="20%"><a href="http://bbs.pxtx.com/">爬行天下</a></td>
+		
+											<td  width="20%"><a href="http://longyu.cc/">龙鱼之巅</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">花花草草</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://tieba.baidu.com/f?kw=%BB%A8">百度花吧</a></td>
+		
+											<td  width="20%"><a href="http://bbs.mychg.org/">藏花阁</a></td>
+		
+											<td  width="20%"><a href="http://www.hmlan.com/">兰花交易网</a></td>
+		
+											<td  width="20%"><a href="http://bbs.cnpenjing.com/">盆景艺术在线</a></td>
+		
+											<td  width="20%"><a href="http://tahua.net/bbs/">踏花行</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.guolan.com/">中国兰花网</a></td>
+		
+											<td  width="20%"><a href="http://www.543l.com/">543l</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">其他</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.crpa.net.cn/">中鸽网</a></td>
+		
+											<td  width="20%"><a href="http://www.chinaxinge.com/">中国信鸽信息网</a></td>
+		
+											<td  width="20%"><a href="http://www.zhxg.com/">中华信鸽网</a></td>
+		
+											<td  width="20%"><a href="http://www.rpw.com.cn/">赛鸽天地</a></td>
+		
+											<td  width="20%"><a href="http://bbs.pxtx.com/">爬行天下</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://gdgp.chinaxinge.com/">各地公棚信鸽网</a></td>
+		
+											<td  width="20%"><a href="http://bbs.18888.com/">青鸟论坛</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="C5D5C5">
+  <td bgcolor="#EFF7F0"  align="right"><div class=vi_title><li class=left>热门宠物贴吧</li></div>
+<table width="97%" border=0 align="right" cellpadding=0 cellspacing=5>
+            <tbody>
+              <tr>
+                <td width="16%"><a href="http://tieba.baidu.com/f?kw=%B2%D8%E9%E1">藏獒</a></td>
+                <td width="16%"><a href="http://tieba.baidu.com/f?kw=%BD%F0%C3%AB">金毛</a></td>                
+                <td width="16%"><a href="http://tieba.baidu.com/f?kw=%C8%F8%C4%A6%D2%AE">萨摩耶</a></td>
+                <td width="16%"><a href="http://tieba.baidu.com/f?kw=%B9%FE%CA%BF%C6%E6">哈士奇</a></td>
+                <td width="16%"><a href="http://tieba.baidu.com/f?kw=%B5%C2%B9%FA%C4%C1%D1%F2%C8%AE">德国牧羊犬</a></td>
+				<td><a href="http://tieba.baidu.com/f?kw=%C0%AD%B2%BC%C0%AD%B6%E0">拉布拉多</a></td>
+              </tr>
+              <tr>                
+				<td><a href="http://tieba.baidu.com/f?kw=%BC%AA%CD%DE%CD%DE">吉娃娃</a></td>
+				 <td><a href="http://tieba.baidu.com/f?kw=%B9%F3%B1%F6%C8%AE">贵宾犬</a></td>
+				 <td><a href="http://tieba.baidu.com/f?kw=%CD%C3%D7%D3">兔子</a></td>
+				 <td><a href="http://tieba.baidu.com/f?kw=%C1%FA%C3%A8">龙猫</a></td>
+                <td><a href="http://tieba.baidu.com/f?kw=%BA%C9%C0%BC%D6%ED">荷兰猪</a></td>
+                <td><a href="http://tieba.baidu.com/f?kw=%F0%D0%F0%C4%D3%E3">鹦鹉鱼</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://tieba.baidu.com/f?kw=%C1%FA%D3%E3">龙鱼</a></td>
+                <td><a href="http://tieba.baidu.com/f?kw=%B2%D6%CA%F3">仓鼠</a></td>
+                <td><a href="http://tieba.baidu.com/f?kw=%C4%F1">鸟</a></td>
+                <td><a href="http://tieba.baidu.com/f?kw=%F0%D0%F0%C4">鹦鹉</a></td>
+                <td><a href="http://tieba.baidu.com/f?ct=536870912&sn=%CA%B1%C9%D0%D0%DD%CF%D0&bs=%B3%E8%CE%EF&rn=200&pn=0&cm=1101&tn=simpleCategory">宠物贴吧目录</a></td>
+                <td>&nbsp;</td>
+              </tr>
+            </tbody>
+        </table></td>
+</tr>
+</table>
+</div>
+</center></div>
+<DIV align=center><br><a href="/" target="_self"><img src="images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="OpenHao123-flower";</script><script src="js/monitor.js"></script>
+<span style="display:none"><script src="js/tj.js"></script></span>
+</body>
+</html>

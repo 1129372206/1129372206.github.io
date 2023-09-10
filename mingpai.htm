@@ -1,0 +1,546 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+td,body {  font-size:  15px;font-family:arial,sans-serif,宋体;}body{
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	background-color: #fcfff7;
+} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;} .style2 {color: #000000}.bgg{background-color:#80B080; width:778px;}
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg{border-color:#8AB78A; width:776px;}
+.f9pt {font-size: 12px;}
+#sfont a,#sfont b{font-size:13px;}
+.vi_title {clear:both;margin:10px 20px 5px 0px;background:url(images/shenghuo_title_bg.gif) repeat-x 10px 6px;height:12px; width:97%}
+.vi_title li.left{float:left;padding-left:-20px;height:12px;font-weight:bold; color:#346F0E}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+--> </style>
+<base target="_blank">
+<title>hao123网址之家－－生活品牌</title>
+</head>
+<body>
+<script src="js/base.js"></script>
+<script src="js/userdata.js"></script>
+<script src="js/record.js"></script>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="hao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="778" height="51">
+    <tr>
+      <td width="230" height="51"><a href="/" target="_self" class="m"><img src="images/logo.gif" alt="把hao123设为主页"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18> </td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()">网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()">MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()">图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()">贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()">知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()">新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action=http://www.baidu.com/s name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=hao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>  
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=778 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=778 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.hao123.cc" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.hao123.cc/');return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="images/home.gif" width="15" height="15" border="0" align="absmiddle"> 把hao123设为主页</a>　　<a href="inc/"><img src="images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="/" target=_self style="color:#424242 ">首页</a> > 生活品牌</td></tr></table>
+</center></div>
+<div align="center"><center>
+<div class="t1 bgg">
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<table width="778" border="0" cellpadding="0" cellspacing="0">  
+  <tr bgcolor="C5D5C5" >
+    <td bgcolor="C5D5C5"  ><table width="100%"  border="0" cellspacing="1" cellpadding="5">
+      <tr bgcolor="#EFF7F0" >
+        <td width="25%"  ><a href="http://www.ganji.com/">赶集网</a></td>
+        <td width="25%"  ><a href="http://www.58.com/">58同城</a></td>
+        <td width="25%"  ><a href="http://www.baixing.com/">百姓网</a></td>
+        <td width="25%"  ><a href="http://www.dianping.com/">大众点评网</a></td>
+      </tr>
+      <tr bgcolor="#EFF7F0" >
+        <td  ><a href="http://www.ctrip.com/">携程旅行</a></td>
+        <td  ><a href="http://flight.mangocity.com/">芒果网</a></td>
+        <td  ><a href="http://www.qunar.com">住哪儿</a></td>
+        <td  ><a href="http://www.koubei.com/">口碑网</a></td>
+      </tr>
+      <tr bgcolor="#EFF7F0" >
+        <td  ><a href="http://tuan.fantong.com/">饭统网</a></td>
+        <td  ><a href="http://www.taobao.com/">淘宝网</a></td>
+        <td  ><a href="http://www.19lou.com/">19楼</a></td>
+        <td  ><a href="http://www.liebiao.com/">列表网</a></td>
+      </tr>
+      <tr bgcolor="#EFF7F0" >
+        <td  ><a href="http://www.aibang.com/">爱帮网</a></td>
+        <td  ><a href="http://www.anjuke.com/">安居客</a></td>
+        <td  ><a href="http://www.leleq.com/">品牌之家</a></td>
+        <td  ><a href="http://www.zhantai.com/">站台</a></td>
+      </tr>
+      <tr bgcolor="#EFF7F0" >
+        <td  ><a href="http://www.100ye.com/">百业网</a></td>
+        <td  ></td>
+        <td  ></td>
+        <td  ></td>
+      </tr>
+
+
+    </table></td>
+    </tr>
+  <tr bgcolor="C5D5C5" >
+    <td align="right" bgcolor="#EFF7F0"  ><div class=vi_title><li class=left>服装饰品</li></div>
+<table width="97%" border=0 align="right" cellpadding=0 cellspacing=5>
+            <tbody>
+              <tr>
+                <td width="16%"><a href="http://jdi.nike.com.cn/">耐克</a></td>
+                <td width="16%"><a href="http://www.e-lining.com/">李宁</a></td>
+                <td width="16%"><a href="http://shop.bosideng.com/">波司登</a></td>
+                <td width="16%"><a href="http://www.pirateship.com.cn/">海盗船</a> </td>
+                <td width="16%"><a href="http://goelia.taobao.com/">歌莉娅</a></td>
+                <td><a href="http://www.tsljewellery.com/">谢瑞麟</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.adidas.com.cn/">阿迪达斯</a></td>
+                <td><a href="http://www.converse.com.cn/">匡威</a></td>
+                <td><a href="http://www.jeanswest.com/">真维斯</a></td>
+                <td><a href="http://www.17ugo.com/">优购网</a></td>
+                <td><a href="http://www.mogless.com/">麦格劳斯</a></td>
+                <td><a href="http://www.baleno.com.hk/">班尼路</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.heilanhome.com/">海澜之家</a></td>
+                <td><a href="http://www.mizuno.com.cn/">美津浓</a></td>
+                <td><a href="http://www.goldlion-china.com/">金利来</a></td>
+                <td><a href="http://www.phland.com.cn/">丽婴房</a></td>
+                <td><a href="http://www.levi.com.cn/">Levi's</a></td>
+                <td><a href="http://www.thenorthface.com.cn/">The North Face</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.puma.com.cn/">彪马-Puma</a></td>
+                <td><a href="http://www.anta.com/">安踏</a></td>
+                <td><A href="http://www.belle.com.cn/">百丽</A></td>
+                <td><a href="http://www.citizen.com.cn/">西铁城</a></td>
+                <td><a href="http://www.banggo.com/">美特斯邦威</a></td>
+                <td><a href="http://www.coach.com/">coach</a></td>
+              </tr>
+			                <tr>
+			                  <td><a href="http://www.e-giordano.com/">佐丹奴</a></td>
+                              <td><a href="http://cn.361sport.com/">361°</a></td>
+                              <td><a href="http://www.cmcshow.com/">cmc十字绣</a></td>
+                              <td><a href="http://www.hermes.com/">爱马仕</a></td>
+                              <td><a href="http://www.septwolves.com/">七匹狼</a></td>
+                              <td><a href="http://www.markfairwhale.com/201108/index.html">马克华菲</a></td>
+              </tr>
+			                <tr>
+			                  <td><a href="http://www.lee.com.cn/">Lee</a></td>
+			                  <td><a href="http://www.kappa.com.cn/">背靠背-Kappa</a></td>
+			                  <td><a href="http://www.ctf.com.cn/">周大福</a></td>
+			                  <td><a href="http://www.eyishion.com ">以纯</a></td>
+			                  <td><a href="http://www.idaphne.com/">达芙妮</a></td>
+			                  <td><a href="http://www.xtep.com.cn/">特步</a></td>
+              </tr>
+			                <tr>
+			                  <td><a href="http://www.only.com/">ONLY</a></td>
+			                  <td><a href="http://www.aimer.com.cn/">爱慕</a></td>
+			                  <td><a href="http://www.balenciaga.com/">巴黎世家</a></td>
+			                  <td><a href="http://www.semir.com/">森马</a></td>
+			                  <td><a href="http://www.casio.com.cn/">卡西欧</a></td>
+              </tr>
+			                <tr>
+			                  <td><a href="http://www.jackjones.com/">杰克琼斯</a></td>
+			                  <td><a href="http://www.qsyr.com/">秋水伊人</a></td>
+			                  <td><a href="http://www.bjcaibai.com.cn/">菜百</a></td>
+			                  <td><a href="http://www.swatch.com.cn/">斯沃琪</a></td>
+			                  <td><a href="http://www.staccato.com/">思加图</a></td>
+			                  <td><a href="http://www.longines.com/">浪琴</a></td>
+              </tr>
+			                <tr>
+			                  <td><a href="http://www.tissot.ch/">天梭</a></td>
+			                  <td><a href="http://www.bolon.cn/">暴龙眼镜</a></td>
+			                  <td>&nbsp;</td>
+			                  <td></td>
+			                  <td></td>
+			                  <td></td>
+              </tr>
+
+
+
+
+            </tbody>
+        </table>
+		<div class=vi_title><li class=left>餐饮/食品</li></div>
+		<table width="97%" border=0 align="right" cellpadding=0 cellspacing=5>
+            <tbody>
+              <tr>
+                <td width="16%"><a href="http://www.kfc.com.cn/">肯德基</a></td>
+                <td width="16%"><a href="http://www.xiabu.com/">呷哺呷哺</a></td>
+                <td width="16%"><a href="http://www.starbucks.cn/">星巴克</a></td>
+                <td width="16%"><a href="http://www.icoke.cn/">可口可乐</a></td>
+                <td width="16%"><a href="http://www.mengniu.com.cn/">蒙牛</a></td>
+                <td ><a href="http://www.zkungfu.com/">真功夫</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.mcdonalds.com.cn/">麦当劳</a></td>
+                <td><a href="http://www.holiland.com.cn/">好利来</a></td>
+                <td><a href="http://www.papajohnschina.com/">棒约翰</a></td>
+                <td><a href="http://www.dicos.com.cn/">德克士</a></td>
+                <td><a href="http://www.yili.com/">伊利</a></td>
+                <td><a href="http://www.goldenjaguar.com/chs/default.aspx">金钱豹</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.pizzahut.com.cn/">必胜客</a></td>
+                <td><a href="http://www.21cake.com/">21cake</a></td>
+                <td><a href="http://www.nescafe.com.cn/">雀巢咖啡</a></td>
+                <td><a href="http://www.masterkong.com.cn/">康师傅</a></td>
+                <td><a href="http://www.heinz.com.cn/">亨氏</a></td>
+                <td><a href="http://www.wahahaclub.com/">娃哈哈</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.origus.com/">好伦哥</a></td>
+                <td><a href="http://www.littlesheep.com/">小肥羊</a></td>
+                <td><a href="http://www.haagendazs.com.cn/">哈根达斯</a></td>
+                <td><a href="http://www.beingmate.com/">贝因美</a></td>
+                <td><a href="http://www.moutaichina.com/">茅台</a></td>
+                <td><a href="http://www.huiyuan.com.cn/">汇源</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.waffleboy.com.cn/">窝夫小子</a></td>
+                <td><a href="http://www.meadjohnson.com.cn/">美赞臣</a></td>
+                <td><a href="http://www.dumex.com.cn/">多美滋</a></td>
+                <td><a href="http://www.wuliangye.com.cn/">五粮液</a></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+            </tbody>
+        </table>
+		<div class=vi_title><li class=left>化妆品</li></div>
+		<table width="97%" border=0 align="right" cellpadding=0 cellspacing=5>
+          <tbody>
+            <tr>
+              <td width="16%"><a href="http://maybelline.tmall.com/">美宝莲</a></td>
+              <td width="16%"><a href="http://www.sephora.cn/">丝芙兰</a></td>
+              <td width="16%"><a href="http://www.olomo.com">欧莱诺</a></td>
+              <td width="16%"><a href="http://www.shiseidochina.com/">资生堂-Shiseido</a></td>
+              <td width="16%"><a href="http://www.esteelauder.com.cn/">雅诗兰黛</a></td>
+              <td><a href="http://www.herborist.com.cn/">佰草集</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://www.avon.com.cn/">雅芳</a></td>
+              <td><a href="http://www.chcedo.com/">自然堂</a></td>
+              <td><a href="http://www.lancome.com.cn/_zh/_cn/index.aspx">兰蔻-Lancome</a></td>
+              <td><a href="http://www.dhc.net.cn/">DHC中国</a></td>
+              <td><a href="http://www.avene.cn/">雅漾</a></td>
+              <td><a href="http://www.marykayintouch.com.cn/">玫琳凯</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://www.yuesai.com/">羽西</a></td>
+              <td><a href="http://www.nivea.com.cn/">妮维雅</a></td>
+              <td><a href="http://www.chanel.com/">香奈儿-Chanel</a></td>
+              <td><a href="http://www.clinique.com.cn/">倩碧-Clinique</a></td>
+              <td><a href="http://www.laneigechina.com/">兰芝-LANEIGE</a></td>
+              <td><a href="http://www.olay.com.cn/">玉兰油-OLAY</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://www.vichy.com.cn/">薇姿</a></td>
+              <td><a  href="http://www.guerlain.com.cn/">娇兰-guerlain</a></td>
+              <td><a  href="http://www.dior.cn/">迪奥</a></td>
+              <td><a  href="http://cn.clarins.com/">娇韵诗</a></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+          </tbody>
+        </table>
+		<div class=vi_title><li class=left>生活日用</li></div>
+		<table width="97%" border=0 align="right" cellpadding=0 cellspacing=5>
+            <tbody>
+              <tr>
+                <td width="16%"><a href="http://www.head-shoulders.com.cn/">海飞丝</a></td>
+                <td width="16%"><a href="http://www.watsons.com.cn/">屈臣氏</a></td>
+                <td width="16%"><a href="http://www.vs.com.cn/">沙宣</a></td>
+                <td width="16%"><a href="http://www.pg.com.cn/">宝洁</a></td>
+                <td width="16%"><a href="http://www.c-bons.com.cn/">丝宝集团</a></td>
+                <td width="16%"><a href="http://www.tongrentang.com/">同仁堂</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.carrefour.com.cn/">家乐福</a></td>
+                <td><a href="http://www.wal-martchina.com/">沃尔玛</a></td>
+                <td><a href="http://www.unilever.com.cn/">联合利华</a></td>
+                <td><a href="http://www.ikea.com/cn/zh/">宜家</a></td>
+                <td><a href="http://www.amway.com.cn/">安利</a></td>
+                <td><a href="http://www.tupperware.com.cn/">特百惠</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.auchan.com.cn/">欧尚</a></td>
+                <td><a href="http://www.jnj.com.cn/">强生</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+
+            </tbody>
+        </table>
+		<div class=vi_title><li class=left>家电</li></div>
+		<table width="97%" border=0 align="right" cellpadding=0 cellspacing=5>
+            <tbody>
+              <tr>
+                <td width="16%"><a href="http://www.skyworth.com/cn/">创维</a></td>
+                <td width="16%"><A href="http://www.sony.com.cn/index.htm">索尼</A></td>
+                <td width="16%"><A href="http://www.siemens.com.cn/">西门子</A></td>
+                <td width="16%"><a href="http://www.hisense.com/">海信</a></td>
+                <td width="16%"><a href="http://www.joyoung.com.cn/">九阳</a></td>
+                <td width="22%"><a href="http://www.xinfei.com/">新飞</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.midea.com.cn/">美的</a></td>
+                <td><A href="http://www.samsung.com/cn/">三星</A></td>
+                <td><A href="http://www.konka.com/cn/index.aspx">康佳</A></td>
+                <td><a href="http://www.electrolux.com.cn/">伊莱克斯</a></td>
+                <td><A href="http://www.toshiba.com.cn/">东芝</A></td>
+                <td><A href="http://www.galanz.com.cn/">格兰仕</A></td>
+              </tr>
+              <tr>
+                <td><A href="http://panasonic.cn/">松下</A></td>
+                <td><A href="http://www.canon.com.cn/">佳能</A></td>
+                <td><a href="http://www.tcl.com/">TCL</a></td>
+                <td><a href="http://www.lg.com.cn/">LG</a></td>
+                <td><A href="http://www.changhong.com.cn/">长虹</A></td>
+                <td><A href="http://www.meiling.com/">美菱</A></td>
+              </tr>
+              <tr>
+                <td><A href="http://www.haier.com/">海尔</A></td>
+                <td><A href="http://www.philips.com.cn/">飞利浦</A></td>
+                <td><A href="http://www.supor.com.cn/">苏泊尔</A></td>
+                <td><A href="http://www.fotile.com/">方太</A></td>
+                <td><A href="http://www.suning.com/">苏宁电器</A></td>
+                <td><A href="http://www.sharp.cn/">夏普</A></td>
+              </tr>
+              <tr>
+                <td><A href="http://www.sacon.cn/">帅康</A></td>
+                <td><A href="http://www.yongle.com.cn/">永乐电器</A></td>
+                <td><A href="http://www.gome.com.cn/">国美电器</A></td>
+                <td><A href="http://www.dzelec.com/">大中电器</A></td>
+                <td><A href="http://www.gree.com/">格力</A></td>
+                <td></td>
+              </tr> 
+            </tbody>
+        </table>
+		</td>
+  </tr>
+  </table>
+</div>
+</center></div>
+<DIV align=center><br><a href="http://www.hao123.cc/" target="_self"><img src="images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="hao123-mingpai";</script><script src="js/monitor.js"></script>
+<span style="display:none"><script src="js/tj.js"></script></span>
+</body>
+</html>

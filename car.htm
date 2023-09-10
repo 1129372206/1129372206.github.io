@@ -1,0 +1,502 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+ td,body {  font-size: 16px; font-family:arial,sans-serif,宋体;}body{margin-top:0px;margin-left:0px;margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;}
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg{border-color:#8AB78A; width:900px}
+.f9pt{font-size: 12px;}
+#sfont a,#sfont b{font-size:13px;}
+.highlight_1 a:link,.highlight_1 a:visited{color:red}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+--> </style>
+<base target="_blank">
+<title>OpenHao123网址之家－－汽车</title>
+</head>
+<body>
+<script src="js/base.js"></script>
+<script src="js/userdata.js"></script>
+<script src="js/record.js"></script>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="OpenHao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="900" height="51">
+    <tr>
+      <td width="290" height="51"><a href="/" target="_self" class="m"><img src="images/logo.gif" alt="把OpenHao123设为主页"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18>&nbsp;</td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()" onMouseDown="ClickMonkey.log('haoweb');" >网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()" onMouseDown="ClickMonkey.log('haomp3');" >MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()" onMouseDown="ClickMonkey.log('haoimg');" >图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()" onMouseDown="ClickMonkey.log('haopost');" >贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" onMouseDown="ClickMonkey.log('haozhidao');" >知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()" onMouseDown="ClickMonkey.log('haonews');" >新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()" onMouseDown="ClickMonkey.log('haovideo');">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action=http://www.baidu.com/s name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=OpenHao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>&nbsp;
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=900 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=900 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.OpenHao123.cc" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.OpenHao123.cc/');return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="images/home.gif" width="15" height="15" border="0" align="absmiddle"> 把OpenHao123设为主页</a>　　<a href="inc/"><img src="images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="/" target=_self style="color:#424242 ">首页</a> > 汽车</td></tr></table>
+</center></div>
+<div align="center" onMouseDown="bdRecord.scope(event)"><center>
+<div class="t1 bgg">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">汽车资讯</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.autohome.com.cn/">汽车之家</a></td>
+		
+											<td  width="20%"><a href="http://auto.sina.com.cn/">新浪汽车</a></td>
+		
+											<td  width="20%"><a href="http://www.xcar.com.cn/">爱卡汽车网</a></td>
+		
+											<td  width="20%"><a href="http://auto.sohu.com/">搜狐汽车</a></td>
+		
+											<td  width="20%"><a href="http://car.autohome.com.cn/">汽车之家报价</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.pcauto.com.cn/">太平洋汽车网</a></td>
+		
+											<td  width="20%"><a href="http://www.cheshi.com/">网上车市</a></td>
+		
+											<td  width="20%"><a href="http://www.chinacars.com/">中国汽车网</a></td>
+		
+											<td  width="20%"><a href="http://auto.qq.com/">腾讯汽车</a></td>
+		
+											<td  width="20%"><a href="http://price.pcauto.com.cn/">太平洋汽车报价</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.che168.com/">车168</a></td>
+		
+											<td  width="20%"><a href="http://www.bitauto.com/">易车网</a></td>
+		
+											<td  width="20%"><a href="http://www.autofan.com.cn/">汽车之友</a></td>
+		
+											<td  width="20%"><a href="http://newcar.xcar.com.cn/price_range.htm">爱卡汽车报价</a></td>
+		
+											<td  width="20%"><a href="http://price.bitauto.com/">易车网报价</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.webcars.com.cn/">万车网</a></td>
+		
+											<td  width="20%"><a href="http://www.iautos.cn/">第一车网</a></td>
+		
+											<td  width="20%"><a href="http://www.hx2car.com/">华夏二手车</a></td>
+		
+											<td  width="20%"  class="gg_b"  ><a href="http://www.zg2sc.cn/">中国二手车网</a></td>
+		
+											<td  width="20%"><a href="http://www.ucar.cn/">优卡二手车</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://cheshijie.bitauto.com/">车世界</a></td>
+		
+											<td  width="20%"><a href="http://www.cn2che.com/">中国二手车城</a></td>
+		
+											<td  width="20%"><a href="http://www.xgo.com.cn/">汽车点评网</a></td>
+		
+											<td  width="20%"><a href="http://www.chetx.com/">车天下</a></td>
+		
+											<td  width="20%"  class="gg_b"  ><a href="http://www.51auto.com/">51二手车</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://auto.163.com/">网易汽车</a></td>
+		
+											<td  width="20%"><a href="http://www.273.cn/">273二手车交易网</a></td>
+		
+											<td  width="20%"><a href="http://auto.youku.com/">优酷汽车视频</a></td>
+		
+											<td  width="20%"><a href="http://www.feelcars.com/">汽车探索</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">购车/用车/养车</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.jxedt.com/">驾校一点通</a></td>
+		
+											<td  width="20%"><a href="http://www.jsyks.com/">驾驶员考试网</a></td>
+		
+											<td  width="20%"><a href="http://auto.sina.com.cn/using/skill/index.shtml">驾驶技巧</a></td>
+		
+											<td  width="20%"><a href="http://zhidao.baidu.com/browse/155">百度知道-购车养车</a></td>
+		
+											<td  width="20%"><a href="http://kaoshi.jxedt.com/">驾驶员模拟考试</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.OpenHao123.cc/haoserver/jiaotongcx.htm">各地交通违章查询</a></td>
+		
+											<td  width="20%"><a href="http://www.gaibar.com/">改吧汽车改装网</a></td>
+		
+											<td  width="20%"><a href="http://www.saclub.com.cn/">中国石化加油卡</a></td>
+		
+											<td  width="20%"><a href="http://www.skycn.com/soft/41661.html">油耗计算工具</a></td>
+		
+											<td  width="20%"><a href="http://bbs.modi-auto.com.cn/">无敌改装</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.qctsw.com/">汽车投诉网</a></td>
+		
+											<td  width="20%"><a href="http://qcxx.mof.gov.cn/">汽车摩托车下乡</a></td>
+		
+											<td  width="20%"><a href="http://www.che168.com/brand_list.htm">汽车标志</a></td>
+		
+											<td  width="20%"><a href="http://wenku.baidu.com/view/8076d87101f69e3143329474.html">道路交通安全法</a></td>
+		
+											<td  width="20%"><a href="http://wenku.baidu.com/view/580a06c24028915f804dc234.html">交通标志大全</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://car.bitauto.com/qichedaikuanjisuanqi/">车贷计算器</a></td>
+		
+											<td  width="20%"><a href="http://www.carcav.com/">中国汽车影音网</a></td>
+		
+											<td  width="20%"><a href="http://www.zuche.com/">神州租车</a></td>
+		
+											<td  width="20%"><a href="http://count.chanet.com.cn/click.cgi?a=212181&d=183869&u=&e="><font color=red>一嗨租车</font></a></td>
+		
+											<td  width="20%"><a href="http://chepai.1518.com/">车牌号码吉凶</a></td>
+		
+				</tr>
+<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://ask.webcars.com.cn/">万车知道</a></td>
+		
+											<td  width="20%"><a href="http://www.webcars.com.cn/compare/">车型对比</a></td>
+		
+											<td  width="20%"><a href="http://www.webcars.com.cn/dealer_list/">经销商查询</a></td>
+		
+											<td  width="20%"><a href="http://www.bjhjyd.gov.cn/">北京车牌摇号申请</a></td>
+		
+											<td  width="20%"><a href="http://www.ok619.com/">油客网</a></td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">汽车/摩托车论坛</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://bbs.fblife.com/">越野ｅ族</a></td>
+		
+											<td  width="20%"><a href="http://club.xcar.com.cn/">爱卡俱乐部</a></td>
+		
+											<td  width="20%"><a href="http://bbs.pcauto.com.cn/">太平洋汽车网论坛</a></td>
+		
+											<td  width="20%"><a href="http://club.autohome.com.cn/">汽车之家社区</a></td>
+		
+											<td  width="20%"><a href="http://bbs.gpsuu.com/">GPS之家</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.360che.com/">卡车之家</a></td>
+		
+											<td  width="20%"><a href="http://bbs.360che.com/">卡车之家论坛</a></td>
+		
+											<td  width="20%"><a href="http://www.chehuo.cn/">车祸网</a></td>
+		
+											<td  width="20%"><a href="http://www.dg-car.net/">东莞车迷网</a></td>
+		
+											<td  width="20%"><a href="http://weifengtang.com/">威风堂摩托会所</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://motorcycle.sh.cn/">摩托迷</a></td>
+		
+											<td  width="20%"><a href="http://www.motof.org/">摩托坊</a></td>
+		
+											<td  width="20%"><a href="http://www.moto8.cn/">摩托吧</a></td>
+		
+											<td  width="20%"> </td>
+		
+											<td  width="20%"> </td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+</table>
+<table width="100%" border="0" align="center" cellPadding="2" cellSpacing="1"  bgcolor=C5D5C5>
+  <TBODY>
+<tr align="center" bgcolor="#D9EDDA">
+	<td height="20" colSpan="5"><span class="f9pt"><font color="#346F0E">厂商</font></span></td>
+</tr>
+
+<tr bgcolor="#EFF7F0">      
+    <td rowspan="2" align="left" vAlign="top" bgcolor="#EFF7F0" style="line-height:24px; padding-left:6px " ><strong class="f9pt">厂商</strong></td>
+    <td colspan="4" align="left" vAlign="center" bgcolor="#EFF7F0">
+	<table width="100%" border="0" cellpadding="5" cellspacing="3">
+				<tr>		<td  width="20%" ><a href="http://www.saicgroup.com/">上汽集团</a></td>										<td  width="20%" ><a href="http://www.faw.com.cn/">一汽集团</a></td>										<td  width="20%" ><a href="http://www.dongfeng-nissan.com.cn/">东风日产</a></td>										<td  width="20%" ><a href="http://www.ccag.cn/">长安集团</a></td>										<td  width="20%" ><a href="http://www.baw.com.cn/">北汽集团</a></td>				</tr>				<tr>		<td  width="20%" ><a href="http://www.chery.cn/">奇瑞集团</a></td>										<td  width="20%" ><a href="http://www.geely.com/">吉利汽车</a></td>										<td  width="20%" ><a href="http://www.gaig.com.cn/index/index.jsp">广汽集团</a></td>										<td  width="20%" ></td>												<td>  </td>		</tr>		
+	</table></td>
+</tr>
+
+<tr bgcolor="#EFF7F0">
+      <td colspan="4" align="left" vAlign="center" bgcolor="#D9EDDA" height="3"></td>
+    </tr>
+	
+<tr bgcolor="#EFF7F0">      
+	<td colspan="5" align="left" vAlign="top">
+		<table width="100%"  border="0" cellspacing="0" cellpadding="3">
+			<tr>
+									<td align="center" ><a href="http://www.bmw.com.cn/"><img src="images/car/04s.gif" border="0" alt="宝马"></a></td>
+									<td align="center" ><a href="http://www.audi.cn/audi/cn/zh2.html"><img src="images/car/02s.gif" border="0" alt="奥迪"></a></td>
+									<td align="center" ><a href="http://www.mercedes-benz.com.cn/"><img src="images/car/71.gif" border="0" alt="奔驰"></a></td>
+									<td align="center" ><a href="http://www.toyota.com/"><img src="images/car/72.gif" border="0" alt="丰田"></a></td>
+									<td align="center" ><a href="http://www.buick.com/"><img src="images/car/73.gif" border="0" alt="别克"></a></td>
+									<td align="center" ><a href="http://www.chevrolet.com.cn/"><img src="images/car/08s.gif" border="0" alt="雪佛兰"></a></td>
+									<td align="center" ><a href="http://www.honda.com.cn/"><img src="images/car/74.gif" border="0" alt="本田"></a></td>
+			  </tr>
+		</table>
+	</td>
+</tr>
+<tr bgcolor="#EFF7F0">
+      <td colspan="6" align="left" vAlign="center" bgcolor="#D9EDDA" height="3"></td>
+    </tr>
+<tr bgcolor="#EFF7F0">      
+    <td rowspan="2" align="left" vAlign="top" bgcolor="#EFF7F0" style="line-height:24px; padding-left:6px " ><strong class="f9pt">热门车型</strong></td>
+    <td colspan="4" align="left" vAlign="center" bgcolor="#EFF7F0">
+	<table width="100%" border="0" cellpadding="5" cellspacing="3">
+				<tr>		
+				                    <td width="20%" ><a href="http://www.autohome.com.cn/614/">朗逸</a></td>
+									<td width="20%" ><a href="http://www.autohome.com.cn/633/">宝来</a></td>
+									<td width="20%"><a href="http://www.autohome.com.cn/905/">大众CC</a></td>
+									<td width="20%" ><a href="http://www.autohome.com.cn/164/">君威</a></td>
+									<td width="20%" ><a href="http://www.autohome.com.cn/792/">雪铁龙C5</a></td>			
+							</tr>				
+							<tr>		
+							<td  width="20%" ><a href="http://car.bitauto.com/keluzi/">科鲁兹</a></td>										
+							<td  width="20%" ><a href="http://car.bitauto.com/tiguan/">途观</a></td>										
+							<td  width="20%" ><a href="http://car.bitauto.com/biyadif3/">比亚迪f3</a></td>										
+							<td  width="20%" ><a href="http://car.bitauto.com/boluo/">POLO</a></td>												
+							<td  width="20%" ><a href="http://www.autohome.com.cn/163/">赛欧</a></td>	
+							</tr>
+							<tr>
+							  <td >&nbsp;</td>
+							  <td >&nbsp;</td>
+							  <td >&nbsp;</td>
+							  <td >&nbsp;</td>
+							  <td  align="right"><a href="http://www.autohome.com.cn/brand/">更多车型&nbsp;&raquo;</a>&nbsp;</td>
+			    </tr>		
+	</table></td>
+</tr>	
+
+  </TBODY>
+</table>
+</div>
+<div style="background-color:#D9EDDA;height:30px;width:900px; border:1px #8AB78A;border-style:solid; text-align:center; margin-top:10px">
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+      <tr align="center" style="padding-top:8px; padding-bottom:6px "><form id="frm1" method="get"   action="http://sou.autohome.com.cn/search.aspx" target="_blank"><td height="30" bgcolor="#EFF7F0" > <input class="input_box" name="q" id="q" type="text" autocomplete="off" style="width: 220px; height:24px; padding-top:3px" /> <input type="submit" value="汽车之家搜索" style="padding-top:2px; font-size:14px "/></td></form>
+      </tr>
+    </table>
+</td>
+    </tr> </table></div>
+</center></div>
+<DIV align=center><br><a href="/" target="_self"><img src="images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="OpenHao123-car";</script><script src="js/monitor.js"></script>
+<span style="display:none"><script src="js/tj.js"></script></span>
+</body>
+</html>

@@ -1,0 +1,562 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <base target="_blank" />
+    <title>OpenHao123网址之家－－各地交通违章查询</title>
+    <link href="../css/v_base_old.css" rel="stylesheet" type="text/css" />
+    <style  type="text/css">
+       /*--override basic style-*/
+      .wrapper-basic{ width:778px;}     
+      .head-basic .search{ margin-left:80px;}
+      /*traffic*/
+      #body-basic{ text-align:center; background-color:#eff7f0;}
+      .wrapper-traffic h1{ font-size:12px; font-weight:bold; color:#346f0E; background-color:#d9edda; font-weight:normal; line-height:20px;}
+      .wrapper-traffic .wrapper-map{ padding-top:10px; position:relative; _height:40px;}
+      .wrapper-traffic .city{ border:solid 1px #666; padding:6px; position:absolute;  left:0;top:0;display:none; background-color:#FCFFF7; text-align:left;}
+      .wrapper-traffic .city a{ margin:5px; display:inline-block; font-size:14px;}
+      .wrapper-traffic table a{ margin:5px 0px 5px 3px; display:inline-block;}
+      .wrapper-traffic table{}
+      .wrapper-traffic table td{ width:25%; background-color:#eff7f0; color:#424242; border:1px solid #FCFFF7;text-align:left; font-size:15px; vertical-align:top; padding:3px;}
+   </style>
+
+</head>
+<body>
+<div id="head-basic" >
+            <div class="head-basic wrapper-basic" id='nav' monkey="cool">
+                <div class="logo">
+                    <a href="http://www.OpenHao123.cc" target="_self" title="OpenHao123网址之家"><img src="../images/logo.gif" width="168" height="63" alt="OpenHao123网址之家" /></a>               
+                </div>
+                <div class="search">
+                        <ul>
+							<li onmousedown="ClickMonkey.log('haoweb');" key="web" class="current">网页</li>
+                            <li onmousedown="ClickMonkey.log('haovideo');" key="video" class="">视频</li>
+
+							<li key='mp3' onmousedown="ClickMonkey.log('haomp3');">MP3</li>
+							<li key='image' onmousedown="ClickMonkey.log('haoimage');">图片</li>
+							<li key='tieba' onmousedown="ClickMonkey.log('haoimage');">贴吧</li>
+							<li key='zhidao' onmousedown="ClickMonkey.log('haozhidao');">知道</li>
+							<li key='news' onmousedown="ClickMonkey.log('haonews');">新闻</li>							
+						</ul>
+
+                          <form action="http://www.baidu.com/s" name="f" onsubmit="fromElement.submit();return false;" target="_blank" >
+                            <i><input id="kw" class="text" value="" type="text"  maxlength="100" /></i>   
+                            <input class="submit" type="submit" value="百度一下" id='sb' />
+                        </form>
+           
+                </div>	        
+            </div>
+         
+</div>
+ <div class="crumb-basic wrapper-basic">
+           <ul>
+            <li class="sethome"><a href="http://www.OpenHao123.cc"  onclick="setHome(this);" >把OpenHao123设为首页</a></li>
+
+            <li class="feedback"><a href='../inc' >网友反馈</a></li>
+            <li class="bread"><a href='http://www.OpenHao123.cc'>首页</a>&gt;各地交通违章查询</li>
+           </ul>    
+ </div>
+    <div id="body-basic" class="wrapper-basic wrapper-traffic main-basic">
+     <h1>各地交通违章查询</h1>
+     <div class='wrapper-map'>
+           <div id='city' class='city'></div>
+           <img width="471" height="400" border="0" usemap="#Map" src="../images/rencai_map.gif"  />
+		<map name="Map" id='map'>
+  <area hint="北京" href="http://www.bjjtgl.gov.cn/publish/portal0/" coords="344,137,373,152" shape="rect" />
+  <area hint="天津" href="http://www.tjits.cn/wfcx/index.asp" coords="362,156,393,170" shape="rect"  />
+  <area hint="上海" href="http://www.shjtaq.com/zwfg/chafen.asp" coords="414,237,440,251" shape="rect"  />
+  <area hint="重庆" href="http://www.cqjg.gov.cn/DriverFind.html" coords="254,264,283,283" shape="rect"/>
+  <area hint="广东" index='0' coords="330,320,362,338" shape="rect" href='#'/>
+  <area hint="浙江" index='1' coords="385,257,416,275" shape="rect" href='#' />
+  <area hint="山东" index='2' coords="351,186,379,199" shape="rect" href='#' />
+  <area hint="江苏" index='3'  coords="379,206,408,224" shape="rect" href='#' />
+  <area hint="河北" index='4'  coords="326,164,357,180" shape="rect" href='#' />
+  <area hint="辽宁" index='5'  coords="385,121,415,138" shape="rect" href='#' />
+  <area hint="河南" index='6'  coords="316,215,342,230" shape="rect" href='#' />
+  <area hint="福建" index='7'  coords="368,292,399,308" shape="rect" href='#' />
+  <area hint="江西" index='8'  coords="345,270,373,284" shape="rect" href='#' />
+  <area hint="湖北" index='9'  coords="309,243,340,263" shape="rect" href='#' />
+  <area hint="湖南" index='10'  coords="303,276,337,299" shape="rect" href='#' />
+  <area hint="山西" index='11'  coords="301,181,330,199" shape="rect" href='#' />
+  <area hint="黑龙江" index='12' coords="400,54,453,79" shape="rect" href='#' />
+  <area hint="陕西" index='13'  coords="274,215,303,233" shape="rect" href='#' />
+  <area hint="甘肃" index='14'  coords="167,149,198,168" shape="rect" href='#' />
+  <area hint="广西" index='15'  coords="280,323,313,346" shape="rect" href='#' />
+  <area hint="青海" index='16'  coords="161,188,204,221" shape="rect" href='#' />
+  <area hint="云南" index='17'  coords="211,317,240,340" shape="rect" href='#' />
+  <area hint="贵州" index='18'  coords="265,294,291,313" shape="rect" href='#' />
+  <area hint="海南" index='19'  coords="278,373,309,395" shape="rect" href='#' />
+  <area hint="四川" index='20'  coords="211,249,249,272" shape="rect" href='#' />
+  <area hint="吉林"  index='21' coords="405,93,437,111" shape="rect" href='#' />
+  <area hint="宁夏" index='22'  coords="240,179,272,199" shape="rect" href='#' />
+  <area hint="内蒙古"  index='23' coords="265,138,312,160" shape="rect" href="#" />
+  <area hint="安徽" index='24' coords="354,233,385,249" shape="rect" href='#' />
+  <area hint="新疆" index='25' coords="85,128,125,150" shape="rect" href='#' />  
+  <area hint="香港"  index='26' coords="360,340,390,362" shape="rect" href="http://www.td.gov.hk/sc/traffic_notices/index_type_1.html" />
+  <area hint="澳门"  index='27' coords="320,360,350,375" shape="rect" href="https://www.fsm.gov.mo/webticket/default.aspx" /> 
+  <!--<area alt="台湾"  index='28' coords="400,310,426,342" shape="rect" />-->
+
+   
+		</map>
+<table width="100%" cellspacing="1" cellpadding="5" border="0">
+      <tbody>
+        <tr >
+        <td><a href="http://www.bjjtgl.gov.cn/publish/portal0/">北京</a></td>
+        <td><a href="http://www.tjits.cn/wfcx/index.asp">天津</a></td>
+        <td><a href="http://www.shjtaq.com/zwfg/chafen.asp">上海</a></td>
+        <td><a href="http://www.cqjg.gov.cn/DriverFind.html">重庆</a></td>
+      </tr>
+      <tr >
+        <td >广东省<br/><a href="http://www.gzjd.gov.cn/gzwfcx/">广州</a>　<a href="http://www.stc.gov.cn/search/vehicle_peccacy.asp">深圳</a>　<a href="http://wz.zhga.gov.cn/">珠海</a>　<a href="http://www.fsga.gov.cn/Main/Common/trafficSerarch.aspx">佛山</a><br/>
+        <a href="http://weizhang.jmjgj.gov.cn/">江门</a>　<a href="http://219.129.94.123:9080/sgjj/">韶关</a>　<a href="http://www.cztp.gov.cn/">潮州</a>　<a href="http://www.gdgajj.com/cx/wzss/wzss.do">梅州</a><br/><a href="http://www.zqga.gov.cn/jjzdzw.shtml">肇庆</a>　<a href="http://183.63.1.146:81/hzjj/sel_transgress.aspx">惠州</a>　<a href="http://www.gdgajj.com/cx/wzss/wzss.do">东莞</a>　<a href="http://jj.gdga.gov.cn/cx/wzss/wzss.do">中山</a><br/><a href="http://www.qyga.gov.cn/qysms20/wfclxx/wfywcx.jsp">清远</a>　<a href="http://gdst110.gov.cn/query/searchJtwf.html">汕头</a>　<a href="http://www.jyjj.gov.cn/">揭阳</a>　<a href="http://www.gdgajj.com/cx/wzss/wzss.do">河源</a></td>
+        <td>浙江省<br/>
+          <a href="http://www.hzti.com/service/default.aspx">杭州</a>　<a href="http://www.hzjxj.com/">湖州</a>　<a href="http://www.jhga.gov.cn/">金华</a>　<a href="http://www.wzsjj.cn/">温州</a>　<br/><a href="http://www.zjjxjj.gov.cn/">嘉兴</a>　<a href="http://www.police.zhoushan.gov.cn/Services_Illegal.asp">舟山</a>　<a href="http://wf.nbjj.gov.cn/">宁波</a>　<a href="http://61.153.62.58/">丽水</a><br/><a href="http://www.tzga.gov.cn/tzjjwwcx/">台州</a>　<a href="http://wscgs.sxga.gov.cn/">绍兴</a>　<a href="http://gaj.qz.gov.cn/eleclist.asp">衢州</a>　<a href="http://www.jhga.gov.cn/">义乌</a><br/><a href="http://www.xsti.gov.cn/">萧山</a>　</td>
+        <td valign="top" >山东省<br/>       <a href="http://218.57.137.34/jnjjwebnew/GongAnIndex/GongAnIndex.aspx">济南</a>　<a href="http://auto.qingdaonews.com/wzcx/search.html">青岛</a>　<a href="http://www.ytjj.gov.cn/">烟台</a>　<a href="http://www.jnjj.gov.cn/ ">济宁</a><br/>
+        <a href="http://www.zbjj.gov.cn/">淄博</a>　<a href="http://58.59.39.43:9080/wfcx/html/jdcwf/jdcwfmain.jsp">日照</a>　<a href="http://218.201.153.138:9080/wfcx/html/jdcwf/jdcwfmain.jsp">德州</a>　<a href="http://218.59.228.162/wfcx/html/jdcwf/jdcwfmain.jsp">枣庄</a><br/><a href="http://auto.lcxw.cn/wzcx.asp">聊城</a>　<a href="http://119.191.61.214:9080/wfcx/html/jdcwf/jdcwfmain.jsp">潍坊</a>　<a href="http://www.dygajj.gov.cn/jncmp/html/jdcwf/jdcwf2.html">东营</a>　<a href="http://www.whdzjc.com/">威海</a><br/>
+        <a href="http://car.zcinfo.net/">诸城</a>　<a href="http://www.ta-police.com/wfcx/index.asp">泰安</a>　<a href="http://www.laiwu.gov.cn/car/weizhang_search.asp">莱芜</a>　<a href="http://123.130.240.182/">菏泽</a><br/>
+        </td>
+		
+        <td>江苏省<br/><a href="http://www.njjg.net/">南京</a>　<a href="http://jgcx.sqjg.net/">宿迁</a>　<a href="http://czjxj.czinfo.net/dzjccx.htm">常州</a>　<a href="http://jxj.wuxi.gov.cn/">无锡</a><br/><a href="http://www.lygjg.net/">连云港</a>　<a href="http://58.210.126.206:9091/QueryVD/">苏州</a>　<a href="http://www.xzjgw.com/2010cx/cars.asp">徐州</a><br/><a href="http://www.ntjxj.com/">南通</a>　<a href="http://www.zjcgs.com/">镇江</a>　<a href="http://www.wxga.gov.cn/default.php?mod=c&s=ssb69ad59">江阴</a>　<a href="http://www.tzjgw.com/news/default.asp">泰州</a><br/><a href="http://www.ycjxj.cn/InfoSearch.asp">盐城</a>　<a href="http://www.csjxj.com/wzcx.php">常熟</a>　<a href="http://www.zjgga.cn/website/police/ShowWeiZhang2.asp">张家港</a><br /><a href="http://218.106.97.174:8080/cx/">扬州</a>　<a href="http://58.210.126.206:9091/QueryVD/">昆山</a></td>
+      </tr>
+      <tr >
+        <td>河北省<br/>
+              <a href="http://www.jdcjsr.com/">石家庄</a>　<a href="http://hsjj2.hengshui.com/">衡水</a>　<a href="http://www.hdjj.gov.cn/#chaxun">邯郸</a><br/>
+          <a href="http://www.bdjiaojing.cn/">保定</a>　<a href="http://www.qhdjtgl.net/ask/chaxun.php">秦皇岛</a>　<a href="http://www.tscg.gov.cn/">唐山</a><br/>
+          <a href="http://www.xtjdcjsr.com/">邢台</a>　<a href="http://www.zjkjjw.com.cn/">张家口</a>　<a href="http://www.cdjj.gov.cn/Index.asp">承德</a><br/>
+          <a href="http://www.lf.gov.cn/">廊坊</a>
+        </td>
+        
+        <td>辽宁省<br/><a href="http://218.25.58.44/searchsys/">沈阳</a>　<a href="http://www.hldgajjzd.com/sjcx/Index.asp">葫芦岛</a>　<a href="http://www.dd122.com/pages/xxcx.asp">丹东</a><br/><a href="http://www.jzgajx.com/">锦州</a>　<a href="http://www.ykjj.gov.cn/wfcx.php">营口</a>　<a href="http://218.24.200.244/">阜新</a>　<a href="http://www.asgajj.com/">鞍山</a><br/><a href="http://www.dlutc.gov.cn/">大连</a>　<a href="http://jjd.panjin.gov.cn/">盘锦</a>　<a href="http://www.zgcy.gov.cn/car_seek/">朝阳</a>　<a href="http://www.liaoyang.gov.cn/moban/wsfw/wscx07.asp">辽阳</a><br/><a href="http://hcgajj.com/xxcx.asp">海城</a>　<a href="http://www.tlga.gov.cn/jdc.jsp?name1=list_jdc.jsp&name2=kb.html?lb=2">铁岭</a></td>
+        <td>河南省<br/><a href="http://www.zzcgs.com.cn/default?url=peccancy/search_info.jsp">郑州</a>　<a href="http://www.nydzjc.com/">南阳</a>　<a href="http://www.xyjjzd.com/">信阳</a>　<a href="http://www.puyang.gov.cn/wmjdcwz.asp">濮阳</a><br/><a href="http://www.hebi.gov.cn/gonggongfuwu/weizhangcheliangchaxun/">鹤壁</a>　<a href="http://www.anyangdx.com/Web_Asking.aspx">安阳</a>　<a href="http://www.jzga.gov.cn/wzcx/lookup.aspx">焦作</a>　<a href="http://www.xcjjw.gov.cn/">许昌</a><br/><a href="http://www.xxgaw.gov.cn/weifa.html">新乡</a>　<a href="http://www.lyjjzd.com/wfcx.asp">洛阳</a>　<a href="http://www.sqradio.com/old945/jdccx.htm">商丘</a>　<a href="http://www.kfpolice.com/NewChange/ConditionPage2.aspx">开封</a><br/><a href="http://wzcx.smx.shangdu.com/">三门峡</a>　<a href="http://www.pds122.com/">平顶山</a></td>
+		
+        <td>福建省<br/><a href="http://fzjj.easdo.com/jtwf/">福州</a>　<a href="http://www.xmjj.gov.cn:8080/xmjj_cxfw/cxsjMain.action?actionStr=getwfcxMain_new#">厦门</a>
+		<br/><a href="http://www.qzgajt.com/smss/index.asp">泉州</a>　<a href="http://fzjj.easdo.com/jtwf/">漳州</a>　<a href="http://wzcx.fjlyga.gov.cn/wzsearch.htm">龙岩</a></td>
+      </tr>
+      <tr >
+        <td>江西省<br/><a href="http://ncjj.nc.gov.cn/infos.asp">南昌</a>　<a href="http://www.gzsjjzd.gov.cn/cx.asp">赣州</a>　<a href="http://www.jjjj.com.cn/page/index.php">九江</a></td>
+        <td>安徽<br/>
+              <a href="http://jiaojing.anhuinews.com/">安徽</a>　<a href="http://www.hfjjzd.gov.cn/hfwebquery/">合肥</a>　<a href="http://www.lajjzd.gov.cn/frmVehVio.aspx">六安</a>　<a href="http://www.ahhnjj.net/">淮南</a>　<br/>
+              <a href="http://jjzd.mas.gov.cn/">马鞍山</a>　<a href="http://www.ahjtxx.com/query/">安庆</a>　<a href="http://bzjj.bz163.net/Index.asp">亳州</a>　<br/>   <a href="http://61.191.211.19:8080/whcx/Main.aspx?fzjg=B">芜湖</a>　<a href="http://www.hbjjzd.cn/hbwfcx/Main.aspx?fzjg=F">淮北</a>
+</td>
+        <td>湖北省<br/>
+          <a href="http://www.whjg.gov.cn/">武汉</a>　<a href="http://www.hsjj.gov.cn/">黄石</a>　<a href="http://xfwfcx.com/">襄阳</a>　<a href="http://www.hbsydx.com/">十堰</a><br/>
+		  <a href="http://www.yichang.gov.cn/col/col3062/">宜昌</a>　<a href="http://jmapp.jingmen.gov.cn/jiaojing/">荆门</a>　<a href="http://www.sz122.net/query.html">随州</a>　<a href="http://www.hb122.org/xxcx/xxcx.jsp">黄冈</a><br/>
+		  <a href="http://www.jzjtgl.com/jzjjweb/">荆州</a></td>
+        <td>湖南省<br/><a href="http://www.hncsjj.gov.cn/QueryJDCWZOther.aspx">长沙</a>　<a href="http://www.changde.gov.cn/art/2008/12/29/art_2511_83281.html">常德</a>　<a href="http://www.sysgajj.gov.cn/">邵阳</a>　<a href="http://so.jtjc.cn/">益阳</a><br/>
+		<a href="http://www.hnhyjj.gov.cn/HYJJXXW/">衡阳</a>　<a href="http://search.pazx888.com/">郴州</a>　<a href="http://www.hnzzjj.gov.cn/ZzjtWeb/queryvv.aspx">株洲</a></td>
+      </tr>
+      <tr >
+        <td>山西省<br/>
+              <a href="http://www.tyjj.gov.cn/">太原</a>　<a href="http://www.sxxzjj.gov.cn/">忻州</a>　<a href="http://www.sxszjj.gov.cn/weizhang.aspx">朔州</a>　<a href="http://www.jjzd.changzhi.gov.cn/">长治</a><br/>
+          <a href="http://wzcx.jconline.cn/">晋城</a>　<a href="http://www.dtjj.com.cn/">大同</a>　 </td>
+        <td>黑龙江<br/>
+              <a href="http://www.hrbgaj.gov.cn/wzcx/">哈尔滨</a>　<a href="http://wt.jtaqxx.com/">齐齐哈尔</a><br/>
+			  <a href="http://www.dqjj.gov.cn/Query.jsp">大庆</a>　<a href="http://221.206.20.201:7010/search.asp">牡丹江</a>　<a href="http://jms122.cn/Default.aspx">佳木斯</a></td>
+        <td>陕西省<br/><a href="http://www.xianjj.com/">西安</a>　<a href="http://61.150.107.59:9080/ylcx/query/QueryAction.do?actiontype=input">榆林</a>　<a href="http://www.yajjzd.com/">延安</a>　<a href="http://cx.akjjzd.gov.cn/">安康</a><br/> <a href="http://www.xyjjzd.gov.cn/">咸阳</a>　<a href="http://www.tc122.com/typenews.asp?id=13">铜川</a>　<a href="http://www.hzjjd.com/weifachaxun/Index.asp">汉中</a> </td>
+		
+		
+        <td>甘肃省<br/><a href="http://www.lzgajj.gov.cn/">兰州</a></td>
+      </tr>
+      <tr >
+        <td>广西<br/>
+              <a href="http://www.nn122.com/wfsx.aspx">南宁</a>　<a href="http://www.gg122.com/">贵港</a>　<a href="http://www.966096.com/">桂林</a>　<a href="http://www.lzcgs.com/">柳州</a></td>
+				
+				
+				
+        <td>青海<br/>
+                <a href="http://www.qh.xinhuanet.com/trafficxn/search.htm">西宁</a></td>
+        <td>云南省<br/><a href="http://www.km122.cn/q2/query.html">昆明</a>　<a href="http://www.yxjjzd.gov.cn/">玉溪</a></td>
+        <td>贵州<br/>
+            <a href="http://jjzd.gygov.gov.cn/jjzd/2380439375600156672/index.html">贵阳</a></td>
+      </tr>
+      <tr >
+        <td>海南省<br/>
+              <a href="http://hainanjj.gov.cn/">海南</a>　<a href="http://www.hkjxj.gov.cn/php/wei_zcx.php">海口</a></td> 
+        <td>四川省<br/>
+
+              <a href="http://www.cdjg.gov.cn/">成都</a>　<a href="http://www.myjtaq.com/">绵阳</a>　<a href="http://www.zg122.gov.cn/illegal.jsp">自贡</a>　<a href="http://www.sclzjj.gov.cn/">泸州</a><br />
+			  <a href="http://dzjj.dz169.net:8088/">达州</a>　<a href="http://www.dyjj.gov.cn/InfoQuery.aspx">德阳</a></td>
+
+        <td>吉林省<br/>
+              <a href="http://www.ccjg.gov.cn/">长春</a>　<a href="http://www.bcjjzd.com/web/qx/cl.asp">白城</a>　<a href="http://www.syjjzd.com/Default.aspx">松原</a>　<a href="http://www.ybjg.gov.cn/wzch/index.asp?Modid=013001">延边</a></td>
+        <td>宁夏<br/><a href="http://www.nxjj.gov.cn/web/nxjjxxw/index.jsp">宁夏</a>　<a href="http://www.nx.cninfo.net/zhuanti/wz/index.html">银川</a></td>
+      </tr>
+	  
+      <tr >
+        <td>内蒙古<br/><a href="http://cgs.hhhtgajt.com/">呼和浩特</a>　<a href="http://www.btjj.gov.cn/">包头</a>　<a href="http://222.74.84.166/drivertestbooking/wz/wzcx.action">乌海</a><br/><a href="http://www.tlcgs.com/Zxcx/clwzcx.asp">通辽</a>　<a href="http://www.cfcgs.gov.cn/wzcx.asp">赤峰</a>　<a href="http://61.138.127.142:9081/ordosww/veh/wzcx/wfcx.jsp">鄂尔多斯</a>　<br /><a href="http://www.bsgajj.gov.cn/">巴彦淖尔</a>　
+        </td> 
+
+        <td>新疆<br/><a href="http://www.xj163.cn/tools/car/">乌鲁木齐</a>　<a href="http://www.xjbzjj.com/default.asp">巴州</a>        </td> 
+
+        <td>香港<br/><a href="http://www.td.gov.hk/sc/traffic_notices/index_type_1.html">香港</a>
+        </td> 
+		
+        <td>澳门<br/><a href="https://www.fsm.gov.mo/webticket/default.aspx">澳门</a>
+
+        </td> 
+
+
+      </tr>
+      </tbody>
+  </table>
+	  
+     </div>  
+    </div>
+<DIV align=center><br><a href="/" target="_self"><img src="../images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+     
+ 
+ <script type="text/javascript">var pageId = "OpenHao123-haoserver-jiaotongcx";</script>
+ <script src="../js/config.js"  type="text/javascript"></script>
+<script src="../js/monitor.js"></script>
+<script src="../js/usertrack.js"  type="text/javascript"></script>
+<script src="/js/v_base.js" type="text/javascript"></script>
+<script type="text/javascript">
+    window.Hao.TrafficData = [];
+
+			Hao.TrafficData [0] = [//广东省
+			            ["广东省","http://www.gdgajj.com/cx/wzss/wzss.do"],
+						["广州","http://www.gzjd.gov.cn/gzwfcx/"],
+						["深圳","http://www.stc.gov.cn/search/vehicle_peccacy.asp"],
+						["珠海","http://wz.zhga.gov.cn/"],
+
+                        [],
+						["佛山","http://www.fsga.gov.cn/Main/Common/trafficSerarch.aspx"],
+						["江门", "http://weizhang.jmjgj.gov.cn/"],						
+						["肇庆","http://www.zqga.gov.cn/jjzdzw.shtml"],
+						["惠州","http://183.63.1.146:81/hzjj/sel_transgress.aspx"],
+                        [],						
+						["潮州","http://www.cztp.gov.cn/"],
+						["韶关","http://219.129.94.123:9080/sgjj/"],
+						["梅州","http://www.gdgajj.com/cx/wzss/wzss.do"],
+						["东莞","http://www.gdgajj.com/cx/wzss/wzss.do"],
+                        [],
+						["中山","http://jj.gdga.gov.cn/cx/wzss/wzss.do"],
+						["清远","http://www.qyga.gov.cn/qysms20/wfclxx/wfywcx.jsp"],
+						["汕头","http://gdst110.gov.cn/query/searchJtwf.html"],
+						["揭阳","http://www.jyjj.gov.cn/"],
+                        [],						
+						["河源","http://www.gdgajj.com/cx/wzss/wzss.do"],
+						["南海","http://www.nhga.gov.cn/qgafj/"]						
+					   ]
+			Hao.TrafficData [1] = [//浙江省
+						["杭州","http://www.hzti.com/service/default.aspx"],
+						["湖州","http://www.hzjxj.com/"],
+						["金华","http://www.jhga.gov.cn/"],
+						["嘉兴", "http://www.zjjxjj.gov.cn/"],
+
+                        [],
+						["义乌", "http://www.jhga.gov.cn/"],						
+						["舟山","http://www.police.zhoushan.gov.cn/Services_Illegal.asp"],
+						["绍兴","http://wscgs.sxga.gov.cn/"],
+						["台州","http://www.tzga.gov.cn/tzjjwwcx/"],
+                        [],						
+						["丽水", "http://61.153.62.58/"],
+						["萧山", "http://www.xsti.gov.cn/"],
+						["宁波","http://wf.nbjj.gov.cn/"],
+						["温州","http://www.wzsjj.cn/"],
+                        [],						
+						["衢州","http://gaj.qz.gov.cn/eleclist.asp"]
+
+					   ]
+			Hao.TrafficData [2] = [//山东省
+						["济南","http://218.57.137.34/jnjjwebnew/GongAnIndex/GongAnIndex.aspx"],
+						["青岛","http://auto.qingdaonews.com/wzcx/search.html"],
+						["烟台","http://www.ytjj.gov.cn/"],
+						["济宁", "http://www.jnjj.gov.cn/"],
+                        [],
+						["淄博","http://www.zbjj.gov.cn/"],
+						["日照","http://58.59.39.43:9080/wfcx/html/jdcwf/jdcwfmain.jsp"],
+						["德州","http://218.201.153.138:9080/wfcx/html/jdcwf/jdcwfmain.jsp"],
+						["枣庄","http://218.59.228.162/wfcx/html/jdcwf/jdcwfmain.jsp"],			
+                        [],
+						["聊城","http://auto.lcxw.cn/wzcx.asp"],
+						["潍坊","http://119.191.61.214:9080/wfcx/html/jdcwf/jdcwfmain.jsp"],
+						["东营","http://www.dygajj.gov.cn/jncmp/html/jdcwf/jdcwf2.html"],
+						["威海","http://www.whdzjc.com/"],							
+                        [],
+						["诸城","http://car.zcinfo.net/"],
+						["泰安","http://www.ta-police.com/wfcx/index.asp"],
+						["莱芜","http://www.laiwu.gov.cn/car/weizhang_search.asp"],
+						["菏泽","http://123.130.240.182/"]					
+					   ]
+					   
+					   
+			Hao.TrafficData [3] = [//江苏省
+						["南京","http://www.njjg.net/"],
+						["宿迁","http://jgcx.sqjg.net/"],
+						["连云港","http://www.lygjg.net/"],
+						["常州", "http://czjxj.czinfo.net/dzjccx.htm"],
+                         [],
+						["无锡", "http://jxj.wuxi.gov.cn/"],
+						["苏州","http://58.210.126.206:9091/QueryVD/"],
+						["徐州","http://www.xzjgw.com/2010cx/cars.asp"],
+						["镇江","http://www.zjcgs.com/"],
+                         [],	
+						["南通","http://www.ntjxj.com/"],							 						
+						["江阴","http://www.wxga.gov.cn/default.php?mod=c&s=ssb69ad59"],
+						["泰州","http://www.tzjgw.com/news/default.asp"],
+						["张家港","http://www.zjgga.cn/website/police/ShowWeiZhang2.asp"],
+                         [],		
+						["盐城", "http://www.ycjxj.cn/InfoSearch.asp"],							 					
+						["常熟","http://www.csjxj.com/wzcx.php"],
+						["扬州","http://218.106.97.174:8080/cx/"],
+						["昆山","http://58.210.126.206:9091/QueryVD/"]											
+					   ]
+			Hao.TrafficData [4] = [//河北省
+						["石家庄","http://www.jdcjsr.com/"],			
+						["邯郸","http://www.hdjj.gov.cn/#chaxun"],
+						["衡水","http://hsjj2.hengshui.com/"],
+						["保定","http://www.bdjiaojing.cn/"],
+                         [],						
+						["秦皇岛","http://www.qhdjtgl.net/ask/chaxun.php"],
+						["唐山","http://www.tscg.gov.cn/"],	
+						["邢台","http://www.xtjdcjsr.com/"],
+						["张家口","http://www.zjkjjw.com.cn/"],
+                         [],						
+						["承德","http://www.cdjj.gov.cn/Index.asp"],
+						["廊坊","http://www.lf.gov.cn/"]
+					   ]
+			Hao.TrafficData [5] = [//辽宁省
+						["辽宁省","http://www.lnjj.gov.cn/"],
+						["沈阳","http://218.25.58.44/searchsys/"],
+						["葫芦岛","http://www.hldgajjzd.com/sjcx/Index.asp"],
+						["丹东","http://www.dd122.com/pages/xxcx.asp"],
+                        [],
+						["锦州","http://www.jzgajx.com/"],						
+						["阜新","http://218.24.200.244/"],
+						["大连","http://www.dlutc.gov.cn/"],
+						["盘锦","http://jjd.panjin.gov.cn/"],
+                        [],						
+						["朝阳","http://www.zgcy.gov.cn/car_seek/"],
+						["鞍山","http://www.asgajj.com/"],
+						["辽阳","http://www.liaoyang.gov.cn/moban/wsfw/wscx07.asp"],
+						["海城","http://hcgajj.com/xxcx.asp"],
+                        [],						
+						["铁岭","http://www.tlga.gov.cn/jdc.jsp?name1=list_jdc.jsp&name2=kb.html?lb=2"],
+						["营口", "http://www.ykjj.gov.cn/wfcx.php"]						
+						]
+			Hao.TrafficData [6] = [//河南省
+						[ "郑州","http://www.zzcgs.com.cn/default?url=peccancy/search_info.jsp"],
+						["南阳","http://www.nydzjc.com/"],
+						["信阳","http://www.xyjjzd.com/"],
+						["濮阳","http://www.puyang.gov.cn/wmjdcwz.asp"],
+                        [],
+						["鹤壁", "http://www.hebi.gov.cn/gonggongfuwu/weizhangcheliangchaxun/"],						
+						["焦作","http://www.jzga.gov.cn/wzcx/lookup.aspx"],
+						["许昌","http://www.xcjjw.gov.cn/"],
+						["新乡","http://www.xxgaw.gov.cn/weifa.html"],
+                        [],						
+						["三门峡", "http://wzcx.smx.shangdu.com/"],
+						["洛阳","http://www.lyjjzd.com/wfcx.asp"],
+						["平顶山","http://www.pds122.com/"],
+						["安阳","http://www.anyangdx.com/Web_Asking.aspx"],
+                        [],						
+						["商丘","http://www.sqradio.com/old945/jdccx.htm"],
+						["开封","http://www.kfpolice.com/NewChange/ConditionPage2.aspx"]					   ]
+			Hao.TrafficData [7] = [//福建省
+						["福州","http://fzjj.easdo.com/jtwf/"],
+						["厦门","http://www.xmjj.gov.cn:8080/xmjj_cxfw/cxsjMain.action?actionStr=getwfcxMain_new#"],
+						["泉州","http://www.qzgajt.com/smss/index.asp"],			
+						["漳州","http://fzjj.easdo.com/jtwf/"],									
+                        [],
+						["龙岩","http://wzcx.fjlyga.gov.cn/wzsearch.htm"]
+					   ]					   
+			Hao.TrafficData [8] = [//江西省
+						["江西省","http://www.jxhld.gov.cn/"],
+						["南昌","http://ncjj.nc.gov.cn/infos.asp"],						
+						["赣州","http://www.gzsjjzd.gov.cn/cx.asp"],						
+						["九江","http://www.jjjj.com.cn/page/index.php"]						
+					   ]
+			Hao.TrafficData [9] = [//湖北省
+						["湖北省","http://www.hb122.org/xxcx/xxcx.jsp"],			
+						["武汉","http://www.whjg.gov.cn/"],
+						["黄石","http://www.hsjj.gov.cn/"],
+						["襄阳","http://xfwfcx.com/"],
+                        [],								
+						["十堰","http://www.hbsydx.com/"],
+						["宜昌","http://www.yichang.gov.cn/col/col3062/"],
+						["荆门","http://jmapp.jingmen.gov.cn/jiaojing/"],
+						["随州","http://www.sz122.net/query.html"],
+                        [],								
+						["黄冈","http://www.hb122.org/xxcx/xxcx.jsp"],
+						["荆州","http://www.jzjtgl.com/jzjjweb/"]
+					   ]
+			Hao.TrafficData [10] = [//湖南省
+						["湖南省","http://search.pazx888.com/SearchIndex.aspx"],
+						["长沙","http://www.hncsjj.gov.cn/QueryJDCWZOther.aspx"],
+						["常德","http://www.changde.gov.cn/art/2008/12/29/art_2511_83281.html"],
+						["邵阳","http://www.sysgajj.gov.cn/"],
+                        [],								
+						["益阳","http://so.jtjc.cn/"],
+						["衡阳","http://www.hnhyjj.gov.cn/HYJJXXW/"],
+						["郴州","http://search.pazx888.com/"],
+						["株洲","http://www.hnzzjj.gov.cn/ZzjtWeb/queryvv.aspx"]						
+					   ]
+			Hao.TrafficData [11] = [//山西省
+						["山西省","http://www.sxgajj.gov.cn/site/guest/search.action?type=0"],
+						["太原","http://www.tyjj.gov.cn/"],						
+						["长治","http://www.jjzd.changzhi.gov.cn/"],
+						["忻州","http://www.sxxzjj.gov.cn/"],
+                        [],						
+						["晋城","http://wzcx.jconline.cn/"],
+						["朔州","http://www.sxszjj.gov.cn/weizhang.aspx"],
+						["大同","http://www.dtjj.com.cn/"]					
+					   ]
+			Hao.TrafficData [12] = [//黑龙江
+						["黑龙江","http://www.hljjj.gov.cn:8081/wfcx/index.aspx"],
+						["哈尔滨","http://www.hrbgaj.gov.cn/wzcx/"],						
+						["齐齐哈尔","http://wt.jtaqxx.com/"],
+                        [],							
+						["大庆","http://www.dqjj.gov.cn/Query.jsp"],
+						["牡丹江","http://221.206.20.201:7010/search.asp"],
+						["佳木斯","http://jms122.cn/Default.aspx"]
+											   ]
+			Hao.TrafficData [13] = [//陕西省
+						["西安","http://www.xianjj.com/"],
+						["延安","http://www.yajjzd.com/"],
+						["安康","http://cx.akjjzd.gov.cn/"],
+						["榆林","http://61.150.107.59:9080/ylcx/query/QueryAction.do?actiontype=input"],
+						["咸阳", "http://www.xyjjzd.gov.cn/"],
+                        [],
+						["铜川","http://www.tc122.com/typenews.asp?id=13"],
+						["汉中","http://www.hzjjd.com/weifachaxun/Index.asp"]	
+					  ]
+			Hao.TrafficData [14] = [//甘肃省
+						["兰州","http://www.lzgajj.gov.cn/"]
+					   ]
+			Hao.TrafficData [15] = [//广西省
+						["广西","http://www.gxjj.gov.cn/"],				
+						["南宁","http://www.nn122.com/wfsx.aspx"],						
+						["贵港","http://www.gg122.com/"],
+						["桂林","http://www.966096.com/"],
+                        [],						
+						["柳州","http://www.lzcgs.com/"]
+					   ]
+			Hao.TrafficData [16] = [//青海
+						["西宁","http://www.qh.xinhuanet.com/trafficxn/search.htm"]
+					   ]
+			Hao.TrafficData [17] = [//云南省
+						["昆明","http://www.km122.cn/q2/query.html"],
+						["玉溪","http://www.yxjjzd.gov.cn/"]					   ]
+			Hao.TrafficData [18] = [//贵州
+						["贵州省","http://www.gzjjzd.gov.cn/subindex.asp?leftname=subleft7&rightname=jtwfcx/hphm_cx"],
+						["贵阳","http://jjzd.gygov.gov.cn/jjzd/2380439375600156672/index.html"]						
+					   ]
+			Hao.TrafficData [19] = [//海南省
+						["海南","http://hainanjj.gov.cn/"],
+						["海口","http://www.hkjxj.gov.cn/php/wei_zcx.php"]
+					   ]
+			Hao.TrafficData [20] = [//四川省
+						["四川省","http://www.scjj.gov.cn/sp_test.htm"],
+						["成都","http://www.cdjg.gov.cn/"],
+						["绵阳","http://www.myjtaq.com/"],
+						["自贡","http://www.zg122.gov.cn/illegal.jsp"],
+                        [],						
+						["泸州","http://www.sclzjj.gov.cn/"],						
+						["达州","http://dzjj.dz169.net:8088/"],
+						["德阳","http://www.dyjj.gov.cn/InfoQuery.aspx"]						
+					   ]
+			Hao.TrafficData [21] = [//吉林省
+						["长春","http://www.ccjg.gov.cn/"],					
+						["吉林","http://202.111.169.163:800/"],							
+						["白城","http://www.bcjjzd.com/web/qx/cl.asp"],
+						["松原","http://www.syjjzd.com/Default.aspx"],
+                        [],						
+						["延边","http://www.ybjg.gov.cn/wzch/index.asp?Modid=013001"]						
+					   ]
+			Hao.TrafficData [22] = [//宁夏
+						["宁夏","http://www.nxjj.gov.cn/web/nxjjxxw/index.jsp"],
+						["银川","http://www.nx.cninfo.net/zhuanti/wz/index.html"]						
+					   ]
+			Hao.TrafficData[23] = [//内蒙古
+						["呼和浩特", "http://cgs.hhhtgajt.com/"],					
+						["包头", "http://www.btjj.gov.cn/"],
+						["巴彦淖尔", "http://www.bsgajj.gov.cn/"],
+						["通辽", "http://www.tlcgs.com/Zxcx/clwzcx.asp"],
+                        [],	
+						["乌海", "http://222.74.84.166/drivertestbooking/wz/wzcx.action"],											
+						["赤峰", "http://www.cfcgs.gov.cn/wzcx.asp"],
+						["鄂尔多斯", "http://61.138.127.142:9081/ordosww/veh/wzcx/wfcx.jsp"]
+					   ];
+			Hao.TrafficData [24] = [//安徽省
+			            ["安徽","http://jiaojing.anhuinews.com/"],
+						["合肥","http://www.hfjjzd.gov.cn/hfwebquery/"],
+						["淮南","http://www.ahhnjj.net/"],
+						["六安","http://www.lajjzd.gov.cn/frmVehVio.aspx"],
+                        [],
+						["马鞍山", "http://jjzd.mas.gov.cn/"],							
+						["安庆","http://www.ahjtxx.com/query/"],
+						["亳州","http://bzjj.bz163.net/Index.asp"],
+						["芜湖","http://61.191.211.19:8080/whcx/Main.aspx?fzjg=B"],
+                        [],
+						["淮北","http://www.hbjjzd.cn/hbwfcx/Main.aspx?fzjg=F"]						
+                        ];
+			Hao.TrafficData [25] = [//新疆
+						["乌鲁木齐","http://www.xj163.cn/tools/car/"],
+						["巴州","http://www.xjbzjj.com/default.asp"]	
+					   ];						
+
+			Hao.TrafficView = function () {
+			    var doc = document, map = doc.getElementById('map'), city = doc.getElementById('city');
+			    city.onmousedown = function (e) {
+			        var event = window.event || e;
+			        if (window.event) {
+			            window.event.cancelBubble = true;
+			        }
+			        else {
+			            event.stopPropagation();
+			        }
+			    };
+			    map.onclick = function (e) {
+			        var coords, index, cityHTML, event, src;
+			        event = window.event || e;
+			        src = event.srcElement || event.target;
+
+			        if (Hao.Tools.checkTag(e, 'area')) {
+			            if (window.event) {
+			                window.event.cancelBubble = true;
+			            }
+			            else {
+			                event.stopPropagation();
+			            }
+			            coords = src.getAttribute('coords').split(',');
+			            index = src.getAttribute('index');
+			            city.style.left = 150 + 10 + parseFloat(coords[0]) + 'px';
+			            city.style.top = 10 + 20 + parseFloat(coords[1]) + 'px';
+			            cityHTML = makeCityHTML(index);
+			            if (cityHTML === null) {
+			                return true;
+			            }
+			            else {
+			                city.innerHTML = cityHTML
+			            }
+			            city.style.display = 'block';
+			        }
+			        return false;
+			    };
+			    doc.onmousedown = function (e) {
+			        city.style.display = 'none';
+			    }
+			    /*--inner function---------*/
+			    function makeCityHTML(index) {
+			        var data = Hao.TrafficData[index], i = 0, html = [];
+			        if (!data || data.length == 0) { return null; }
+			        for (i = 0; i < data.length; i++) {
+			            if (data[i].length == 2) {
+			                html.push("<a href='" + data[i][1] + "'>" + data[i][0] + "</a>");
+			            }
+			            else {
+			                html.push('<br/>');
+			            }
+			        }
+			        return html.join('');
+			    }
+
+
+			};
+    Hao.TrafficView();
+</script>
+ 
+</body>
+</html>

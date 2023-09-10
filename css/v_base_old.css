@@ -1,0 +1,68 @@
+ /*
+---------secondary page common style,for old page-------------
+last modified on 2010-03-25
+*/
+ /*---global style---*/
+    *{margin:0;padding:0;}
+    :focus{outline:0;}
+    img{border:none;}
+    li{list-style:none;}
+    table{ border-collapse:collapse; width:100%;}
+    body{ font-family: Arial,'宋体';background-color:#FCFFF7; font-size:12px;}
+    a{ color:#000;text-decoration:none;}
+    a:hover{color:Red; text-decoration:underline;}
+    .wrapper-basic{ width:960px; margin:0 auto; }
+    
+    /*----cms style------*/    
+    .highlight_1 a{ color:red;}
+    .bold_1{ font-weight:bold;}
+    
+    /*----head----*/    
+     .head-basic{padding-top:3px; overflow:hidden;font-size:14px; border-bottom:solid 1px #C1D0D7; height:66px;}
+     .head-basic .logo{float:left; font-size:0;}
+     .head-basic .search{float:left; display:inline; margin-left:165px; margin-top:6px;}
+     .head-basic ul{padding-bottom:2px; overflow:hidden; zoom:1;}
+     .head-basic li{float:left;height:26px;line-height:26px;margin-right:21px;display:inline;cursor:pointer; text-align:left;}
+     .head-basic li.current{color:#000; font-weight:bold;cursor:default;}
+     .head-basic form{ float:left;}
+     /*in ordet to add border later*/
+     .head-basic i{ float:left;}
+     .head-basic .text{ background-color:#FFF; height:20px;padding:2px 4px;font:14px/1.25 Simsun;float:left; width:300px; border: solid 1px #7F9DB9;}
+     .head-basic .submit{height:30px;width:104px; float:left; margin-left:10px; cursor:pointer; font-size:16px; position:relative; top:-2px;}
+     
+     /*--navy link(crumb)---*/
+     .crumb-basic{ line-height:26px; text-align:left; overflow:hidden; zoom:1; background-color:#eef7ff;}
+     .crumb-basic .sethome,.crumb-basic .feedback{ padding-left:20px; margin-right:30px;}
+     .crumb-basic .sethome{ background:url(/images/home.gif) 0 50% no-repeat; margin-left:6px; display:inline;}
+     .crumb-basic .sethome a{color:#D35E04;}
+     .crumb-basic .feedback{ background:url(/images/notebook.gif) 0 50% no-repeat;}
+     .crumb-basic  li{ float:left;}
+     .crumb-basic .bread{ float:right;color:#666; padding-right:10px;}
+     .crumb-basic .bread span{ margin:3px;}
+     .crumb-basic .bread a{ color:#333;}
+     /*--framework---*/
+     #head-basic{}
+     #body-basic{}
+     #foot-basic a{ font-weight:bold; font-size:14px; color:#419250; display:block; margin:0 auto; line-height:60px;background:url(/images/base/back.gif) 0 50% no-repeat; cursor:pointer; padding-left:30px; width:90px;}
+     
+      /*主要内容wrapper-basic*/
+      .main-basic{ border:1px solid #77AE84;}
+     
+      /*列表类 list*/
+      .main-basic .list{ background-color:#F2F9F2;}
+      .main-basic .list td{font-size:16px; padding-left:12px; border-style:none none solid solid; border-color:#E3EDE3; border-width:1px; height:36px; width:20%;}
+      .main-basic  h5{ line-height:20px; color:#2F8059; font-size:12px; font-weight:normal; background-color:#E0F0E4;border-bottom:solid 1px #E3EDE3; text-align:center;}
+      .main-basic  h5 span{ display:block; border:solid 1px #FFF; border-bottom:none;}
+      /*为了兼容ie6设立此类*/
+      .main-basic .list td.first{ border-left:none;}
+      
+      /*tab类,条目为固定高宽*/
+      .tab-basic{ width:100%; border-bottom:1px solid #77AE84; height:29px; padding-top:10px;}
+      .tab-basic li{ float:left; display:inline; margin-left:5px; height:22px; padding-top:6px; }
+      .tab-basic div{ border:1px solid #77AE84; border-bottom:none; float:left;width:168px;}
+      .tab-basic i{ float:left; width:2px;  font-size:0; overflow:hidden; background-color:#A6A6A6; height:25px; display:none; margin-top:4px;}
+      .tab-basic a{ background-color:#B6D6BB; font-size:12px; line-height:22px;display:block;text-align:center;  line-height:22px; text-decoration:none; color:#2F8059; cursor:pointer;}
+      .tab-basic .selected{ padding-top:0; height:28px;}
+      .tab-basic .selected div{ position:relative;background-color:#FFF; height:28px; width:166px;}
+      .tab-basic .selected a{  background-color:#FFF; position:absolute; bottom:-1px; left:0; height:28px; width:166px; font-weight:bold; line-height:29px; cursor:default; font-size:13px; cursor:default;}
+      .tab-basic .selected i{ display:block;}

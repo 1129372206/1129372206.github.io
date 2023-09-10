@@ -1,0 +1,537 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+ td,body {  font-size:15px; font-family:arial,sans-serif,宋体;}body{margin-top:0px; margin-left:0px; margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;} 
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.bgg{width:766px; background:#D9EDDA;border:1px solid #8AB78A}
+.bgg table{ margin:5px 5px 5px 5px}
+.zb table{ margin:0px 5px 0px 5px}
+.zbfont{color:#2E6D4A; text-align:center}
+.zbfont a:link,.zbfont a:visited{color:#2E6D4A}
+.zbfont a:hover{color:red}
+.f9pt{font-size: 12px;}
+.f14{font-size: 15px;}
+#sfont a,#sfont b{font-size:13px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg2{width:776px; background:#D9EDDA;border:1px solid #8AB78A}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+--> </style>
+<base target="_blank">
+<title>OpenHao123网址之家－－地方服务-北京</title>
+</head>
+<body>
+<script src="../js/base.js"></script>
+<script src="../js/userdata.js"></script>
+<script src="../js/record.js"></script>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="OpenHao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="778" height="51">
+    <tr>
+      <td width="230" height="51"><a href="/" target="_self" class="m"><img src="../images/logo.gif" alt="设为主页"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18> </td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()" onMouseDown="ClickMonkey.log('haoweb');" >网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()" onMouseDown="ClickMonkey.log('haomp3');" >MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()" onMouseDown="ClickMonkey.log('haoimg');" >图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()" onMouseDown="ClickMonkey.log('haopost');" >贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" onMouseDown="ClickMonkey.log('haozhidao');" >知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()" onMouseDown="ClickMonkey.log('haonews');" >新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()" onMouseDown="ClickMonkey.log('haovideo');">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action=http://www.baidu.com/s name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=OpenHao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=778 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=778 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.OpenHao123.cc" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.OpenHao123.cc/');return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="../images/home.gif" width="15" height="15" border="0" align="absmiddle"> 设为主页</a>　　<a href="/inc"><img src="../images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="/" target=_self style="color:#424242 ">首页</a> >  <a href="http://www.OpenHao123.cc/daquan/defangsite.htm" style="color:#424242 ">地方服务</a> > 北京</td></tr></table>
+</center></div>
+<div align="center" onMouseDown="bdRecord.scope(event)"><center>
+<div class="bgg" >
+<table width="100%"  border="0" cellspacing="1" cellpadding="5">
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<tr bgcolor="EFF7F0">
+                 <td width="12%" rowspan="3" bgcolor="EFF7F0" class="zbfont">新闻</td>
+                <td width="22%"><a href="http://www.beijing.gov.cn/">首都之窗</a></td>
+                <td width="22%"><a href="http://www.qianlong.com/">千龙网</a></td>
+                <td width="22%"><a href="http://www.morningpost.com.cn/">北京晨报</a></td>
+                <td width="22%"><a href="http://www.bjnews.com.cn/">新京报</a></td>
+              </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.ynet.com/">北青网</a></td>
+                <td><a href="http://www.jinghua.cn/">京华时报</a></td>
+                <td><a href="http://www.gmw.cn/">光明网</a></td>
+              <td><a href="http://www.rbc.cn/">北京广播网</a></td>
+              </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.btv.com.cn/">北京电视台</a></td>
+                <td></td>
+                <td></td>
+              <td></td>
+              </tr>
+
+
+              <tr bgcolor="E5F2E5">
+                <td rowspan="3" bgcolor="E5F2E5" class="zbfont">交通</td>
+                <td><a href="http://map.baidu.com/?newmap=1&l=12&t=B_NORMAL_MAP&c=12957244.92,4828090.32&s=cur%26curtp%3D2%26wd%3D%25E5%258C%2597%25E4%25BA%25AC
+">北京地图</a></td>
+                <td><a href="http://www.bjbus.com/">北京公交网</a></td>
+                <td><a href="http://www.weather.com.cn/weather/101010100.shtml">北京天气</a></td>
+                <td><a href="http://www.bcia.com.cn/">首都机场</a></td>
+              </tr>
+              <tr bgcolor="E5F2E5">
+                <td><a href="http://map.baidu.com/subways/index.html?c=beijing">北京地铁</a></td>
+                <td><a href="http://fm1039.rbc.cn/">1039交通台</a></td>
+                <td><a href="http://www.bjjtgl.gov.cn/publish/portal0/tab72/">违章查询</a></td>
+                <td><a href="http://ditu.beijing.cn/">数字北京</a></td>
+              </tr>
+              <tr bgcolor="E5F2E5">
+                <td><a href="http://www.bjjtgl.gov.cn/">北京交通管理局</a></td>
+                <td><a href="http://beijing.edushi.com/">e都市北京</a></td>
+                <td><a href="http://www.bjjtw.gov.cn/">北京交通网</a></td>
+                <td><a href="http://www.bjhjyd.gov.cn/">车牌摇号申请</a></td>
+              </tr>			  
+          
+              <tr bgcolor="EFF7F0">
+                <td rowspan="3"  class="zbfont">论坛</td>
+                <td><a href="http://tieba.baidu.com/f?kw=%B1%B1%BE%A9">北京贴吧</a></td>
+                <td><a href="http://bbs.qianlong.com/">京华论坛</a></td>
+                <td><a href="http://www.wangjing.cn/">望京网论坛</a></td>
+                <td><a href="http://www.yanjiao.com/">燕郊网城</a></td>
+              </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.hlgnet.com/">回龙观社区网</a></td>
+                <td><a href="http://www.bato.cn/">八通网</a></td>
+                <td><a href="http://www.yizlife.com/">亦庄生活</a></td>
+                <td><a href="http://bbs.bwlc.net/">北京福彩论坛</a></td>
+              </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.tty520.com/">天通苑社区网</a></td>
+                <td><a href="http://www.haofs.com/">网聚房山</a></td>
+                <td><a href="http://static.tieba.baidu.com/tb/cms/OpenHao123/beijing.html">北京热门论坛</a></td>
+                <td><a href="http://www.lvye.info/">绿野户外</a></td>
+              </tr>
+
+<tr bgcolor="E5F2E5">
+                <td rowspan="2"  class="zbfont">通信</td>
+                <td><a href="http://www.bj.10086.cn/">北京移动</a></td>
+                <td><a href="http://info2.10010.com/lt/plugin/portal/arealevel/queryCityInfo.do?arno=000100010001&id=1001">北京联通</a></td>
+                <td><a href="http://www.bjgwbn.net.cn/">长城宽带</a></td>
+                <td><a href="http://bj.ct10000.com/">北京电信</a></td>
+        </tr>
+<tr bgcolor="E5F2E5">
+                <td><a href="http://www.bbn.com.cn/">北京宽带网</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+
+
+        </tr>
+		
+<tr bgcolor="EFF7F0">
+                <td rowspan="4"  class="zbfont">房产</td>
+				<td><a href="http://www.bjgjj.gov.cn/">北京住房公积金网</a></td>
+                <td><a href="http://www.bjfdc.gov.cn/">北京房地产交易管理网</a></td>
+                <td><a href="http://bj.soufun.com/">搜房网-北京</a></td>
+                <td><a href="http://house.focus.cn/">焦点房产-北京</a></td>
+ 
+        </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://bj.5i5j.com/">我爱我家</a></td>
+                <td><a href="http://bj.ganji.com/">赶集网北京</a></td>
+                <td><a href="http://beijing.baixing.com/">北京百姓网</a></td>
+                <td><a href="http://bj.h2h.cn/">手递手北京</a></td>
+              </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://beijing.anjuke.com/">安居客北京</a></td>
+                <td><a href="http://www.tuitui99.com/">推推99</a></td>            
+                <td><a href=http://beijing.tg.com.cn/>齐家家居</a></td>
+				<td><a href=http://www.meizhaiwang.com/>美宅网</a></td>
+              </tr>
+              <tr bgcolor="EFF7F0">
+                <td></td>
+                <td></td>            
+                <td></td>
+				<td  align="right"><a href=http://www.OpenHao123.cc/fangchan/bjfc.htm style="padding-right:10px ">更多&nbsp;&raquo;</a></td>
+              </tr>			             
+			  <tr bgcolor="E5F2E5">
+                <td rowspan="4"  class="zbfont">旅游</td>
+                <td><a href="http://www.lvping.com/tourism-d1-beijing.html">驴评北京旅游指南</a><BR>                </td>
+                <td><a href="http://ly.beijing.cn/index.shtml">首都之窗旅游</a></td>
+                <td><a href="http://www.summerpalace-china.com/">颐和园</a></td>
+                <td><a href="http://www.dpm.org.cn/">故宫博物院</a></td>
+              </tr>
+              <tr bgcolor="E5F2E5">
+                <td><a href="http://www.bj-sea.com/">北京海洋馆</a></td>
+                <td><a href="http://www.beijingyuyuantanpark.com/">玉渊潭</a></td>
+                <td><a href="http://www.beijingzoo.com/">北京动物园</a></td>
+                <td><a href="http://www.beijingbg.com/">北京植物园</a></td>
+              </tr>
+			                <tr bgcolor="#E5F2E5">
+                 <td><a href="http://www.bjp.org.cn/">北京天文馆</a></td>                
+                <td><a href="http://www.bjta.gov.cn/">北京旅游局</a></td>
+	      <td><a href="http://www.cstm.org.cn/">中国科技馆</a></td>
+                <td><a href="http://www.oldbeijing.net/">老北京网</a></td>
+              </tr> 
+			                <tr bgcolor="#E5F2E5">
+                 <td><a href="http://www.bjexpo.com/">北京展览馆</a></td>                
+                <td><a href="http://www.pgm.org.cn/">恭王府</a></td>
+	       <td><a href="http://bj.happyvalley.cn/">北京欢乐谷</a></td>
+                <td></td>
+              </tr>
+
+			  <tr bgcolor="EFF7F0">
+                <td rowspan="1"  class="zbfont">教育</td>
+                 <td><a href="http://www.bjpta.gov.cn/">北京人事考试网</a></td>
+                 <td><a href="http://www.kuaiji.com.cn/">北京会计网</a></td>
+                <td><a href="http://beijing.neworiental.org/">北京新东方</a></td>
+                <td><a href="http://www.bjeea.cn/">北京教育考试院</a></td>
+              </tr>
+
+			  <tr bgcolor="E5F2E5">
+                <td rowspan="1"  class="zbfont">美食</td>
+                 <td><a href="http://www.dianping.com/beijing">大众点评</a></td>
+                 <td><a href="http://www.lihua.com/2008/">丽华快餐</a></td>
+                <td><a href="http://beijing.fantong.com/">饭统网北京</a></td>
+                <td></td>
+              </tr>
+
+			               
+			  <tr bgcolor="EFF7F0">
+                <td rowspan="3"  class="zbfont">购物</td>
+                <td ><a href="http://www.55bbs.com/">我爱打折</a> </td>
+                <td><a href="http://www.zgcbb.com/">中关村图书大厦</a></td>
+                <td><a href="http://www.bjbb.com/">西单图书大厦</a></td>
+                <td><a href="http://www.wfjsd.com/">王府井书店</a></td>
+              </tr>
+              <tr bgcolor="EFF7F0">
+                <td ><a href="http://www.carrefour.com.cn/">家乐福</a></td>
+	       <td ><a href="http://tuan.aibang.com/">爱帮团</a></td>
+	       <td ><a href="http://www.OpenHao123.cc/tuan.htm">北京团购</a></td>
+	       <td ><a href="http://life.sina.com.cn/tuan/beijing/">新浪团购</a></td>
+              </tr>
+              <tr bgcolor="EFF7F0">
+                <td ><a href="http://www.didatuan.com/">嘀嗒团</a></td>
+	       <td ><a href="http://www.meituan.com/beijing">美团网北京</a></td>
+	       <td ><a href="http://www.mosh.cn/beijing">魔时网</a></td>
+	       <td ><a href="http://www.bj100.com/">京探网</a></td>
+              </tr>
+			             
+			  <tr bgcolor="E5F2E5">
+                <td rowspan="6"  class="zbfont">休闲</td>
+                <td><a href="http://www.ifindu.cn/">六人行</a></td>
+                <td><a href="http://www.798art.org/">798艺术区</a></td>
+                <td><a href="http://www.chncpa.org/">国家大剧院</a></td>
+                <td><a href="http://www.piao.com.cn/">中国票务在线</a></td>
+              </tr>
+              <tr bgcolor="E5F2E5">
+               <td><a href="http://data.ent.sina.com.cn/cinema/area.php?&dpc=1">北京影讯</a></td>
+                <td><a href="http://www.wandafilm.com/">万达影城</a></td>
+                <td><a href="http://www.xidanjoycity.com/">大悦城</a></td>
+                <td><a href="http://www.imegabox.com/">美嘉影城</a></td>
+              </tr>
+			                <tr bgcolor="#E5F2E5">
+                 <td><a href="http://www.cn.cashboxparty.com/">钱柜</a></td>
+                <td><a href="http://www.clubzone.cn/">北京酒吧夜时尚</a> </td>
+                <td><a href="http://www.bjdiaoyu.com/">北京钓鱼网</a></td>
+                <td><a href="http://www.ixingmei.com/">星美国际影城</a></td>
+              </tr> 
+
+			                <tr bgcolor="#E5F2E5">
+                 <td><a href="http://www.clcn.net.cn/">首都图书馆</a></td>
+                <td><a href="http://www.bjume.com/">华星国际影城</a></td>
+                <td><a href="http://www.laosheteahouse.com/">老舍茶馆</a></td>
+                <td><a href="http://www.cnfm.org.cn/">中国电影博物馆</a></td>
+              </tr> 
+			                <tr bgcolor="#E5F2E5">
+                 <td><a href="http://www.capitalmuseum.org.cn/">首都博物馆</a></td>
+                <td><a href="http://www.228.com.cn/bj/index.html">永乐票务</a></td>
+                <td><a href="http://www.sddyy.cn/">首都电影院</a></td>
+                <td><a href="http://piao.youa.baidu.com/10">有啊票务</a></td>
+              </tr>
+			                <tr bgcolor="#E5F2E5">
+                 <td><a href="http://www.chnmuseum.cn/">国家博物馆</a></td>
+                <td><a href="http://www.ccyou.cn/">出城网</a></td>
+                <td></td>
+                <td></td>
+              </tr>
+
+
+			  <tr bgcolor="EFF7F0">
+                <td rowspan="6" bgcolor="EFF7F0"  class="zbfont">政府</td>
+                <td><a href="http://www.beijing.gov.cn/">北京市政府</a></td>
+                <td><a href="http://www.hd315.gov.cn/">北京市工商管理局</a></td>
+                <td><a href="http://www.bjgaj.gov.cn/">北京市公安局</a></td>
+                <td><a href="http://www.bjcz.gov.cn/">北京市财政局</a></td>
+			  </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.bjedu.gov.cn/">北京市教委</a></td>
+                <td><a href="http://www.bjhd.gov.cn/">海淀区政府</a></td>
+                <td><a href="http://bjgy.chinacourt.org/">北京法院网</a></td>
+                <td><a href="http://www.bjhb.gov.cn/">北京市卫生局</a></td>
+              </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.tax861.gov.cn/">北京市地方税务局</a></td>
+               <td><a href="http://www.bjsat.gov.cn/">北京国税</a></td>
+                <td><a href="http://www.bjjs.gov.cn/">北京市建设委员会</a></td>
+                <td><a href="http://www.bjpta.gov.cn/">北京人事考试网</a></td>
+              </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.bjmzj.gov.cn/">北京市民政局</a></td>
+                <td><a href="http://www.bjstats.gov.cn/">北京市统计局</a></td>
+               <td><a href="http://www.bjfdc.gov.cn/public/Index.asp">北京房地产交易管理网</a></td>
+                <td><a href="http://www.bjfsh.gov.cn/">房山信息网</a></td>
+              </tr>  
+               <tr bgcolor="EFF7F0">
+                <td><a href="http://www.kuaiji.com.cn/">北京会计网</a></td>
+                <td><a href="http://www.bjdx.gov.cn/">大兴信息网</a></td>
+               <td><a href="http://www.bjsjs.gov.cn/">石景山信息网</a></td>
+                <td><a href="http://www.bjshy.gov.cn/">顺义网城</a></td>
+              </tr>
+                <tr bgcolor="EFF7F0">
+                <td><a href="http://www.bjhr.gov.cn/">怀柔信息网</a></td>
+                <td><a href="http://www.bjld.gov.cn/csibiz/home/">北京社保网</a></td>
+               <td><a href="http://www.bjpc.gov.cn/">北京市发改委</a></td>
+                <td></td>
+              </tr>
+
+			  
+			    
+<tr bgcolor="E5F2E5">
+                <td rowspan="3"  class="zbfont">其他</td>
+				<td><a href="http://life.youa.com/">有啊生活</a></td>
+                <td><a href="http://www.gohoo.cn/">歌华宽带</a></td>
+                <td><a href="http://www.pumch.cn/">北京协和医院</a></td>
+                <td><a href="http://www.51job.com/default-area.php?area=0100">前程无忧北京</a></td>
+ 
+        </tr>
+              <tr bgcolor="E5F2E5">
+                <td><a href="http://www.bgctv.com.cn/">歌华有线</a></td>
+                <td><a href="http://www.zhaopin.com/beijing/">智联招聘北京</a></td>
+                <td><a href="http://www.301hospital.com.cn/">北京301医院</a></td>
+                <td><a href="http://www.bjmama.net/">北京妈妈网</a></td>
+              </tr>
+              <tr bgcolor="E5F2E5">
+                <td><a href="http://fcguoan.sina.com.cn/">国安足球俱乐部</a></td>
+                <td><a href="http://www.bjguahao.gov.cn/comm/index.php">北京网上预约挂号</a></td>
+                <td></td>
+                <td></td>
+              </tr>	
+</table>
+</div>
+</center></div>
+<br>
+<DIV align=center><br><a href="http://www.OpenHao123.cc/" target="_self"><img src="../images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="OpenHao123-navhtm-navbj";</script><script src="../js/monitor.js"></script>
+<span style="display:none"><script src="/js/tj.js"></script></span></body>
+</html>

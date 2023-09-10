@@ -1,0 +1,310 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+td,body {  font-size: 15px; font-family:arial,sans-serif,宋体;}body{margin-top:0px; margin-left:0px; margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;} .bgg{background-color:#80B080; width:778px;}
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg{border-color:#8AB78A; width:776px;}
+.f9pt{font-size: 12px;}
+.s{width:2%;}
+#sfont a,#sfont b{font-size:13px;}
+
+.highlight_1 a:link {color:#ff0000}
+.highlight_1 a:link,.highlight_1 a:visited{color:red}
+.highlight_2{background:#fff}
+.highlight_2 a:link {color:green}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+
+.tdL{ color:#538753; padding:0px 0 0 15px; font-weight:600}
+.tdR{ color:#538753; padding:0px 0 0 0; font-weight:600}
+.lineS{color:#999999}
+.tdW{ line-height:28px;width:96%; padding:0px 0 0 15px;}
+hr.cg {border-top:1px dashed #C8DEC6;height: 1px;overflow:hidden; width:96%; margin-top:0}
+--> </style>
+<base target="_blank">
+<title>OpenHao123网址之家－－酷站</title>
+</head>
+<body>
+<script src="js/base.js"></script>
+<script src="js/userdata.js"></script>
+<script src="js/record.js"></script>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="OpenHao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="778" height="51">
+    <tr>
+      <td width="290" height="51"><a href="http://www.OpenHao123.cc" target="_self" class="m"><img src="images/logo.gif" alt="把OpenHao123设为主页"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18> </td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()" onMouseDown="ClickMonkey.log('haoweb');" >网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()" onMouseDown="ClickMonkey.log('haomp3');" >MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()" onMouseDown="ClickMonkey.log('haoimg');" >图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()" onMouseDown="ClickMonkey.log('haopost');" >贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" onMouseDown="ClickMonkey.log('haozhidao');" >知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()" onMouseDown="ClickMonkey.log('haonews');" >新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()" onMouseDown="ClickMonkey.log('haovideo');">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action=http://www.baidu.com/s name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=OpenHao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=778 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=778 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.OpenHao123.cc" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.OpenHao123.cc/');return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="images/home.gif" width="15" height="15" border="0" align="absmiddle"> 把OpenHao123设为主页</a>　　<a href="inc/"><img src="images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="/" target=_self style="color:#424242 ">首页</a> > 酷站</td></tr></table>
+</center></div>
+<div align="center" onMouseDown="bdRecord.scope(event)"><center>
+<div class="t1 bgg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#EFF7F0">
+<tr>
+    <td width="95%" class="tdW" colspan="2" ><div class=tdL>知识</div>　<a href="http://www.cqvip.com/">维普资讯</a>　<a href="http://www.chinaqking.com/">中国期刊网</a>　<a href="http://www.qikan.com.cn/">龙源期刊网</a>　<a href="http://bk.183.com.cn/index.do">邮政报刊订阅网</a>　<a href="http://www.zazhipu.com/">杂志铺</a>　<a href="http://wiki.mbalib.com/">MBA智库百科</a>　<a href="http://www.cosmoscape.com/">星空天文网</a>　<a href="http://www.quanxue.cn/">劝学网</a><br>　<a href="http://www.astronomy.com.cn/bbs/">牧夫天文论坛</a>　<a href="http://www.patent-cn.com/">专利之家</a>　<a href="http://www.sciam.com.cn/">环球科学</a>　<a href="http://songshuhui.net/">科学松鼠会</a>　<a href="http://www.ufo-1.cn/">UFO探索网</a>　<a href="http://www.guokr.com/">果壳网</a>　<a href="http://www.5xue.com/">我学网</a>　<a href="http://v.163.com/open/">网易公开课</a><br>　<a href="http://zh.wikipedia.org/">维基百科</a>　<a href="http://www.51zxw.net/">我要自学网</a>　<a href="http://www.cscse.edu.cn/">中国留学网</a>　<a href="http://bbs.taisha.org/">太傻超级论坛</a>　<a href="http://tech.163.com/school/video/">网易学院</a>　<a href="http://wenwen.soso.com/">搜搜问问</a>　<a href="http://xue.baidu.com/">新手学上网</a>　<a href="http://nnsa.mep.gov.cn/">国家核安全局</a><br>　<a href="http://www.wordlm.com/">word联盟</a>　<a href="http://iask.sina.com.cn/">爱问知识人</a>　<a href="http://www.zhihu.com/">知乎</a> </td>    
+  </tr>
+ <tr>
+    <td colspan="2" ><hr class=cg></td>
+    </tr>
+  <tr>
+    <td width="95%" class="tdW" colspan="2" ><div class=tdL>兴趣</div>　<a href="http://www.rubik.com.cn/">魔方小站</a>　<a href="http://bbs.bianzhirensheng.com/">编织人生</a>　<a href="http://bbs.china-shufajia.com/">书法家论坛</a>　<a href="http://bbs.zgzkw.com/">中国篆刻论坛</a>　<a href="http://bbs.cnpenjing.com/">盆景艺术论坛</a>　<a href="http://www.zuojiaju.com/">木工爱好者</a>　<a href="http://www.rouding.com/">肉丁网</a>　<a href="http://bbs.mx3g.com/">模型中国论坛</a><br>　<a href="http://bbs.5imx.com/">我爱模型论坛</a>　<a href="http://bbs.bbicn.com/">兵人在线</a>　<a href="http://www.actoys.net/">ACTOYS模玩网</a>　<a href="http://www.pcwaishe.cn/">外设天下</a>　<a href="http://www.mylhh.com/">连趣网</a>　<a href="http://www.krdrama.com/bbs/">韩剧社区</a>　<a href="http://www.jlpzj.com/">纪录片之家</a>　<a href="http://www.poobbs.com/">涂鸦王国</a><br>　<a href="http://kxt.fm/">邻居的耳朵</a> </td>    
+  </tr>
+  <tr>
+    <td colspan="2" ><hr class=cg></td>
+    </tr>
+  <tr>
+    <td width="95%" class="tdW" colspan="2" ><div class=tdL>爱物</div>　<a href="http://www.watchstore.com.cn/">名表论坛</a>　<a href="http://www.chineseantiques.com.cn/">中国古玩论坛</a>　<a href="http://www.knifriend.com/">刀友论坛</a>　<a href="http://www.iwatch365.net/">爱表族</a>　<a href="http://www.shoudian.com/">手电筒论坛</a>　<a href="http://www.av199.com/">家庭影院音响论坛</a>　<a href="http://www.zippofans.com/">Zippo爱好者</a>　<a href="http://www.tobaccochina.com/">烟草在线</a><br>　<a href="http://www.erji.net/">耳机大家坛</a>　<a href="http://www.hifidiy.net/">中国音响DIY</a>　<a href="http://www.bggd.com/bbs/">北旅望远镜论坛</a>　<a href="http://www.dyee.org/bbs/">紫砂江湖</a>　<a href="http://www.giftour.com/">集物特</a>　<a href="http://www.x-kicks.com/">新新球鞋网</a>　<a href="http://www.yanyue.cn/">烟悦网</a>　<a href="http://www.gaoloumi.com/">高楼迷</a> </td>
+  </tr>
+ <tr>
+    <td colspan="2" ><hr class=cg></td>
+    </tr>
+  <tr>
+   <td width="95%" class="tdW" colspan="2" ><div class=tdL>运动</div>　<a href="http://www.chinafishtv.com/">中国钓鱼频道</a>　<a href="http://bbs.zjfishing.net/">浙江钓鱼网</a>　<a href="http://www.diaoyuweng.com/">钓鱼翁</a>　<a href="http://www.enjoyfish.com.cn/">鱼乐无限</a>　<a href="http://www.yuqu.com/">渔趣网</a>　<a href="http://bbs.chinafishing.com/">海峡钓鱼论坛</a>　<a href="http://www.lg918.cn/bbs/">老鬼钓鱼论坛</a>　<a href="http://www.77bike.com/bbs/">折叠车交流网</a><br>　<a href="http://www.biketo.com/bbs/">自行车旅行网</a>　<a href="http://www.chinabike.net/newbbs/">自行车论坛</a>　<a href="http://www.dongfanghong.com.cn/bbs/">东方红自行车论坛</a>　<a href="http://bbs.badmintoncn.com/">中羽论坛</a>　<a href="http://bbs.chinaswim.com/">悠泳网</a>　<a href="http://www.doyouhike.net/">磨坊 </a>　<a href="http://bbs.fblife.com/">越野E族</a>　<a href="http://bbs.8264.com/">8264驴友论坛</a><br>　<a href="http://www.zhonghuahunt.com/">中华打猎论坛</a></td>    
+  </tr>
+  <tr>
+    <td colspan="2" ><hr class=cg></td>
+    </tr>
+  <tr>
+      <td width="95%" class="tdW" colspan="2" ><div class=tdL>生活</div>　<a href="http://www.ganji.com/">赶集网</a>　<a href="http://www.h2h.cn/">手递手</a>　<a href="http://www.baixing.com/">百姓网</a>　<a href="http://www.edeng.cn/">易登网</a>　<a href="http://life.youa.com/">有啊生活</a>　<a href="http://www.caibangzi.com/">财帮子</a>　<a href="http://www.qian8ao.com/">钱包</a>　<a href="http://www.jizhangla.com/">财客网</a>　<a href="http://www.caakee.com/">财客在线</a>　<a href="http://www.shede.com/">舍得网</a>　<a href="http://www.ditiezu.com/">地铁族</a><br>　<a href="http://www.jd-bbs.com/">家电论坛</a>　<a href="http://www.163dz.com/bbs/">家电维修论坛</a>　<a href="http://www.ea3w.com/">万维家电网</a>　<a href="http://www.psychologies.com.cn/">心理月刊</a>　<a href="http://www.psychcn.com/">华夏心理网</a>　<a href="http://www.chinapost.com.cn/">中国邮政网</a>　<a href="http://bbs.enjoykorea.net/">乐在韩国</a>　<a href="http://www.jifenzhong.com/">几分钟</a> </td>  
+  </tr>
+  <tr>
+    <td colspan="2" ><hr class=cg></td>
+    </tr>
+  <tr>
+    <td width="95%" class="tdW" colspan="2" ><div class=tdL>宗教</div>　<a href="http://www.fjdh.com/">佛教导航</a>　<a href="http://www.jingangjing.com/">金刚经</a>　<a href="http://www.zgfj.cn/">中国佛教网</a>　<a href="http://www.ptsfjw.com/">普陀山佛教网</a>　<a href="http://www.folou.com/">地藏缘论坛</a>　<a href="http://www.fjnet.com/">佛教在线</a>　<a href="http://www.foxue.org/">佛学在线</a>　<a href="http://www.xuefo.net/">学佛网</a>　<a href="http://www.zanmeishi.com/">赞美诗</a><br>　<a href="http://www.yslzc.com/">伊斯兰之窗</a>　<a href="http://www.2muslim.com/">中穆网</a>　<a href="http://www.edzx.com/">恩典在线</a>　<a href="http://www.ysong.org/">雅歌基督教音乐</a>　<a href="http://www.fuyin.tv/">福音影视网</a>　<a href="http://www.bskk.com/">地藏论坛</a> </td>    
+  </tr>
+  <tr>
+    <td colspan="2" ><hr class=cg></td>
+    </tr>
+	<tr>
+    <td width="95%" class="tdW" colspan="2" ><div class=tdL>网络</div>　<a href="http://www.pceggs.com/">pc蛋蛋</a>　<a href="http://www.dbank.com/">DBank网盘</a>　<a href="http://www.techweb.com.cn/">TechWeb</a>　<a href="http://www.csdn.net/">CSDN技术社区</a>　<a href="http://www.donews.com/">donews</a>　<a href="http://msdn.microsoft.com/">msdn</a>　<a href="http://www.ccidnet.com/">赛迪</a>　<a href="http://www.youdao.com/">有道</a>　<a href="http://www.chinaitlab.com/">中国it实验室</a><br>　<a href="http://www.soso.com/">soso</a>　<a href="http://www.vidown.cn/">维棠</a>　<a href="http://www.net.cn/">万网</a>　<a href="http://www.kuaipan.cn/">金山快盘</a>　<a href="http://www.rayfile.com/">Rayfile网盘</a>　<a href="http://www.mycodes.net/">源码之家</a>　<a href="http://www.qiannao.com/">千脑网盘</a>　<a href="http://disk.qq.com/">QQ网络硬盘</a>　<a href="http://www.onlylz.com/">楼主网</a></td>    
+  </tr>
+  <tr>
+    <td colspan="2" ><hr class=cg></td>
+    </tr>
+	 <tr>
+      <td width="95%" class="tdW" colspan="2" ><div class=tdL>趣站</div>　<a href="http://www.zhubajie.com/">猪八戒</a>　<a href="http://www.vikecn.com/">威客中国</a>　<a href="http://www.taskcn.com/">任务中国 </a>　<a href="http://www.zhengjicn.com/">中国征集网</a>　<a href="http://www.baike086.com/">摆客中国</a>　<a href="http://bbs.64gua.com/">周易天地</a>　<a href="http://blog.sina.com.cn/wangmomo">王卯卯-兔斯基</a>　<a href="http://119.china.com.cn/">中国消防在线</a><br>　<a href="http://www.mogujie.com/">蘑菇街</a>　<a href="http://www.paidai.com/">派代网</a>　<a href="http://www.51testing.com/">51testing </a>　<a href="http://www.sojump.com/">问卷星</a>　<a href="http://www.crcf.org.cn/">中国红十字基金会</a>　<a href="http://www.onefoundation.cn/">壹基金</a>　<a href="http://www.wenming.cn/">中国文明网</a>　<a href="http://www.cyzone.cn/">创业邦</a>　<a href="http://ouroots.nlc.gov.cn/">中华寻根网</a>  <br>　<a href="http://www.liketry.com/">喜试网</a>　 </td>  
+  </tr>
+</table>
+</div>
+</center></div>
+<br>
+<DIV align=center><br><a href="/" target="_self"><img src="images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="OpenHao123-zhaoz";</script><script src="js/monitor.js"></script>
+</body>
+</html>

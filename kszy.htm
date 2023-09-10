@@ -1,0 +1,570 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+ td,body {  font-size: 16px; font-family:arial,sans-serif,宋体;}body{margin-top:0px;margin-left:0px;margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;}
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg{border-color:#8AB78A; width:898px}
+.f9pt{font-size: 12px;}
+#sfont a,#sfont b{font-size:13px;}
+.highlight_1 a:link,.highlight_1 a:visited{color:red}
+.wr{text-align:right}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+.tdL{ color:#538753; padding:0px 0 0 15px; font-weight:600}
+.tdR{ color:#538753; padding:0px 0 0 0; font-weight:600}
+.tdL a:link,.tdR a:link,.tdL a:visited,.tdR a:visited{color:#538753;}
+.tdL a:hover,.tdR a:hover{color:red;}
+.tdH{ line-height:28px}
+hr.cg {border-top:1px dashed #C8DEC6;height: 1px;overflow:hidden; width:96%; margin-top:0}
+--> </style>
+<base target="_blank">
+<title>OpenHao123网址之家－－考试</title>
+</head>
+<body>
+<script src="js/base.js"></script>
+<script src="js/userdata.js"></script>
+<script src="js/record.js"></script>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="OpenHao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="900" height="51">
+    <tr>
+      <td width="290" height="51"><a href="/" target="_self" class="m"><img src="images/logo.gif" alt="把OpenHao123设为主页"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18> </td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()" onMouseDown="ClickMonkey.log('haoweb');" >网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()" onMouseDown="ClickMonkey.log('haomp3');" >MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()" onMouseDown="ClickMonkey.log('haoimg');" >图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()" onMouseDown="ClickMonkey.log('haopost');" >贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" onMouseDown="ClickMonkey.log('haozhidao');" >知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()" onMouseDown="ClickMonkey.log('haonews');" >新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()" onMouseDown="ClickMonkey.log('haovideo');">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action=http://www.baidu.com/s name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=OpenHao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=900 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=900 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.OpenHao123.cc" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.OpenHao123.cc/');return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="images/home.gif" width="15" height="15" border="0" align="absmiddle"> 把OpenHao123设为主页</a>　　<a href="inc/"><img src="images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="/" target=_self style="color:#424242 ">首页</a> > 考试</td></tr></table>
+</center></div>
+<div align="center" onMouseDown="bdRecord.scope(event)"><center>
+<div class="t1 bgg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<!--无内容-->
+<!--无内容-->
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">近期考试</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#EFF7F0" height="70px">
+  <tr>
+    <td class="tdH"><div class=tdL>2011年卫生资格考试</div>
+        　 
+        <a href="http://www.examda.com/wszg/">考试信息</a>　<a href="http://www.21wecan.com/">中国卫生人才网</a></td>
+    <td class="tdH" valign="top"><div class=tdR>2011年硕士研究生考试</div>
+        <a href="http://yz.chsi.com.cn/">研究生招生信息网</a> </td>
+  </tr>
+  <tr>
+    <td colspan="2" ><hr class=cg></td>
+    </tr>
+<tr>
+    <td width="55%" class="tdH"><div class=tdL>2010年四六级考试</div>
+      　<a href="http://www.exam8.com/english/CET46/">试题答案及解析</a></td>
+    <td width="45%" class="tdH"><div class=tdR>全国自考考试</div>
+        <a href="http://zikao.eol.cn/html/zk/time/">2011年考试报名</a></td>
+</tr>  
+
+<tr>
+  <td colspan="2" ><hr class=cg></td>
+</tr>
+<tr>
+  <td width="55%" class="tdH"><div class=tdL>2011年国家公务员招录考试</div>
+      　
+      <a href="http://www.chinagwy.org/">国家公务员网</a>　<a href="http://www.examda.com/gwy/2011ms/">国考面试攻略</a>　<a href="http://www.examda.com/gwy/">笔试成绩查询</a></td>
+  <td width="45%" class="tdH" valign="top"><div class=tdR>2010全国职称英语考试</div>
+        <a href="http://www.examda.com/zcyy/">考试直通车</a>
+
+</td>
+</tr>
+
+  			</table>
+	</td>
+</tr>
+<tr bgcolor="C5D5C5">
+        <td bgcolor="#D9EDDA" class="f9pt" height="20"><p align="center"><font color="#346F0E">各地考试信息</font></td>
+      </tr>
+<tr bgcolor="C5D5C5">
+<td width="100%" colspan="4" align="center" bgcolor="#EFF7F0"><img src="images/rencai_map.gif" border="0" usemap="#Map"><map name="Map">
+<area shape="rect" coords="343,137,372,152" href="http://www.bjeea.cn/" alt="北京教育考试院"></area>
+<area shape="rect" coords="363,155,393,172" href="http://www.zhaokao.net/" alt="天津教育招生考试中心"></area>
+<area shape="rect" coords="325,165,356,181" href="http://www.hebeea.edu.cn/" alt="河北省教育考试院"></area>
+<area shape="rect" coords="300,184,332,203" href="http://www.sxkszx.cn/" alt="山西省招生考试管理中心"></area>
+<area shape="rect" coords="260,140,313,159" href="http://www.nm.zsks.cn/" alt="内蒙古自治区教育招生考试中心"></area>
+<area shape="rect" coords="382,122,415,143" href="http://new.lnzsks.com/" alt="辽宁省招生"></area>
+<area shape="rect" coords="403,95,440,115" href="http://www.jledu.gov.cn/" alt="吉林省招生办公室"></area>
+<area shape="rect" coords="402,51,454,82" href="http://www.lzk.hl.cn/" alt="黑龙江省招考办公室"></area>
+<area shape="rect" coords="408,235,447,254" href="http://www.shmeea.com.cn/" alt="上海教育考试院"></area>
+<area shape="rect" coords="375,209,414,229" href="http://www.jseea.cn/" alt="江苏省教育考试院"></area>
+<area shape="rect" coords="385,257,420,277" href="http://www.zjzs.net/" alt="浙江教育考试网"></area>
+<area shape="rect" coords="354,235,388,253" href="http://www.ahzsks.cn/" alt="安徽招考网"></area>
+<area shape="rect" coords="370,291,401,310" href="http://www.fjzs.com.cn/" alt="福建教育厅"></area>
+<area shape="rect" coords="342,267,377,288" href="http://gaokao.jxedu.gov.cn/" alt="江西教育网"></area>
+<area shape="rect" coords="351,186,382,204" href="http://www.sdzk.gov.cn/" alt="山东省教育招生考试院"></area>
+<area shape="rect" coords="311,215,351,236" href="http://www.heao.gov.cn/" alt="河南教委招生办公室"></area>
+<area shape="rect" coords="309,244,344,264" href="http://www.hbea.edu.cn/" alt="湖北省教育考试院"></area>
+<area shape="rect" coords="308,280,339,304" href="http://www.hneeb.cn/" alt="湖南省教育考试院"></area>
+<area shape="rect" coords="328,317,369,337" href="http://www.5184.com/" alt="广东省考试服务网"></area>
+<area shape="rect" coords="278,325,319,346" href="http://www.gxeea.cn/" alt="广西壮族自治区招生考试院"></area>
+<area shape="rect" coords="275,370,311,394" href="http://www.ea.hainan.gov.cn/" alt="海南省考试局"></area>
+<area shape="rect" coords="255,263,290,283" href="http://www.cqzk.com.cn/" alt="重庆招生考试办公室"></area>
+<area shape="rect" coords="204,318,252,345" href="http://www.ynzs.cn/" alt="云南招考频道"></area>
+<area shape="rect" coords="258,295,298,316" href="http://www.gzszk.com/" alt="贵州省招生办公室"></area>
+<area shape="rect" coords="271,214,305,236" href="http://www.sneac.com/" alt="陕西招生考试信息网"></area>
+<area shape="rect" coords="167,151,210,174" href="http://www.gszs.edu.cn/" alt="甘肃省招生办公室"></area>
+<area shape="rect" coords="151,192,218,224" href="http://www.qhzk.com/" alt="青海省考试管理中心"></area>
+<area shape="rect" coords="245,179,273,202" href="http://www.nxks.nx.edu.cn/" alt="宁夏教育考试院"></area>
+<area shape="rect" coords="63,124,157,164" href="http://www.xjzs.edu.cn/" alt="新疆招生"></area>
+<area shape="rect" coords="86,234,140,279" href="http://www.xzzsks.com.cn/" alt="西藏教育考试院"></area>
+<area shape="rect" coords="210,249,247,272" href="http://www.scedu.net/" alt="四川省教育厅网"></area>
+<area shape="rect" coords="" href="" alt="null"></area>
+<area shape="rect" coords="" href="" alt="null"></area>
+<area shape="rect" coords="" href="" alt="null"></area>
+<area shape="rect" coords="" href="" alt="null"></area>
+<area shape="rect" coords="" href="" alt="null"></area>
+<area shape="rect" coords="" href="" alt="null"></area>
+<area shape="rect" coords="343,137,372,152" href="http://www.bjeea.cn/" alt="北京教育考试院"></area>
+</map>
+</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">公务员考试</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.scs.gov.cn/">国家公务员局</a></td>
+		
+											<td  width="20%"><a href="http://www.offcn.com/">中公网</a></td>
+		
+											<td  width="20%"><a href="http://edu.sina.com.cn/exam/official/index.shtml">新浪公务员考试</a></td>
+		
+											<td  width="20%"><a href="http://www.51test.net/gwy/">无忧公务员考试</a></td>
+		
+											<td  width="20%"><a href="http://www.21gwy.com/">国公网</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.chinagwy.org/">国家公务员考试网</a></td>
+		
+											<td  width="20%"><a href="http://www.htexam.com/">华图教育网</a></td>
+		
+											<td  width="20%"><a href="http://edu.qq.com/official/">腾讯公务员考试</a></td>
+		
+											<td  width="20%"><a href="http://www.OpenHao123.cc/eduhtm/rsks.htm">各省人事考试网</a></td>
+		
+											<td  width="20%"><a href="http://gongwuyuan.eol.cn/">国家公务员招考网</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://bbs.qzzn.com/">QZZN公务员考试论坛</a></td>
+		
+											<td  width="20%"><a href="http://bm.scs.gov.cn/">公务员考试网</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">考研</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://edu.sina.com.cn/kaoyan/">新浪考研</a></td>
+		
+											<td  width="20%"><a href="http://yz.chsi.com.cn/">研究生招生信息网</a></td>
+		
+											<td  width="20%"><a href="http://www.chinakaoyan.com/">中国考研网</a></td>
+		
+											<td  width="20%"><a href="http://bbs.kaoyan.com/">考研论坛</a></td>
+		
+											<td  width="20%"><a href="http://www.medkaoyan.net/myforum/">医学考研社区</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://edu.qq.com/y/">腾讯考研</a></td>
+		
+											<td  width="20%"><a href="http://www.cnedu.cn/">考研教育网</a></td>
+		
+											<td  width="20%"><a href="http://www.kaoyan.com/">考研加油站</a></td>
+		
+											<td  width="20%"><a href="http://www.medkaoyan.net/">医学考研网</a></td>
+		
+											<td  width="20%"><a href="http://www.kuakao.com/">跨考网</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://learning.sohu.com/kaoyan.shtml">搜狐考研</a></td>
+		
+											<td  width="20%"><a href="http://www.wendeng.com.cn/">文登教育</a></td>
+		
+											<td  width="20%"><a href="http://www.kaoyantj.com/">考研共济网</a></td>
+		
+											<td  width="20%"><a href="http://www.1zhao.org/">知识宝库</a></td>
+		
+											<td  width="20%"><a href="http://emuch.net/bbs/">小木虫</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.pinggu.org/bbs/">人大经济论坛</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">高考 / 自考 / 成考</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://gaokao.chsi.com.cn/">阳光高考</a></td>
+		
+											<td  width="20%"><a href="http://www.chengkao365.com/">成人高考教育网</a></td>
+		
+											<td  width="20%"><a href="http://edu.sina.com.cn/gaokao/index.html">新浪高考</a></td>
+		
+											<td  width="20%"><a href="http://edu.qq.com/gaokao/">腾讯高考</a></td>
+		
+											<td  width="20%"><a href="http://www.tl100.com/">天利考试信息网</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.ks5u.com/">高考资源网</a></td>
+		
+											<td  width="20%"><a href="http://edu.sina.com.cn/zikao/">新浪自考频道</a></td>
+		
+											<td  width="20%"><a href="http://www.chinazikao.com/">中国自考网</a></td>
+		
+											<td  width="20%"><a href="http://zhongkao.eduu.com/">中考网</a></td>
+		
+											<td  width="20%"><a href="http://edu.qq.com/kszx/ck_index.shtml">腾讯成考</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://chengkao.eol.cn/">教育在线成人高考</a></td>
+		
+											<td  width="20%"><a href="http://www.canpoint.cn/">全品教学网</a></td>
+		
+											<td  width="20%"><a href="http://www.zikao365.com/">自考365网</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">英语类考试 ( 托福/ 雅思/ GRE/ PETS )</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.cet.edu.cn/">全国大学四六级考试</a></td>
+		
+											<td  width="20%"><a href="http://www.china-cet.com/">四六级考试网</a></td>
+		
+											<td  width="20%"><a href="http://edu.sina.com.cn/exam/cet/index.shtml">英语四六级-新浪考试</a></td>
+		
+											<td  width="20%"><a href="http://www.neworiental.org/">新东方英语</a></td>
+		
+											<td  width="20%"><a href="http://www.51mokao.com/">我要模考网</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://toefl.etest.net.cn/">托福网考网上报名</a></td>
+		
+											<td  width="20%"><a href="http://bbs.taisha.org/">太傻留学论坛</a></td>
+		
+											<td  width="20%"><a href="http://ielts.etest.edu.cn/">雅思网上报名</a></td>
+		
+											<td  width="20%"><a href="http://www.cnielts.com/">中国雅思网</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">专业类考试</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.cicpa.org.cn/">注册会计师考试</a></td>
+		
+											<td  width="20%"><a href="http://www.chinaacc.com/">中华会计网校</a></td>
+		
+											<td  width="20%"><a href="http://www.sikao8.com/">司考吧</a></td>
+		
+											<td  width="20%"><a href="http://www.examda.com/">考试大</a></td>
+		
+											<td  width="20%"><a href="http://sk.neea.edu.cn/jsjdj/index.jsp">全国计算机等级考试</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.moj.gov.cn/sfkss/node_226.htm">国家司法考试</a></td>
+		
+											<td  width="20%"><a href="http://edu.sina.com.cn/exam/lawyer/">新浪司法考试</a></td>
+		
+											<td  width="20%"><a href="http://www.zqks.com/">中国证券考试网</a></td>
+		
+											<td  width="20%"><a href="http://www.21wecan.com/">全国卫生专业技术资格</a></td>
+		
+											<td  width="20%"><a href="http://www.dongao.com/">东奥会计在线</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.51edu.com/">精品学习网</a></td>
+		
+											<td  width="20%"><a href="http://www.coc.gov.cn/">中国建造师网</a></td>
+		
+											<td  width="20%"><a href="http://www.exam8.com/">考试吧</a></td>
+		
+											<td  width="20%"><a href="http://www.catti.net.cn/">翻译专业资格考试</a></td>
+		
+											<td  width="20%"><a href="http://www.iliyu.com/">鲤鱼网</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.cpta.com.cn/">中国人事考试网</a></td>
+		
+											<td  width="20%"><a href="http://club.topsage.com/">大家论坛</a></td>
+		
+											<td  width="20%"><a href="http://www.cfachina.org/">中国期货业协会</a></td>
+		
+											<td  width="20%"><a href="http://www.xinzhitang.com.cn/">剑桥少儿英语</a></td>
+		
+											<td  width="20%"><a href="http://www.jianshe99.com/">建设工程教育网</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.51test.net/">无忧考网</a></td>
+		
+											<td  width="20%"><a href="http://www.ck100.com/">财考网</a></td>
+		
+											<td  width="20%"><a href="http://bbs.anquan.com.cn/">安全论坛</a></td>
+		
+											<td  width="20%"><a href="http://www.OpenHao123.cc/kslist.htm">各类考试官网</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<!--无内容-->
+</table>
+</div>
+</center></div>
+<DIV align=center><br><a href="/" target="_self"><img src="images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="OpenHao123-kszy";</script><script src="js/monitor.js"></script>
+<span style="display:none"><script src="js/tj.js"></script></span>
+</body>
+</html>

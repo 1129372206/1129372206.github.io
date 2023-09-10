@@ -1,0 +1,566 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+body {margin:0; padding:0;}
+div, span, p, table, tr, th, td, thead, tbody, form, fieldset, label, input, select, adddress {margin:0; padding:0;}
+h1, h2, h3, h4, h5, h6 {margin:0; padding:0;}
+ul, ol, li, dl, dt, dd {list-style:none; margin:0; padding:0; text-align:left; }
+img, fieldset, form {border:0;}
+
+.column-A td{height:34px;overflow:hidden;padding:0 0 0 0; text-align:left}
+.column-A td.f9pt{ text-align:center}
+td.f9pt{height:20px;}
+.bgg td a{margin:0 0 0 7px}
+.column-B td{height:34px;overflow:hidden;padding:0 0 0 0; text-align:center}
+<!--
+ td,body {  font-size: 16px; font-family:arial,sans-serif,宋体;}body{margin-top:0px;margin-left:0px;margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{TEXT-DECORATION: none;padding-left:4px;} a:active{text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;}
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg{border-color:#8AB78A; width:900px}
+.f9pt{font-size: 12px;}
+#sfont a,#sfont b{font-size:13px;}
+.highlight_1 a:link,.highlight_1 a:visited{color:red}
+.f14pt{font-size: 14px;}
+a.highlight_2:link{ color:#2F3743; text-decoration:none;padding-left:4px;}
+a.highlight_2:visited{COLOR: #2F3743; TEXT-DECORATION: none;padding-left:4px;}
+a.highlight_2:active{color:green;text-decoration:none;padding-left:4px;}
+a.highlight_2:hover{color:red;text-decoration:underline;padding-left:4px;}
+.wr{text-align:right}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+.l-container{width:898px;position:relative;margin:3px 0 0 0;overflow:hidden;zoom:1;}
+.aw_detail .tb_approach p,.aw_detail .tb_workdemand p,.aw_detail .tb_rules p{line-height:24px;font-size:14px;color:#4a4a4a;padding:0 0 0 8px;margin:0 0 1px 0;overflow:hidden;font-family:"宋体";zoom:1;}
+.adAreaA{background:url("images/line_music.jpg")  no-repeat 0 25px;height:26px;width:898px;margin:0;overflow:hidden;z-index:0;margin:6px 0 0 0}
+@media screen and (min-width:0px){.adAreaA {}}
+.adAreaA h3{color:#878787;float:left;font-size:12px;height:26px;line-height:26px;text-align:center;width:92px;cursor:pointer; margin-left:5px;overflow:hidden}
+.adAreaA .on{border:1px solid #adb9c2;border-bottom:1px solid #eff7f0;background-color:#EFF7F0;color:#346F0E;width:92px;overflow:hidden;zoom:1}
+.hide{display:none;}
+.dw{margin:0 0 0 4px;display:inline-block}
+.nv { text-align:left;padding:0 0 0 100px}
+.nv input{margin:0 2px 0 5px}
+--> </style>
+<base target="_blank">
+<title>hao123网址之家－－微博</title>
+</head>
+<body>
+<script src="js/base.js"></script>
+<script src="js/userdata.js"></script>
+<script src="js/record.js"></script>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="hao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="900" height="51">
+    <tr>
+      <td width="290" height="51"><a href="http://www.hao123.cc" target="_self" class="m"><img src="images/logo.gif" alt="把hao123设为主页"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18> </td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()" onMouseDown="ClickMonkey.log('haoweb');" >网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()" onMouseDown="ClickMonkey.log('haomp3');" >MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()" onMouseDown="ClickMonkey.log('haoimg');" >图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()" onMouseDown="ClickMonkey.log('haopost');" >贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" onMouseDown="ClickMonkey.log('haozhidao');" >知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()" onMouseDown="ClickMonkey.log('haonews');" >新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()" onMouseDown="ClickMonkey.log('haovideo');">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action=http://www.baidu.com/s name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=hao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=boxpos><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=900 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=900 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.hao123.cc" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.hao123.cc/');return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="images/home.gif" width="15" height="15" border="0" align="absmiddle"> 把hao123设为主页</a>　　<a href="inc/"><img src="images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="/" target=_self style="color:#424242 ">首页</a> > 微博</td></tr></table>
+</center></div>
+<div align="center" onMouseDown="bdRecord.scope(event)"><center>
+<div class="t1 bgg column-A">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">微博</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://weibo.com/?c=spr_sw_sq_lm2_weibo_t882062">新浪微博</a></td>
+		
+											<td  width="20%"    ><a href="http://t.qq.com/">腾讯微博</a></td>
+		
+											<td  width="20%"    ><a href="http://t.sohu.com/">搜狐微博</a></td>
+		
+											<td  width="20%"    ><a href="http://t.163.com/">网易微博</a></td>
+		
+											<td  width="20%"    ><a href="http://t.ifeng.com/">凤凰微博</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://jiepang.com/">街旁</a></td>
+		
+											<td  width="20%"    ><a href="http://auth.shequ.10086.cn/">139说客</a></td>
+		
+											<td  width="20%"    ><a href="http://fanfou.com/home/">饭否</a></td>
+		
+											<td  width="20%"    ><a href="http://www.digu.com/">嘀咕</a></td>
+		
+											<td  width="20%"    ><a href="http://www.tongxue.com/">同学网</a></td>
+		
+				</tr>
+		</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">女明星微博</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+  <td ><table width="100%"  border="0" cellspacing="1" cellpadding="7">
+      <tr bgcolor="#EFF7F0">
+        <td  width="20%"    ><a href="http://weibo.com/yaochen">姚晨</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/dees">小s</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/zhaowei/">赵薇</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/xiena">谢娜</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/libingbing">李冰冰</a></td>
+      </tr>
+      <tr bgcolor="#EFF7F0">
+        <td  width="20%"    ><a href="http://weibo.com/1629810574">王菲</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/1742727537">蔡依林</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/wuxin">吴昕</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/anyixuan">安以轩</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/yangmiblog">杨幂</a></td>
+      </tr>
+      <tr bgcolor="#EFF7F0">
+        <td  width="20%"    ><a href="http://weibo.com/lixiaolu">李小璐</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/linxinru">林心如</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/michelereis">李嘉欣</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/zhudan">朱丹</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/yingcaier">应采儿</a></td>
+      </tr>	  
+      <tr bgcolor="#EFF7F0">
+        <td  width="20%"    ><a href="http://weibo.com/zhanghanyun">张含韵</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/mayili">马伊琍</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/1193476843">李湘</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/linariel">林依晨</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/1221987632">曹颖</a></td>
+      </tr>	  
+      <tr bgcolor="#EFF7F0">
+        <td  width="20%"    ><a href="http://weibo.com/huosiyan">霍思燕</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/reneliu2010">刘若英</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/tangyan">唐嫣</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/shishi310">刘诗诗</a></td>
+        <td  width="20%"  align="right"><a href="http://weibo.com/pub/top/starfans?o=1">更多明星>></a></td>
+      </tr>		  
+	  
+  </table></td>
+</tr>
+
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">男明星微博</font></td>
+</tr>
+
+
+<tr bgcolor="C5D5C5">
+  <td ><table width="100%"  border="0" cellspacing="1" cellpadding="7">
+      <tr bgcolor="#EFF7F0">
+        <td  width="20%"    ><a href="http://benshan.t.sohu.com/">赵本山</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/zhoulibo">周立波</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/guodegang">郭德纲</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/jasonzhangjie">张杰</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/hejiong">何炅</a></td>
+      </tr>
+      <tr bgcolor="#EFF7F0">
+        <td  width="20%"    ><a href="http://t.qq.com/liuxiang">刘翔</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/hangeng">韩庚</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/leehom">王力宏</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/1413971423">李维嘉</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/duhaitao">杜海涛</a></td>
+      </tr>
+      <tr bgcolor="#EFF7F0">
+        <td  width="20%"    ><a href="http://weibo.com/zhanghan1006">张翰</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/xiaoshenyang2008">小沈阳</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/duchunblog">杜淳</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/1291843462">魏晨</a></td>
+        <td  width="20%"    ><a href="http://t.sohu.com/u/4362874">崔永元</a></td>
+      </tr>
+      <tr bgcolor="#EFF7F0">
+        <td  width="20%"    ><a href="http://weibo.com/hemin">何晟铭</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/fengshaofeng">冯绍峰</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/huangxiaoming">黄晓明</a></td>
+        <td  width="20%"    ><a href="http://weibo.com/fengxiaogang">冯小刚</a></td>
+        <td  width="20%"  align="right"><a href="http://weibo.com/pub/top/starfans?o=1">更多明星>></a></td>
+      </tr>	  
+  </table></td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">其他微博</font></td>
+</tr>
+<tr bgcolor="EFF7F0">
+	<td align="center" bgcolor="#EFF7F0" >
+      <div class="l-container aw_detail">
+                	 <div class="adAreaA">    
+                        <h3 class="on" id="tbc0-0">财经名人</h3>
+                        <h3 id="tbc0-1">体育名人</h3>
+                        <h3 id="tbc0-2">文化名人</h3>
+                        <h3 id="tbc0-3">草根微博</h3>						
+                    </div>
+                    <div id="tb0-0" monkey="tb0-0">
+                    	<div class="tb_approach">
+                        	<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://weibo.com/kaifulee">李开复</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/renzhiqiang">任志强</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/caiwensheng">蔡文胜</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/1291592332">韩志国</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/chenzhiwu">陈志武</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://weibo.com/yuminhong">俞敏洪</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/shiyuzhu">史玉柱</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/wangshi">王石</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/yanxuqingpi">严旭青啤</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/xuxiaoping">徐小平</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://weibo.com/aigofengjun">爱国者冯军</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/chaoyong">汪潮涌</a></td>
+		
+											<td  width="20%"><a href="http://weibo.com/zhaoxiaolovegod">赵晓</a></td>
+		
+
+											<td  width="20%"><a href="http://weibo.com/shenguojun">沈国军</a></td>
+		
+											<td  width="20%"><a href="http://weibo.com/pub/top/starfans?o=2">更多名人>></a></td>
+		
+				</tr>		
+							</table>					
+                        </div>
+                       
+                    </div>
+                    <div id="tb0-1" monkey="tb0-1" class="hide">
+					<div class="tb_workdemand">
+                        	<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://weibo.com/huangjianxiang">黄健翔</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/yijianlianblog">易建联</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/hanqiaosheng">大嘴韩乔生</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/yugayujia">于嘉</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/shenhuazhujun">朱骏</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://weibo.com/lichengpeng">李承鹏</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/donglu">董路</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/nba">NBA</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/hewei">贺炜</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/baochunlai">鲍春来</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://weibo.com/zhanjun">ESPN詹俊</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/suqun">苏群</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/1010956892">马琳</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/1838388131">陈一冰</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/pub/top/starfans?o=3">更多名人>></a></td>
+		
+				</tr>												</table>
+                      </div>
+					</div>
+                    <div id="tb0-2" monkey="tb0-2" class="hide">
+					<div class="tb_workdemand">
+                        	<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://weibo.com/iamamycheung">张小娴</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/zhyj">郑渊洁</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/imzhuwei">朱伟</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/shenhongfei">沈宏非</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/fangzhouzi">方舟子</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://weibo.com/cangyue">沧月</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/wangxiaoshan">王小山</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/liyinhe">李银河</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/hanzhijun">韩志军</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/adore">张悦然</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://weibo.com/bufeiyan">步非烟</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/zhouyijun">阿忆</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/lome">庄雅婷</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/simanan">司马南</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/pub/top/starfans?t=66&rnd=1299047685028">更多名人>></a></td>
+		
+				</tr>												</table>
+                      </div>
+					</div>
+                    <div id="tb0-3" monkey="tb0-3" class="hide">
+                    	<div class="tb_workdemand">
+                        	<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://weibo.com/pub/top/grass">冷笑话精选</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/jingcaiyulu">精彩语录</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/jdyl">星座爱情</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/oomoo">生活小智慧</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/gongfang">创意工坊</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://weibo.com/dingshengjiblog">全球时尚</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/jipinmeinv">美容健康</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/moviefactory">电影工厂</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/duanzi">段子</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/zhenjingni">当时我震惊了</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://weibo.com/mengxian">全球奇闻趣事</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/qqjp">全球街拍</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/ceshidaren">测试达人</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/ssnx">时尚女性</a></td>
+		
+											<td  width="20%"    ><a href="http://weibo.com/pub/top/grass">更多名人>></a></td>
+		
+				</tr>												</table>
+                      </div>
+					</div>					
+          </div>		 	
+	
+	</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript">
+   (function(){var G=function(H){return document.getElementById(H)};var F=function(K,J){for(var I=0,H=K.length;I<H;I++){J.apply(K[I],[I,K[I]])}};var D=function(K,J,I,H){F(I,function(L,M){if(L!=H){M.className=J}});I[H].className=K};var C=function(J){var H=[];for(var I=0;I<20;I++){if(G(J+"-"+I)){H.push(G(J+"-"+I))}else{return H}}return H};var A=function(H,J){var K=C(J.tabctrl+H);var I=C(J.tab+H);if(H==1){F(K,function(L,M){M.onclick=function(){D("","hide",I,L);D("on","",K,L);return false;}})}else{F(K,function(L,M){M.onmouseover=function(){D("","hide",I,L);D("on","",K,L)};})}};var B={tabctrl:"tbc",tab:"tb",num:6};for(var E=0;E<B.num;E++){A(E,B)}})();
+</script>
+</center></div>
+  <DIV align=center><br><a href="/" target="_self"><img src="images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="hao123-microblog";</script><script src="js/monitor.js"></script>
+</body>
+</html>

@@ -1,0 +1,542 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+ td,body {  font-size:15px; font-family:arial,sans-serif,宋体;}body{margin-top:0px; margin-left:0px; margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;} 
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.bgg{width:766px; background:#D9EDDA;border:1px solid #8AB78A}
+.bgg table{ margin:5px 5px 5px 5px}
+.zb table{ margin:0px 5px 0px 5px}
+.zbfont{color:#2E6D4A; text-align:center}
+.zbfont a:link,.zbfont a:visited{color:#2E6D4A}
+.zbfont a:hover{color:red}
+.f9pt{font-size: 12px;}
+.f14{font-size: 15px;}
+#sfont a,#sfont b{font-size:13px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg2{width:776px; background:#D9EDDA;border:1px solid #8AB78A}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+--> </style>
+<base target="_blank">
+<title>OpenHao123网址之家－－地方服务-山东</title>
+</head>
+<body>
+<script src="../js/base.js"></script>
+<script src="../js/userdata.js"></script>
+<script src="../js/record.js"></script>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="OpenHao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="778" height="51">
+    <tr>
+      <td width="230" height="51"><a href="/" target="_self" class="m"><img src="../images/logo.gif" alt="设为主页"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18> </td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()" onMouseDown="ClickMonkey.log('haoweb');" >网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()" onMouseDown="ClickMonkey.log('haomp3');" >MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()" onMouseDown="ClickMonkey.log('haoimg');" >图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()" onMouseDown="ClickMonkey.log('haopost');" >贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" onMouseDown="ClickMonkey.log('haozhidao');" >知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()" onMouseDown="ClickMonkey.log('haonews');" >新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()" onMouseDown="ClickMonkey.log('haovideo');">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action=http://www.baidu.com/s name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=OpenHao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=778 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=778 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.OpenHao123.cc" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.OpenHao123.cc/');return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="../images/home.gif" width="15" height="15" border="0" align="absmiddle"> 设为主页</a>　　<a href="/inc"><img src="../images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="/" target=_self style="color:#424242 ">首页</a> >  <a href="http://www.OpenHao123.cc/daquan/defangsite.htm" style="color:#424242 ">地方服务</a> > 山东</td></tr></table>
+</center></div>
+<div align="center" onMouseDown="bdRecord.scope(event)"><center>
+<div class="bgg" >
+<table width="100%"  border="0" cellspacing="1" cellpadding="5">
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<tr bgcolor="EFF7F0">
+                <td width="12%" rowspan="4" bgcolor="EFF7F0" class="zbfont">新闻</td>
+          <td width="22%"><a href="http://www.sdinfo.net/">齐鲁热线</a></td>
+                <td width="22%"><a href="http://www.dzwww.com/">大众网</a></td>
+                <td width="22%"><a href="http://www.qlwb.com.cn/">齐鲁晚报</a></td>
+                <td width="22%"><a href="http://www.qingdaonews.com/">青岛新闻网</a></td>
+        </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.beelink.com/">百灵网</a></td>
+                <td><a href="http://www.sdnews.com.cn/">山东新闻网</a></td>
+	       <td><a href="http://www.jiaodong.net/">胶东在线</a></td>
+                <td><a href="http://www.rznews.cn/">日照新闻网</a></td>
+              </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.e23.cn/">舜网</a></td>
+                <td><a href="http://www.whnews.cn/">威海新闻网</a></td>
+                <td><a href=" http://www.jn001.com/">济宁东方圣城网</a></td>
+                <td><a href="http://www.iqilu.com/">齐鲁网</a></td>
+              </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.qingdaomedia.com/">青岛传媒网</a></td>
+                <td><a href="http://www.sdtv.com.cn/">山东电视台</a></td>
+                <td><a href="http://www.dezhoudaily.com/">德州新闻网</a></td>
+                <td></td>
+              </tr>
+
+              <tr bgcolor="E5F2E5">
+                <td rowspan="2" bgcolor="E5F2E5" class="zbfont">交通</td>
+                <td><a href="http://map.baidu.com/?newmap=1&l=12&t=B_NORMAL_MAP&c=13027301.49,4369219.64&s=cur%26curtp%3D2%26wd%3D%25E6%25B5%258E%25E5%258D%2597
+">济南地图</a></td>
+                <td><a href="http://www.jnbus.com.cn/">济南公交</a></td>
+                <td><a href="http://www.jnqczz.com.cn/">济南长途汽车总站</a></td>
+                <td><a href="http://www.shandongair.com.cn/">山东航空集团</a></td>
+              </tr>
+              <tr bgcolor="E5F2E5">
+                <td><a href="http://www.qdairport.com/">青岛机场</a></td>
+                <td><a href="http://map.baidu.com/?newmap=1&l=12&t=B_NORMAL_MAP&c=13401279.06,4289695.55&s=cur%26curtp%3D2%26wd%3D%25E9%259D%2592%25E5%25B2%259B
+">青岛地图</a></td>
+                <td><a href="http://www.jnjj.com/">济南交警信息网</a></td>
+                <td></td>
+              </tr>
+             
+              
+               <tr bgcolor="#EFF7F0">
+                <td rowspan="6" bgcolor="#EFF7F0"  class="zbfont">论坛</td>
+                <td><a href="http://bbs.0538.com.cn/">泰安论坛</a></td>
+                <td><a href="http://www.jiaozhou.net/bbs/">胶州网</a></td>
+                <td><a href="http://club.qingdaonews.com/">青青岛社区</a></td>
+                <td><a href="http://bbs.dzwww.com/">大众论坛</a></td>
+              </tr>
+              <tr bgcolor="#EFF7F0">
+                <td><a href="http://bbs.jiaodong.net/">17路论坛</a></td>
+                <td><a href="http://tieba.baidu.com/f?kw=%C9%BD%B6%AB">山东贴吧</a></td>
+                <td><a href="http://tieba.baidu.com/f?kw=%BC%C3%C4%CF">济南贴吧</a></td>
+                <td><a href="http://tieba.baidu.com/f?kw=%C7%E0%B5%BA">青岛贴吧</a></td>
+              </tr>
+              <tr bgcolor="#EFF7F0">
+                <td><a href="http://www.ytbbs.com/">烟台论坛</a></td>
+                <td><a href="http://bbs.dzwww.com/forumdisplay.php?fid=61&page=1">鲁南论坛</a></td>
+                <td><a href="http://www.zqr.cn/">章丘人论坛</a></td>
+                <td><a href="http://bbs.e23.cn/">舜网论坛</a></td>
+              </tr>
+              <tr bgcolor="#EFF7F0">
+                <td><a href="http://www.actcn.net/">无为论坛</a></td>
+                <td><a href="http://www.iweihai.cn/club/">爱威海社区</a></td>
+                <td><a href="http://bbs.sgnet.cc/">开心论坛</a></td>
+                <td><a href="http://bbs.jnnews.tv/">声远论坛</a></td>
+              </tr>
+              <tr bgcolor="#EFF7F0">
+                <td><a href="http://static.tieba.baidu.com/tb/cms/OpenHao123/shandong.html">山东热门贴吧</a></td>
+                <td><a href="http://bbs.0634.com/">莱芜论坛</a></td>
+                <td><a href="http://bbs.heze.cc/">菏泽牡丹茶座</a></td>
+                <td><a href="http://bbs1.sdticai.com/">山东体彩论坛</a></td>
+              </tr>
+              <tr bgcolor="#EFF7F0">
+                <td><a href="http://www.jnmama.com/">济南妈妈网</a></td>
+                <td><a href="http://www.sgnet.cc/sg/">寿光民声</a></td>
+                <td><a href="http://bbs.dzwww.com/forum/listtopic.jsp?bid=222">日照大众论坛</a></td>
+                <td></td>
+              </tr>
+             
+                      
+              <tr bgcolor="#E5F2E5">
+                <td width="12%" bgcolor="#E5F2E5" class="zbfont">通信</td>
+                <td><a href="http://www.sd.10086.cn/">山东移动</a></td>
+                <td><a href="http://info2.10010.com/lt/plugin/portal/arealevel/queryCityInfo.do?arno=00010016&id=2651">山东联通</a></td>
+                <td><a href="http://www.bdchina.com/">宽带中国</a></td>
+                <td><a href="http://sd.ct10000.com/">山东电信</a></td>
+              </tr>
+
+             
+              <tr bgcolor="#EFF7F0">
+                <td rowspan="2" bgcolor="#EFF7F0" class="zbfont">房产</td>
+                <td><a href="http://jn.soufun.com/">搜房网-济南</a></td>
+                <td><a href="http://qd.soufun.com/">搜房网-青岛</a></td>
+                <td><a href="http://www.house.sd.cn/">青岛房产在线</a></td>
+                <td><a href="http://www.gjj.gov.cn/">济南住房公积金网</a></td>
+            </tr>
+              <tr bgcolor="#EFF7F0">
+                <td></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td align="right"><a href=http://www.OpenHao123.cc/fangchan/sdfc.htm style="padding-right:10px ">更多&nbsp;&raquo;</a></td>
+              </tr>                   
+              <tr bgcolor="E5F2E5">
+                <td rowspan="1" bgcolor="E5F2E5"  class="zbfont">旅游</td>
+                <td><a href="http://www.qdta.gov.cn/  ">青岛旅游政务网 </a></td>
+                <td><a href="http://www.sdta.cn/">山东旅游网</a></td>
+                <td><a href="http://www.mount-tai.com.cn/">泰山信息网</a></td>
+              <td><a href="http://www.sdta.gov.cn/">山东旅游政务网</a></td>
+              </tr>
+			  
+                   <tr bgcolor="EFF7F0">
+                <td rowspan="5" bgcolor="EFF7F0" class="zbfont">教育</td>
+                <td><a href="http://www.sdu.edu.cn/">山东大学</a></td>
+                <td><a href="http://www.sdut.edu.cn/">山东理工大学</a></td>
+                <td><a href="http://www.ouc.edu.cn/">中国海洋大学</a></td>
+                <td><a href="http://www.qdu.edu.cn/">青岛大学</a></td>
+              </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.sdedu.gov.cn/">山东省教育厅</a></td>
+                <td><a href="http://www.sdzs.gov.cn/">山东省教育招生考试院</a></td>
+				<td><a href="http://www.sdshiyan.sd.cn/">山东省实验中学</a></td>
+                <td><a href="http://www.jnzk.net/">济南自考网</a></td>                
+              </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.qlteacher.com/">山东教师教育网</a></td>
+                <td><a href="http://www.sdgwy.org/">山东公务员网</a></td>
+                <td><a href="http://www.51ben.cn/">山东专升本考试网</a></td>
+				<td><a href="http://www.sdzkw.com/">山东自考网</a></td>
+              </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.rsks.sdrs.gov.cn/">山东人事考试信息网</a></td>
+                <td><a href="http://www.sdlib.com/">山东省图书馆</a></td>
+                <td><a href="http://www.sdgbjy.gov.cn/">山东干部学习网</a></td>
+                 <td><a href="http://www.sdkjxxw.cn/">山东会计信息网</a></td>
+              </tr>
+               <tr bgcolor="EFF7F0">
+                <td><a href="http://www.sdbys.cn/index.html">山东高校毕业生就业信息网</a></td>
+                <td><a href="http://www.sdxd.gov.cn/">山东选调生网</a></td>
+                <td></td>
+                 <td align="right"><a href=http://www.OpenHao123.cc/eduhtm/shangdong.htm style="padding-right:10px">更多&nbsp;&raquo;</a></td>
+              </tr>
+
+             		  			  
+               <tr bgcolor="E5F2E5">
+                <td rowspan="1" bgcolor="E5F2E5"  class="zbfont">休闲</td>
+                <td><a href="http://www.jinantuan.com/">济团网</a></td>
+              <td><a href="http://www.dianping.com/jinan">大众点评网(济南)</a></td>
+              <td><a href="http://www.tuandan.com/">团单网</a></td>
+              <td> </td>			  
+              </tr>            
+             
+<tr bgcolor="EFF7F0">
+                <td rowspan="10" bgcolor="EFF7F0"   class="zbfont">各地</td>
+                <td><a href="http://www.online.jn.sd.cn/">济南信息港</a></td>
+                <td><a href="http://www.lznews.cn/">鲁中网</a></td>
+                <td><a href="http://www.shm.com.cn/">烟台水母网</a></td>
+                <td><a href="http://www.bandao.cn/">半岛网</a></td>
+              </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.qd.sd.cn/">青岛信息港</a></td>
+                <td><a href="http://www.ytcnc.net/">烟台热线</a></td>
+                <td><a href="http://www.whinfo.net.cn/">威海信息港</a></td>
+                <td><a href="http://www.rizhao.net/">日照信息港</a></td>
+            </tr>
+              <tr bgcolor="EFF7F0">
+                <td ><a href="http://www.wfinfo.cn/">潍坊信息港</a></td>
+                <td><a href="http://www.my0538.com/">中华泰山网</a></td>
+                <td><a href="http://www.zbinfo.net/">淄博信息港</a></td>
+                <td><a href="http://www.ly169.cn/">临沂信息港</a></td>
+            </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.zcinfo.net/">诸城信息港</a></td>
+                <td><a href="http://www.dzcnc.com/">鲁北热线</a></td>
+                <td><a href="http://www.tainfo.net/">泰安信息港</a></td>
+                <td><a href="http://www.heze.cc/">菏泽信息港</a></td>
+            </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.lwinfo.com/">莱芜信息港</a></td>
+                <td><a href="http://www.laixi.com/">莱西信息港</a></td>
+                <td><a href="http://www.dongying.com.cn/">东营信息港</a></td>
+                <td><a href="http://www.whwd.com/">文登之窗</a></td>
+            </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.jnnc.com/">新视听</a></td> 
+                <td><a href="http://www.rz168.com/">日照百事通</a></td>
+                <td><a href="http://www.zaozhuang.com.cn/">枣庄信息港</a></td>
+                <td><a href="http://www.lywww.com/">临沂在线</a></td>
+            </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.jiaonan.net/">胶南信息港</a></td>
+                <td><a href="http://www.hdxxg.com/">黄岛信息港</a></td>
+                <td><a href="http://www.pujia.com/">普加网</a></td>
+                <td><a href="http://www.penglai.com.cn/">蓬莱信息港</a></td>
+            </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://ji-www.sd.cninfo.net/">济宁信息港</a></td>
+                <td><a href="http://www.jiaonan.tv/">胶南信息网</a></td>
+                <td><a href="http://www.0634.com/">莱芜都市网</a></td>
+                <td><a href="http://www.laiwu.net/">莱芜在线</a></td>
+            </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.bz169.com/">滨州信息港</a></td>
+                <td><a href="http://www.qdjimo.com/">即墨信息港</a></td>
+                <td><a href="http://www.wfnews.com.cn/">潍坊新闻网</a></td>
+                <td><a href="http://www.qingkai.com/">青岛开发区信息港</a></td>
+            </tr>
+              <tr bgcolor="EFF7F0">
+                <td><a href="http://www.dzwindows.com/">德州之窗</a></td>
+                <td><a href="http://www.hhk365.com/">黄河口信息港</a></td>
+                <td><a href="http://www.qufu123.com/">曲阜123</a></td>
+                <td></td>
+              </tr>
+            
+			
+
+     
+              <tr bgcolor="E5F2E5">
+                <td rowspan="9"  class="zbfont">政府</td>
+                <td><a href="http://www.sd.gov.cn/">山东省政府</a></td>
+                <td><a href="http://www.jncc.gov.cn/">济南建设网</a></td>
+                <td><a href="http://www.jiaonan.gov.cn/">胶南政务网</a></td>
+                <td><a href="http://www.sdfda.gov.cn/">山东食品药品管理局</a></td>
+              </tr>
+              <tr bgcolor="E5F2E5">
+                <td><a href="http://www.jinan.gov.cn/">济南</a></td>
+                <td><a href="http://www.qingdao.gov.cn/">青岛</a></td>
+                <td><a href="http://www.zaozhuang.gov.cn/">枣庄</a></td>
+                <td><a href="http://www.dongying.gov.cn/">东营</a></td>
+              </tr>
+              <tr bgcolor="E5F2E5">
+                <td><a href="http://www.yantai.gov.cn/">烟台</a></td>
+                <td><a href="http://www.weifang.gov.cn/">潍坊</a></td>
+                <td><a href="http://www.jining.gov.cn/">济宁</a></td>
+                <td><a href="http://www.taian.gov.cn/">泰安</a></td>
+              </tr>
+              <tr bgcolor="E5F2E5">
+                <td><a href="http://www.weihai.gov.cn/">威海</a></td>
+                <td><a href="http://www.rizhao.gov.cn/">日照</a></td>
+                <td><a href="http://www.laiwu.gov.cn/">莱芜</a></td>
+                <td><a href="http://www.linyi.gov.cn/">临沂</a></td>
+              </tr>
+              <tr bgcolor="E5F2E5">
+                <td><a href="http://www.dezhou.gov.cn/">德州</a></td>
+                <td><a href="http://www.liaocheng.gov.cn/">聊城</a></td>
+                <td><a href="http://www.binzhou.gov.cn/">滨州</a></td>
+                <td><a href="http://www.heze.gov.cn/">菏泽</a></td>
+              </tr>
+              <tr bgcolor="E5F2E5">
+                <td><a href="http://www.sdws.gov.cn/">山东省卫生厅</a></td>
+                <td><a href="http://www.tengzhou.gov.cn/">滕州</a></td>
+                <td><a href="http://www.sdjt.gov.cn/index.jsp">山东省交通厅</a></td>
+                <td><a href="http://www.sdds.gov.cn/">山东省地方税务局</a></td>
+              </tr>
+              <tr bgcolor="E5F2E5">
+                <td><a href="http://www.qufu.gov.cn/">曲阜</a></td>
+                <td><a href="http://www.jnga.gov.cn/">济南公安服务在线</a></td>
+                <td><a href="http://www.sd-n-tax.gov.cn/">山东省国家税务局</a></td>
+                <td><a href="http://www.sdny.gov.cn/">山东农业信息网</a></td>
+              </tr>
+              <tr bgcolor="E5F2E5">
+                <td><a href="http://dec.qdds.net/">青岛地税电子申报系统</a></td>
+                <td><a href="http://www.sdhrss.gov.cn/">山东省人力资源和社会保障厅</a></td>
+                <td><a href="http://www.jngsj.gov.cn/">济南市工商局</a></td>
+                <td><a href="http://www.ccgp-shandong.gov.cn/">山东政府采购网</a></td>
+              </tr>
+              <tr bgcolor="E5F2E5">
+                <td><a href="http://www.sdaic.gov.cn/">山东红盾信息网</a></td>
+                <td><a href="http://www.jncz.gov.cn/">济南财政公众网</a></td>
+                <td></td>
+                <td></td>
+              </tr>
+</table>
+</div>
+</center></div>
+<br>
+<DIV align=center><br><a href="http://www.OpenHao123.cc/" target="_self"><img src="../images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="OpenHao123-navhtm-navsd";</script><script src="../js/monitor.js"></script>
+<span style="display:none"><script src="/js/tj.js"></script></span></body>
+</html>

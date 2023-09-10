@@ -1,0 +1,492 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <base target="_blank" />
+    <title>OpenHao123网址之家－－快递查询</title>
+    <link href="../css/v_base_old.css" rel="stylesheet" type="text/css" />
+    <style  type="text/css">
+        /*override basic style*/
+        .head-basic .logo{ margin-top:8px;}
+        .main-basic h5{ font-size:14px;}
+        .main-basic{ background-color:#F2F9F2; }
+        /*-临时方案，重写 basic 显示原来的页头。页头定下来去掉这部分--*/
+        .head-basic{ border-bottom:3px solid #2DB966; padding-bottom:10px; margin-top:6px;}
+        .head-basic .submit{ background:url("../images/phone/tv.gif") no-repeat scroll -141px -50px transparent; height:30px; width:97px; text-indent:-1000em;  border:none; top:0; margin-left:0; overflow:hidden;}
+        .head-basic .submit.hover{background:url("../images/phone/tv.gif") no-repeat scroll -141px -20px transparent;}
+        .head-basic li.current{ background:url("../images/phone/tv.gif") no-repeat scroll -141px -130px transparent; color:#FFF; width:49px; text-align:center;}
+        .head-basic .text{  border-color:#EFEFEF #FFFFFF #FFFFFF #EFEFEF; border-style:solid; border-width:1px 0px 0px 1px;  width:336px; height:21px;}
+        .head-basic i{ border-color:#7B7B7B #B6B6B6 #B6B6B6 #7B7B7B; border-style:solid; border-width:1px; margin-right:10px;}
+        .head-basic .search { margin-left:107px;}
+        /*crum*/
+        .crumb-basic{ background-color:#FCFFF7; line-height:36px;}
+        .crumb-basic .sethome{ background:url(../images/express/icons.jpg) 0px 10px no-repeat;}
+        .crumb-basic .feedback{background:url(../images/express/icons.jpg) 0px -35px no-repeat;}
+        .crumb-basic .sethome a{ color:Red;}
+        /*express*/
+        #express{}
+        #express .popular{font-size:14px;margin-top:15px; border-bottom:1px solid #E3EDE3;}
+        #express .popular td{ width:20%; text-align:center; padding-bottom:15px;}
+        #express .popular img{ display:block; margin:0 auto 10px auto;}
+        #express .popular span{ margin-right:5px;}
+        #express .noborder-top{ border:none;}
+        #express .more-open a,#express .more-close a{ background-repeat:no-repeat; background-image:url(../images/express/arrow.gif); }
+        #express .more-open a{background-position:right -10px;}
+        #express .more-close a{background-position:right 5px;}
+        #express-other .more-open a,#express-other .more-close a{padding-right:20px; cursor:pointer;}
+        #express-other .more-close{border-left:1px solid #77AE84;}
+        #express-more{border:1px solid #77AE84; border-top:none; display:none;}
+ 
+        #express .border-bottom{ border-bottom:1px solid #77AE84;}
+        #express .border-top{border-top:1px solid #77AE84;}
+        #express .border-bottom-none td{ border-bottom:none;}
+        #express .border-bottom-none .more-close{ border-bottom:1px solid #E3EDE3;}
+        #express .more-close div{ position:relative; width:100%; }
+        #express .more-close div a{line-height:36px;}
+        #express .more-close i{ color:#F2F9F2; height:40px; border-right:1px solid #77AE84; vertical-align:middle; position:absolute; right:-1px; top:-1px; z-index:10}
+        #express-query{ padding-top:10px; border-top:1px solid #E3EDE3; position:relative; padding-bottom:5px; overflow:hidden; *zoom:1;}
+        #express-query .label{ color:#317E57; font-size:14px; font-weight:bold;}
+        #express-query dl{ padding-left:145px; font-size:13px; height:28px; font-family:'宋体'}
+        #express-query dt{ float:left; padding:4px 0px; padding-top:6px;}
+        #express-query dd{ float:left; margin-left:10px; display:inline; padding:6px 2px 4px;}
+        #express-query dd span{ display:block; padding:1px 4px;cursor:pointer; }
+        #express-query dd span.selected,#express-query  .provider td span.selected{ cursor:default; background-color:#FF671D; color:#FFF;}
+        #express-query dd.first{ margin-left:7px;}
+        #express-query dd.more{ margin-left:3px;}
+        #express-query dd.more-close,#express-query dd.more-open{ border:1px solid #E3EDE3; border-bottom:none;background-color:#F2F9F2; position:relative; bottom:-1px;  margin-left:5px; padding:5px 8px 7px;}
+        #express-query dd.more-open{ border-color:#F2F9F2;}
+        #express-query dd.more-close a,#express-query dd.more-open a{ padding-right:20px;cursor:pointer;}
+        #express-query .more-express{ width:830px; margin:0 auto; border:1px solid #E3EDE3; clear:both; padding-top:5px; display:none; padding-bottom:10px;}
+        #express-query  .provider{ width:700px; margin-left:100px;}
+        #express-query  .provider td{ padding-left:6px;height:26px;}
+        #express-query  .provider td span{ margin:0px 8px; display:inline-block; height:16px; line-height:16px;padding:2px; cursor:pointer;}
+        #express-query  .provider td span.selected{ cursor:default; }
+        #express-query  .provider td em{ font-style:normal; display:inline-block; height:15px; width:15px; background-color:#FFD7C7; line-height:15px; color:#E06303; text-align:center;}
+        #express-query .search .label{ width:86px; line-height:25px;}
+        #express-query  .search{ margin:12px 0px 0px 145px; width:auto;}
+        #express-query  .search td{ text-align:left;}
+       
+        #express-query  .text-wrapper{ border:1px solid #8A8A8A; float:left;}
+        #express-query  .text-wrapper input{ border:none; float:left; border-top:1px solid #E0E0E0;border-left:1px solid #E0E0E0; width:390px; padding:3px; height:16px; font-size:14px;}
+        #express-query  .query{ padding-left:5px; text-align:left;}
+        #express-query  .query input{ background:url(../images/phone/button.jpg) no-repeat; height:25px; width:97px; cursor:pointer; border:none;}
+        #express-query  .info-wrapper{ height:40px; width:100%; clear:both;}
+        #express-query  .info{  margin-top:8px; margin-left:230px; float:left; padding:6px 8px; display:inline; border:1px solid #E8E99D; background-color:#F3F3B7; display:none; }
+        #express-query  .info .light{color:#747474; margin-right:3px;}
+        #express-query  .info .heavy{color:#31322D;}
+        #express-query  .info a{ color:#0053A5; }
+        #express-query  .info a:hover{ color:Red;}
+        #express-query  .info em{ color:Red; font-style:normal;}
+        #express-query  .support{ color:#747474; float:right; padding-right:10px;}
+        #express-query  .result{ clear:left; padding-top:10px; margin-left:220px;}
+        #express-query  .result li{ line-height:20px; padding-left:10px;}
+        #express-query  .result li.first{ background:url(../images/express/arrow-result.gif) 0 50%  no-repeat; height:20px;}
+        
+        #express-other .list{width:956px; margin:0 auto;}
+    </style>
+</head>
+<body>
+    <div id="head-basic" >
+            <div class="head-basic wrapper-basic" id='nav' monkey="cool">
+                <div class="logo">
+                    <a href="http://www.OpenHao123.cc" target="_self" title="OpenHao123网址之家"><img src="../images/logo.gif" width="168" height="63" alt="OpenHao123网址之家" /></a>               
+                </div>
+                <div class="search">
+                        <ul>
+							<li onmousedown="ClickMonkey.log('haoweb');" key="web" class="current">网页</li>
+                            <li onmousedown="ClickMonkey.log('haovideo');" key="video" class="">视频</li>
+
+							<li key='mp3' onmousedown="ClickMonkey.log('haomp3');">MP3</li>
+							<li key='image' onmousedown="ClickMonkey.log('haoimage');">图片</li>
+							<li key='tieba' onmousedown="ClickMonkey.log('haoimage');">贴吧</li>
+							<li key='zhidao' onmousedown="ClickMonkey.log('haozhidao');">知道</li>
+							<li key='news' onmousedown="ClickMonkey.log('haonews');">新闻</li>							
+						</ul>
+
+                          <form action="http://www.baidu.com/s" name="f" onsubmit="fromElement.submit();return false;" target="_blank" >
+                            <i><input id="kw" class="text" value="" type="text"  maxlength="100" /></i>   
+                            <input class="submit" type="submit" value="百度一下" id='sb' />
+                        </form>
+           
+                </div>	        
+            </div>
+         
+</div>
+ <div class="crumb-basic wrapper-basic">
+           <ul>
+            <li class="sethome"><a href="http://www.OpenHao123.cc"  onclick="setHome(this);" >把OpenHao123设为首页</a></li>
+
+            <li class="feedback"><a href='../inc' >网友反馈</a></li>
+            <li class="bread"><a href='http://www.OpenHao123.cc'>首页</a>&gt;快递查询</li>
+           </ul>    
+ </div>
+    <div id="body-basic" class="wrapper-basic">
+        <div class="main-basic">
+            <div id='express'>
+                <h5><span>常用快递</span> </h5>
+                    <table class='popular'>
+                    <tbody>
+                        <tr>
+                            <td><a href="http://www.ems.com.cn/"><img width="160" height="50" border="0"  src="../images/express/ems.jpg"/></a><span>11185</span> <a href='http://www.ems.com.cn/serviceguide/zi-fei-biao-zhun.html'>资费标准</a></td>
+                            <td><a href="http://www.sf-express.com/tabid/68/Default.aspx"><img width="160" height="50" border="0"  src="../images/express/express.jpg"/></a><span>4008111111</span> <a href="http://www.sf-express.com/tabid/70/Default.aspx">网点查询</a></td>
+                            <td><a href="http://www.yundaex.com/"><img src="../images/express/yunda.jpg" width="160" height="50" border="0"></a><span>021-39207888</span> <a href="http://www.yundaex.com/www/fuwuwangdian.html?lang">网点查询</a></td>
+                            <td><a href="http://www.yto.net.cn/"><img src="../images/express/yt.jpg" width="160" height="50" border="0"> </a><span>021-69777888</span> <a href="http://www.yto.net.cn/service/service1.asp">网点查询</a></td>
+                            <td><a href="http://yjcx.chinapost.com.cn/"><img src="../images/express/chinapost.jpg" width="160" height="50" border="0"> </a><span>010-12305</span> <a href="http://www.chinapost.gov.cn/folder9/folder2047/">资费查询</a></td>
+                        </tr>
+                         <tr>
+                            <td><a href="http://www.sto.cn/"><img src="../images/express/sto.jpg" width="160" height="50" border="0"> </a><span>0571-82122222</span> <a href="http://www.sto.cn/wdcx.asp">网点查询</a></td>
+                            <td><a href="http://www.zto.cn/"><img src="../images/express/zto.jpg" width="160" height="50" border="0" ></a><span>021-39777777</span> <a href="http://www.zto.cn/SiteInfo/index.aspx">网点查询</a></td>
+                            <td><a href="http://www.ttkdex.com/"><img src="../images/express/ttk.jpg" width="160" height="50" border="0" ></a><span>4008-208-198</span> <a href="http://www.ttkdex.com/pages/wdcx2.jsp">网点查询</a></td>
+                            <td><a href="http://www.htky365.com/"><img src="../images/express/huit.jpg" width="160" height="50" border="0" ></a><span>021-62963636</span> <a href="http://www.htky365.com/distributing/zdfb.jsp">网点查询</a></td>
+                            <td><a href="http://www.zjs.com.cn/"><img width="160" height="50" border="0" align="absmiddle" src="../images/express/zjs.jpg"/></a><span>4006789000</span> <a href="http://www.zjs.com.cn/WS_Business/WS_Bussiness_CityArea.aspx?id=6">网点查询</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+    <div id='express-other'>
+       <h5><span>其他快递</span></h5>
+            <table class="list">
+    <tbody>
+    	    	<tr>
+        <td  class="first   "><a href="http://www.xfhex.cn/">鑫飞鸿</a></td>
+            <td  class="   "><a href="http://www.cces.com.cn/">CCES</a></td>
+            <td  class="   "><a href="http://www.deppon.com/">德邦物流</a></td>
+            <td  class="   "><a href="http://www.cre.cn/">中铁快运</a></td>
+            <td  class="   "><a href="http://www.tnt.com/country/zh_cn.html">TNT国际快递</a></td>
+    		</tr>
+         	    	<tr>
+        <td  class="first   "><a href="http://www.cnpl.com.cn/">中邮物流</a></td>
+            <td  class="   "><a href="http://www.ups.com/WebTracking/track?loc=zh_CN&WT.svl=PriNav">UPS快递</a></td>
+            <td  class="   "><a href="http://www.fedex.com/cn/">联邦快递FedEx</a></td>
+            <td  class="   "><a href="http://www.apex100.com/">全一快递</a></td>
+            <td  class="   "><a href="http://www.shenghui56.com/">盛辉物流</a></td>
+    		</tr>
+         	    	<tr>
+        <td  class="first   "><a href="http://www.cn.dhl.com/publish/cn/zh/tools/dropoff.high.html">DHL</a></td>
+            <td  class="   "><a href="http://www.xbwl.cn/">新邦物流</a></td>
+            <td  class="   "><a href="http://www.hoau.net/">天地华宇</a></td>
+            <td  class="   "><a href="http://www.jiaji.com/">佳吉快运</a></td>
+            <td  class="   "></td>
+    		</tr>
+         </tbody>
+</table>        
+</div>
+<div id='express-more'>
+
+ <h5><span>更多快递new</span></h5>
+            <table class="list">
+    <tbody>
+    	    	<tr>
+        <td  class="first   "><a href="http://www.lbex.com.cn/">龙邦快递查询</a></td>
+            <td  class="   "><a href="http://www.uc56.com/">优速快递</a></td>
+            <td  class="   "><a href="http://cn.aaeweb.com/">AAE全球专递</a></td>
+            <td  class="   "><a href="http://www.4006688400.com/">星晨急便</a></td>
+            <td  class="   "><a href="http://www.sure56.com/">速尔快递</a></td>
+    		</tr>
+         	    	<tr>
+        <td  class="first   "><a href="http://www.fastexpress.com.cn/">快捷速递</a></td>
+            <td  class="   "><a href="http://www.fkd.com.cn/">飞康达物流</a></td>
+            <td  class="   "><a href="http://www.yjkd.com/">元智捷诚</a></td>
+            <td  class="   "><a href="http://www.jiayi56.com/">佳怡物流</a></td>
+            <td  class="   "><a href="http://www.qckd.net/">全晨快递</a></td>
+    		</tr>
+         	    	<tr>
+        <td  class="first   "><a href="http://www.at-express.com/">全日通快递</a></td>
+            <td  class="   "><a href="http://www.lts.com.cn/">联昊通快递</a></td>
+            <td  class="   "><a href="http://www.ebon-express.com/">一邦快递</a></td>
+            <td  class="   "><a href="http://www.cae.com.cn/">民航快递</a></td>
+            <td  class="   "><a href="http://www.nd56.com/">港中能达</a></td>
+    		</tr>
+         </tbody>
+</table></div>
+
+<h5><span>快递查询</span></h5>
+<div id="express-query">
+   <div id='express-provider'>
+<dl id='popularExpress'>
+    <dt class="label">请选择快递</dt>
+    <dd class='first'><span code='ems'>EMS</span></dd>
+    <dd><span code='shentong'>申通</span></dd>
+    <dd><span code='yuantong'>圆通</span></dd>
+    <dd><span code='huitongkuaidi'>汇通</span></dd>
+    <dd><span code='ups'>UPS</span></dd>
+    <dd><span code='shunfeng'>顺丰</span></dd>
+    <dd><span code='zhaijisong'>宅急送</span></dd>
+    <dd><span code='yunda'>韵达</span></dd>
+    <dd><span code='tiantian'>天天</span></dd>
+    <dd class='more-open'><a id='moreExpress'>更多</a></dd>
+</dl>
+<div class='more-express' id='moreExpressContent'>
+<table class='provider'>
+  <tbody>
+     <tr>
+        <td><em>A</em><span code='aae'>AAE</span><span code='anxindakuaixi'>安信达</span></td>
+        <td><em>G</em><span code='guangdongyouzhengwuliu'>广东邮政</span><span code='ganzhongnengda'>港中能达</span></td>
+        <td><em>T</em><span code='tnt' >TNT</span><span code='tiandihuayu'>天地华宇</span></td>
+     </tr>
+     <tr><td><em>B</em><span code='bht'>BHT</span><span  code='baifudongfang'>百福东方</span></td>
+         <td><em>J</em><span  code='jinguangsudikuaijian'>京广</span><span  code='jiajiwuliu'>佳吉</span><span code='jiayiwuliu'>佳怡</span><span code='jixianda'>急先达</span></td>
+         <td><em>X</em><span  code='xinbangwuliu'>新邦</span><span  code='xinfengwuliu'>信丰</span><span code='xinhongyukuaidi'>鑫飞鸿</span><span code='xingchengjibian'>星晨急便</span></td>
+     </tr>
+      <tr><td><em>C</em><span code='cces'>CCES</span></td>
+         <td><em>L</em><span  code='longbanwuliu'>龙邦</span><span  code='fedex'>联邦快递</span><span code='lianhaowuliu'>联昊通</span></td>
+         <td rowspan='2'><em>Y</em><span  code='youshuwuliu'>优速</span><span  code='yibangwuliu'>一邦</span><span code='yuntongkuaidi'>运通</span><span code='yuanweifeng'>源伟丰</span><span code='yuanchengwuliu'>远成</span><br />
+             <span  code='yuefengwuliu' style='margin-left:25px'>越丰</span><span  code='yafengsudi'>亚风</span><span  code='yuanzhijiecheng'>元智捷诚</span><span  code='youzhengguonei'>邮政国内包裹挂号信</span>
+         </td>
+     </tr>
+      <tr><td><em>D</em><span code='dhl'>DHL</span><span  code='datianwuliu'>大田</span><span  code='debangwuliu'>德邦</span></td>
+         <td><em>Q</em><span  code='quanyikuaidi'>全一</span><span  code='quanchenkuaidi'>全晨</span><span code='quanritongkuaidi'>全日通</span><span code='quanjitong'>全际通</span></td>
+         
+     </tr>
+     <tr><td><em>F</em><span code='fedex'>FedEx</span><span code='feikangda'>飞康达</span></td>
+         <td><em>S</em><span  code='suer'>速尔</span><span  code='shenghuiwuliu'>盛辉</span></td>
+         <td><em>Z</em><span  code='zhongtiewuliu'>中铁快运</span><span  code='zhongyouwuliu'>中邮物流</span><span code='zhongtong'>中通</span></td>
+     </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<table class='search'>
+    <tbody>
+        <tr><td class='label'><label >请输入单号</label></td><td><span class='text-wrapper'><input type="text" maxlength='40' id='noteCode' class='text' /></span></td><td class='query'><input id='queryButton'  ></td></tr>
+    </tbody>
+</table>
+ <div class='info-wrapper' id='infoWrapper'> <p id='info' class='info'></p></div>
+ 
+<ul class='result' id='result'>
+</ul>
+ <p class='support'>更多快递查询，请到&nbsp;<a href='http://www.kuaidi100.com'>www.kuaidi100.com</a></p>
+            </div>
+    </div>
+        </div>
+        
+    </div>
+    <div align="center" style="padding:20px"><a href="/" target="_self" style="padding:0"><img src="../images/return.gif" alt="返回本站首页" border="0"></a></div>
+ 
+ <script type="text/javascript">     var pageId = "OpenHao123-haoserver-kuaidi";</script>
+ <script src="../js/config.js"  type="text/javascript"></script>
+<script src="../js/monitor.js"></script>
+<script src="../js/usertrack.js"  type="text/javascript"></script>
+<script type="text/javascript" src="../js/v_base.js"></script>
+<script type="text/javascript">
+    /*-物流公司资料--*/
+    var jsonComany = [{ 'companyname': '联昊通物流', 'shortname': '联昊通', 'tel': '0769-88620000 85116666', 'url': 'lhtwl', 'code': 'lianhaowuliu', 'hasvali': 0, 'comurl': 'http://www.lts.com.cn' }, { 'companyname': '原飞航物流', 'shortname': '原飞航', 'tel': '0755-29778899,29778100', 'url': 'yfh', 'code': 'yuanfeihangwuliu', 'hasvali': null, 'comurl': 'http://www.yfhex.com/' }, { 'companyname': '蓝镖快递', 'shortname': '蓝镖', 'tel': '0769-82898317', 'url': 'lanb', 'code': 'lanbiaokuaidi', 'hasvali': null, 'comurl': 'http://www.bluedart.cn/' }, { 'companyname': '伍圆速递', 'shortname': '伍圆', 'tel': '0592—5050535', 'url': 'wy', 'code': 'wuyuansudi', 'hasvali': 0, 'comurl': 'http://www.f5xm.com/' }, { 'companyname': '亚风速递', 'shortname': '亚风', 'tel': '400-628-0018', 'url': 'yfsd', 'code': 'yafengsudi', 'hasvali': 0, 'comurl': 'htt://www.broad-asia.net' }, { 'companyname': '源安达快递', 'shortname': '源安达', 'tel': '0769-85021875', 'url': 'yad', 'code': 'yuananda', 'hasvali': 0, 'comurl': 'http://www.yadex.com.cn' }, { 'companyname': '元智捷诚快递', 'shortname': '元智捷诚', 'tel': '0532- 89657811', 'url': 'yzjc', 'code': 'yuanzhijiecheng', 'hasvali': null, 'comurl': 'http://www.yjkd.com' }, { 'companyname': '中邮物流', 'shortname': '中邮', 'tel': '11185', 'url': 'zywl', 'code': 'zhongyouwuliu', 'hasvali': 0, 'comurl': 'http://www.cnpl.cn' }, { 'companyname': '申通快递', 'shortname': '申通', 'tel': '0571-82122222', 'url': 'st', 'code': 'shentong', 'hasvali': 1, 'comurl': 'http://www.sto.cn' }, { 'companyname': 'EMS特快专递', 'shortname': 'EMS', 'tel': '11185', 'url': 'ems', 'code': 'ems', 'hasvali': 1, 'comurl': 'http://www.ems.com.cn' }, { 'companyname': '顺丰速运', 'shortname': '顺丰', 'tel': '4008-111-111', 'url': 'sf', 'code': 'shunfeng', 'hasvali': 1, 'comurl': 'http://www.sf-express.com' }, { 'companyname': '韵达快运', 'shortname': '韵达', 'tel': '021-39207888', 'url': 'yd', 'code': 'yunda', 'hasvali': 0, 'comurl': 'http://www.yundaex.com' }, { 'companyname': '圆通速递', 'shortname': '圆通', 'tel': '021-69777888 69777999', 'url': 'yt', 'code': 'yuantong', 'hasvali': 0, 'comurl': 'http://www.yto.net.cn' }, { 'companyname': '中通速递', 'shortname': '中通', 'tel': '021-59130789 59130271', 'url': 'zt', 'code': 'zhongtong', 'hasvali': 0, 'comurl': 'http://www.zto.cn' }, { 'companyname': '汇通快运', 'shortname': '汇通', 'tel': '021-52967798 52967933', 'url': 'htky', 'code': 'huitongkuaidi', 'hasvali': 0, 'comurl': 'http://www.htky365.com' }, { 'companyname': '天天快递', 'shortname': '天天', 'tel': '4007-160-170', 'url': 'tt', 'code': 'tiantian', 'hasvali': 0, 'comurl': 'http://www.ttkdex.com' }, { 'companyname': '宅急送', 'shortname': '宅急送', 'tel': '400-6789-000', 'url': 'zjs', 'code': 'zhaijisong', 'hasvali': 0, 'comurl': 'http://www.zjs.com.cn' }, { 'companyname': '希伊艾斯快递', 'shortname': 'CCES', 'tel': '4006-773-777', 'url': 'cces', 'code': 'cces', 'hasvali': 0, 'comurl': 'http://www.cces.com.cn' }, { 'companyname': '全一快递', 'shortname': '全一', 'tel': '400-678-1515', 'url': 'qy', 'code': 'quanyikuaidi', 'hasvali': 0, 'comurl': 'http://www.apex100.com' }, { 'companyname': '彪记快递', 'shortname': '彪记', 'tel': '+886 (02) 2562-3533', 'url': 'bj', 'code': 'biaojikuaidi', 'hasvali': 0, 'comurl': 'http://www.pewkee.com/' }, { 'companyname': '星晨急便', 'shortname': '急便', 'tel': '400-6688-400', 'url': 'xcjb', 'code': 'xingchengjibian', 'hasvali': 0, 'comurl': 'www.4006688400.com' }, { 'companyname': '源伟丰快递', 'shortname': '源伟丰', 'tel': '400-601-2228', 'url': 'ywf', 'code': 'yuanweifeng', 'hasvali': 0, 'comurl': 'http://www.ywfex.com' }, { 'companyname': '全日通快递', 'shortname': '全日通', 'tel': '020-86298999', 'url': 'qrt', 'code': 'quanritongkuaidi', 'hasvali': 0, 'comurl': 'http://www.atexpress.cn' }, { 'companyname': '安信达快递', 'shortname': '安信达', 'tel': '021-54224681 54224682 54224685', 'url': 'axd', 'code': 'anxindakuaixi', 'hasvali': 0, 'comurl': 'http://www.anxinda.com' }, { 'companyname': '民航快递', 'shortname': '民航', 'tel': '4008-17-4008', 'url': 'mh', 'code': 'minghangkuaidi', 'hasvali': 0, 'comurl': 'http://www.cae.com.cn' }, { 'companyname': '凤凰快递', 'shortname': '凤凰', 'tel': '010-85826200', 'url': 'fhkd', 'code': 'fenghuangkuaidi', 'hasvali': 0, 'comurl': 'http://www.phoenixexp.com' }, { 'companyname': '京广速递', 'shortname': '京广', 'tel': '400-660-6488', 'url': 'jgsd', 'code': 'jinguangsudikuaijian', 'hasvali': 0, 'comurl': 'http://www.kke.com.hk' }, { 'companyname': '配思货运', 'shortname': '配思', 'tel': '010-65489928 65489571 65489469 65489456', 'url': 'pshy', 'code': 'peisihuoyunkuaidi', 'hasvali': 0, 'comurl': 'http://www.peisi.cn' }, { 'companyname': '中铁快运', 'shortname': '中铁', 'tel': '95105366', 'url': 'ztky', 'code': 'zhongtiewuliu', 'hasvali': 0, 'comurl': 'http://www.cre.cn' }, { 'companyname': 'UPS', 'shortname': 'UPS', 'tel': '800-820-8388 400-820-8388 (适用于手机客户)', 'url': 'ups', 'code': 'ups', 'hasvali': 0, 'comurl': 'http://www.ups.com/cn' }, { 'companyname': 'FedEx', 'shortname': 'FEDEX', 'tel': '800-988-1888 400-886-1888', 'url': 'fedex', 'code': 'fedex', 'hasvali': 0, 'comurl': 'http://fedex.com/cn' }, { 'companyname': 'DHL', 'shortname': 'DHL', 'tel': '800-810-8000(免费) 手机用户拨打：400-810-8000', 'url': 'dhl', 'code': 'dhl', 'hasvali': 0, 'comurl': 'http://www.cn.dhl.com' }, { 'companyname': 'AAE全球专递', 'shortname': 'AAE', 'tel': '400-6100-400', 'url': 'aae', 'code': 'aae', 'hasvali': 0, 'comurl': 'http://cn.aaeweb.com' }, { 'companyname': '大田物流', 'shortname': '大田', 'tel': '400-626-1166', 'url': 'dtwl', 'code': 'datianwuliu', 'hasvali': 0, 'comurl': 'http://www.dtw.com.cn' }, { 'companyname': '德邦物流', 'shortname': '德邦', 'tel': '400-830-5555 ', 'url': 'dbwl', 'code': 'debangwuliu', 'hasvali': 0, 'comurl': 'http://www.deppon.com' }, { 'companyname': '新邦物流', 'shortname': '新邦', 'tel': '400-880-8188', 'url': 'xbwl', 'code': 'xinbangwuliu', 'hasvali': 0, 'comurl': 'http://www.xbwl.cn' }, { 'companyname': '龙邦物流', 'shortname': '龙邦', 'tel': '0769-88921111', 'url': 'lb', 'code': 'longbanwuliu', 'hasvali': 0, 'comurl': 'http://www.lbex.com.cn' }, { 'companyname': '一邦速递', 'shortname': '一邦', 'tel': '4008-000-666', 'url': 'yb', 'code': 'yibangwuliu', 'hasvali': 0, 'comurl': 'http://www.ebon-express.com' }, { 'companyname': '速尔物流', 'shortname': '速尔', 'tel': '4008822168', 'url': 'sewl', 'code': 'suer', 'hasvali': 0, 'comurl': 'http://www.sure56.com' }, { 'companyname': '广东邮政物流', 'shortname': '广东邮政', 'tel': '020-38181677', 'url': 'gdyzwl', 'code': 'guangdongyouzhengwuliu', 'hasvali': 0, 'comurl': 'http://www.ep183.com' }, { 'companyname': '天地华宇', 'shortname': '天地华宇', 'tel': '400-808-6666', 'url': 'tdhy', 'code': 'tiandihuayu', 'hasvali': 0, 'comurl': 'http://www.hoau.net' }, { 'companyname': '盛辉物流', 'shortname': '盛辉', 'tel': '0591-83657777 83677588  83639788 83678918', 'url': 'sh', 'code': 'shenghuiwuliu', 'hasvali': 0, 'comurl': 'http://www.shenghui56.com' }, { 'companyname': '长宇物流', 'shortname': '长宇', 'tel': '4007-161-262', 'url': 'cywl', 'code': 'changyuwuliu', 'hasvali': 0, 'comurl': 'http://61.145.121.47/custSearch.jsp' }, { 'companyname': '飞康达物流', 'shortname': '飞康达', 'tel': '010-84223376 84223378', 'url': 'fkd', 'code': 'feikangda', 'hasvali': 0, 'comurl': 'http://www.fkd.com.cn' }, { 'companyname': '中国邮政国内包裹/挂号信', 'shortname': '邮政国内', 'tel': '11185', 'url': 'yzgn', 'code': 'youzhengguonei', 'hasvali': 1, 'comurl': 'http://yjcx.chinapost.com.cn' }, { 'companyname': '中国邮政国际包裹/挂号信', 'shortname': '国际', 'tel': '11185', 'url': 'yzgj', 'code': 'youzhengguoji', 'hasvali': 0, 'comurl': 'http://intmail.183.com.cn/' }, { 'companyname': '远成物流', 'shortname': '远成', 'tel': '400-820-1646', 'url': 'ycwl', 'code': 'yuanchengwuliu', 'hasvali': 0, 'comurl': 'http://www.ycgwl.com/' }, { 'companyname': '信丰物流', 'shortname': '信丰', 'tel': '4008-306-333', 'url': 'xfwl', 'code': 'xinfengwuliu', 'hasvali': 0, 'comurl': 'http://www.xf-express.com.cn' }, { 'companyname': '文捷航空速递', 'shortname': '文捷', 'tel': '020-88561502 85871501 31683301', 'url': 'wjhk', 'code': 'wenjiesudi', 'hasvali': 0, 'comurl': 'http://www.wjexpress.com' }, { 'companyname': '全晨快递', 'shortname': '全晨', 'tel': '0769-82026703', 'url': 'qckd', 'code': 'quanchenkuaidi', 'hasvali': 0, 'comurl': 'http://www.qckd.net/' }, { 'companyname': '佳怡物流', 'shortname': '佳怡', 'tel': '400-660-5656', 'url': 'jywl', 'code': 'jiayiwuliu', 'hasvali': 0, 'comurl': 'http://www.jiayi56.com/' }, { 'companyname': '优速物流', 'shortname': '优速', 'tel': '400-1111-119', 'url': 'yskd', 'code': 'youshuwuliu', 'hasvali': 0, 'comurl': 'http://www.uc56.com/' }, { 'companyname': '快捷速递', 'shortname': '快捷', 'tel': '400-8304-888', 'url': 'kjkd', 'code': 'kuaijiesudi', 'hasvali': 0, 'comurl': 'http://www.fastexpress.com.cn' }, { 'companyname': 'D速快递', 'shortname': 'D速', 'tel': '0531-83165757', 'url': 'dskd', 'code': 'dsukuaidi', 'hasvali': 0, 'comurl': 'http://www.d-exp.cn' }, { 'companyname': '全际通物流', 'shortname': '全际通', 'tel': '021-62966050', 'url': 'qjt', 'code': 'quanjitong', 'hasvali': 0, 'comurl': 'http://www.quanjt.com' }, { 'companyname': '港中能达物流', 'shortname': '能达', 'tel': '021-62215731', 'url': 'ndkd', 'code': 'ganzhongnengda', 'hasvali': 0, 'comurl': 'http://www.nd56.com/' }, { 'companyname': '安捷快递', 'shortname': '安捷', 'tel': '0532-81636315', 'url': 'ajkd', 'code': 'anjiekuaidi', 'hasvali': 0, 'comurl': 'http://www.anjelex.com' }, { 'companyname': '越丰物流', 'shortname': '越丰', 'tel': '85-223909969', 'url': 'yfwl', 'code': 'yuefengwuliu', 'hasvali': 0, 'comurl': 'http://www.yfexpress.com.hk/' }, { 'companyname': 'DPEX', 'shortname': 'DPEX', 'tel': '0755-88297707', 'url': 'dpex', 'code': 'dpex', 'hasvali': 0, 'comurl': 'http://www.szdpex.com.cn/' }, { 'companyname': '急先达', 'shortname': '急先达', 'tel': '400-886-5988', 'url': 'jxd', 'code': 'jixianda', 'hasvali': 0, 'comurl': 'http://www.joust.cn' }, { 'companyname': '百福东方', 'shortname': '百福东方', 'tel': '010—57169000', 'url': 'bfdf', 'code': 'baifudongfang', 'hasvali': 0, 'comurl': 'http://www.ees.com.cn/ ' }, { 'companyname': 'COE', 'shortname': 'COE', 'tel': '0755-83575000', 'url': 'coe', 'code': 'coe', 'hasvali': 0, 'comurl': 'http://www.coe.com.hk' }, { 'companyname': '南京100快递', 'shortname': '南京100', 'tel': '025-84510043', 'url': 'nj', 'code': 'nanjing', 'hasvali': 1, 'comurl': 'http://www.100cskd.com' }, { 'companyname': '恒路物流', 'shortname': '恒路', 'tel': '0755-26981900', 'url': 'hl', 'code': 'hengluwuliu', 'hasvali': 0, 'comurl': 'http://www.e-henglu.com/' }, { 'companyname': '金大物流', 'shortname': '金大', 'tel': '0755-82262209', 'url': 'jd', 'code': 'jindawuliu', 'hasvali': 0, 'comurl': 'http://www.szkingdom.com.cn' }, { 'companyname': '华夏龙物流', 'shortname': '华夏龙', 'tel': '0755-61211999', 'url': 'hxl', 'code': 'huaxialongwuliu', 'hasvali': 0, 'comurl': 'http://www.chinadragon56.com' }, { 'companyname': '运通快递', 'shortname': '运通', 'tel': '0769-38804886', 'url': 'ytkd', 'code': 'yuntongkuaidi', 'hasvali': 0, 'comurl': 'http://www.ytkd168.com/' }, { 'companyname': '佳吉快运', 'shortname': '佳吉', 'tel': '4008205566', 'url': 'jjwl', 'code': 'jiajiwuliu', 'hasvali': 2, 'comurl': 'http://www.jiaji.com' }, { 'companyname': '盛丰物流', 'shortname': '盛丰', 'tel': '0591-83621111', 'url': 'sfwl', 'code': 'shengfengwuliu', 'hasvali': 0, 'comurl': 'http://www.sfwl.com.cn' }, { 'companyname': '加运美速递', 'shortname': '加运美', 'tel': '0769-85515555', 'url': 'jymwl', 'code': 'jiayunmeiwuliu', 'hasvali': 0, 'comurl': 'http://www.tms56.com' }, { 'companyname': '万象物流', 'shortname': '万象', 'tel': '4008208088', 'url': 'wxwl', 'code': 'wanxiangwuliu', 'hasvali': 1, 'comurl': 'http://www.ewinshine.com' }, { 'companyname': '宏品物流', 'shortname': '宏品', 'tel': '4006121456', 'url': 'hpwl', 'code': 'hongpinwuliu', 'hasvali': 1, 'comurl': 'http://www.hpexpress.com.cn/' }, { 'companyname': 'GLS', 'shortname': 'GLS', 'tel': '877-914-5465', 'url': 'gls', 'code': 'gls', 'hasvali': 0, 'comurl': 'http://www.cn-gls.com' }, { 'companyname': '中铁物流', 'shortname': '中铁', 'tel': '400-000-5566', 'url': 'ztwl', 'code': 'ztky', 'hasvali': 0, 'comurl': 'http://www.ztky.com' }, { 'companyname': '鑫飞鸿物流快递', 'shortname': '鑫飞鸿', 'tel': '021-69781999', 'url': 'xfh', 'code': 'xinhongyukuaidi', 'hasvali': 0, 'comurl': 'www.xfhex.cn' }, { 'companyname': 'TNT', 'shortname': 'TNT', 'tel': '800-820-9868 400-820-9868(适用于手机用户)', 'url': 'tnt', 'code': 'tnt', 'hasvali': 0, 'comurl': 'http://www.tnt.com.cn' }, { 'companyname': '万家物流', 'shortname': '万家', 'tel': '021-51592928', 'url': 'wjwl', 'code': 'wanjiawuliu', 'hasvali': 0, 'comurl': 'http://www.manco-logistics.com' }, { 'companyname': 'BHT', 'shortname': 'BHT', 'tel': '010-58633508', 'url': 'bht', 'code': 'bht', 'hasvali': 0, 'comurl': 'http://www.bht-exp.com/' }, { 'companyname': '上大物流', 'shortname': '上大', 'tel': '021-54477891 54477892 54479917', 'url': 'shangda', 'code': 'shangda', 'hasvali': 0, 'comurl': 'http://www.sundapost.net'}];
+    /*-----------展现快递数据-------------*/
+    var script = Hao.ScriptLoader({ });
+
+    Hao.OnlyOne = function (arg) {
+        var list = arg.list, length = arg.list.length,
+            event = arg.event || 'onclick',
+            className = arg.className || 'selected',
+            currentItem = null,
+            onSelected = arg.onSelected;
+
+        for (var i = 0; i < length; i++) {
+            list[i][event] = function () {
+                for (var j = 0; j < length; j++) {
+                    list[j].className = list[j].className.replace(' ' + className, '');
+                }
+                this.className = this.className + ' ' + className;
+                currentItem = this;
+                if (onSelected) {
+                    onSelected(this);
+                }
+               
+            };
+        }
+
+        return {
+            clear: function () {
+                if (currentItem) {
+                    currentItem.className = currentItem.className.replace(' ' + className, '');
+                    currentItem = null;
+                }
+
+            },
+            getCurrent: function () { return currentItem; }
+        };
+
+    }
+    function getItemByCode(code) {
+        for (var i = 0; i < jsonComany.length; i++) {
+            if (jsonComany[i].code.toLowerCase() == code.toLowerCase()) {
+                return jsonComany[i];
+            }
+        }
+    }
+
+
+
+    Hao.ExpressView = function () {
+        var doc = document, expressQuery = doc.getElementById('express-provider'), expressOther = doc.getElementById('express-other'), expressMore = doc.getElementById('express-more'),
+            expressOtherTDList = expressOther.getElementsByTagName('td'),
+            expressOtherTDLength = expressOtherTDList.length,
+              expressMoreTD = expressOtherTDList[expressOtherTDLength - 1],
+              upTD = expressOtherTDList[expressOtherTDLength - 1 - 5],
+             parentTR = expressMoreTD.parentNode, isHide = true, isMoreHide = true,
+        popularExpress = doc.getElementById('popularExpress'), moreExpress = doc.getElementById('moreExpress'), moreExpressContent = doc.getElementById('moreExpressContent'),
+        queryButton = doc.getElementById('queryButton'), info = doc.getElementById('info'), noteCode = doc.getElementById('noteCode'), infoWrapper = doc.getElementById('infoWrapper'),
+        expressResult = document.getElementById('result'), isReadyReceive = false, key = 0;
+
+        expressMoreTD.innerHTML = "<a href='#' onclick='return expressView.toggleMore()'>更多快递</a>";
+        expressMoreTD.className = 'more-open';
+        expressMore.removeChild(expressMore.children[0]);
+        var expreMoreTds = expressMore.children[0].getElementsByTagName('td');
+        expreMoreTds[0].className = 'first border-top';
+        expreMoreTds[1].className = 'border-top';
+        expreMoreTds[2].className = 'border-top';
+        expreMoreTds[3].className = 'border-top';
+
+        var onlyOne = Hao.OnlyOne({ list: expressQuery.getElementsByTagName('span'), onSelected: function (oThis) {
+            setPhoneInfo();
+            expressResult.innerHTML = '';
+            isReadyReceive = false;
+            info.style.display = 'inline';
+        }
+        });
+
+        function setError(s) {
+            info.innerHTML = String.format("<em>{0}</em>", s);
+        }
+        function setHint(s) {
+            info.innerHTML = String.format("<span class='light'>{0}</span>", s);
+        }
+        function setPhoneInfo() {
+            var code = onlyOne.getCurrent().getAttribute('code');
+            var item = getItemByCode(code);
+            info.innerHTML = String.format('<span class="light">如有疑问请咨询</span><a href="{2}" code="{3}">{0}</a><span class="heavy">：查询电话{1}</span>', item.companyname, item.tel, item.comurl, code);
+        }
+        window.kd_callback = function (sendKey, errorCode, data) {
+
+            if (!isReadyReceive) {
+
+                return;
+            }
+
+            if (sendKey != key) {
+
+                return;
+            }
+
+            if (errorCode != '1') {
+                data = decodeURIComponent(data);
+                setError(data);
+                return;
+            }
+
+            var html = [];
+            for (var i = 0; i < data.length; i++) {
+                var expressText = decodeURIComponent(data[i].context);
+                expressText = expressText.replace(/^[\s,　]*/, '');
+                if (i == 0) {
+                    html.push(String.format('<li class="first">{0}　{1}</li>', data[i].time, expressText));
+                }
+                else {
+                    html.push(String.format('<li>{0}　{1}</li>', data[i].time, expressText));
+                }
+            }
+
+            expressResult.innerHTML = html.join('');
+   
+            setPhoneInfo();
+        }
+        queryButton.onclick = function () {
+            info.style.display = 'inline';
+            var companyCode, current = null, noteCodeValue = noteCode.value;
+            current = onlyOne.getCurrent();
+            if (current) {
+                companyCode = current.getAttribute('code');
+            }
+            else {
+                setError("请先选择快递公司!");
+                return;
+            }
+            noteCodeValue = noteCodeValue.replace(/^\s*|\s*$/, '');
+            if (noteCodeValue == '') {
+
+                setError("请输入单号！");
+                return;
+            }
+
+            if (!/^\w+$/.test(noteCodeValue)) {
+                setError("单号有误，请重新输入!");
+                return;
+            }
+            key++;
+            isReadyReceive = true;
+            setHint('正在查询，请稍候……');
+            script.request(String.format('http://utility.OpenHao123.cc/kuaidi.php?com={0}&nu={1}&key={2}', companyCode, noteCodeValue, key));
+
+            //track
+            UserTrack.send({ level: "2", page: pageId, type: "click", position: 'com_' + companyCode });
+        }
+
+        moreExpress.onclick = function () {
+            var parendNode = moreExpress.parentNode;
+            if (isMoreHide) {
+
+                moreExpressContent.style.display = 'block';
+                parendNode.className = 'more-close';
+
+            }
+            else {
+                moreExpressContent.style.display = 'none';
+                parendNode.className = 'more-open';
+            }
+            //onlyOne.clear();
+            //isReadyReceive = false;
+            isMoreHide = !isMoreHide;
+        };
+
+        function toggleMore() {
+            if (isHide) {
+                upTD.className = 'border-bottom';
+                parentTR.className = 'border-bottom-none';
+                expressMore.style.display = 'block';
+                expressMoreTD.innerHTML = "<div> <a href='#' onclick='return expressView.toggleMore()'>更多快递</a><i></i></div>";
+                expressMoreTD.className = 'more-close ';
+            }
+            else {
+                upTD.className = '';
+                parentTR.className = '';
+                expressMore.style.display = 'none';
+                expressMoreTD.innerHTML = "<a href='#' onclick='return expressView.toggleMore()'>更多快递</a>";
+                expressMoreTD.className = 'more-open ';
+            }
+            isHide = !isHide
+            return false;
+        }
+        //company url clicked track
+        infoWrapper.onclick = function (e) {
+            var target = Hao.Tools.checkTag(e, 'a');
+            if (target) {
+                var companyCode = target.getAttribute('code');
+                UserTrack.send({ level: "2", page: pageId, type: "click", position: 'url_' + companyCode });
+            }
+        };
+        return {
+            toggleMore: toggleMore
+        };
+    };
+    var expressView = Hao.ExpressView();
+    /*临时方案，等页头定下来去掉这部分*/
+    var logo = document.getElementById('head-basic').getElementsByTagName('img')[0],
+         sb=document.getElementById('sb');
+    logo.src = '../images/logo.gif';
+    logo.width = 168;
+    logo.height = 63;
+    sb.onmouseover = function () {
+        this.className = 'submit hover';
+        this.style.width = '98px';
+    };
+    sb.onmouseout = function () {
+        this.className = 'submit';
+        this.style.width = '97px';
+    };
+ 
+    sb.value = '';
+   
+</script> 
+</body>
+</html>

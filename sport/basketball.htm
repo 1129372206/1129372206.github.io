@@ -1,0 +1,480 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+ td,body {  font-size: 16px; font-family:arial,sans-serif,宋体;}body{margin-top:0px;margin-left:0px;margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;}
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg{border-color:#8AB78A; width:900px}
+.f9pt{font-size: 12px;}
+#sfont a,#sfont b{font-size:13px;}
+.teamlist LI {PADDING-RIGHT: 0px; PADDING-LEFT: 30px; FLOAT: left; PADDING-BOTTOM: 8px; WIDTH: 253px; PADDING-TOP: 8px; HEIGHT: 86px}
+.teamlist LI IMG {	BORDER-RIGHT: #d1d1d1 1px solid; BORDER-TOP: #d1d1d1 1px solid; DISPLAY: block; FLOAT: left; BORDER-LEFT: #d1d1d1 1px solid; WIDTH: 80px; MARGIN-RIGHT: 20px; BORDER-BOTTOM: #d1d1d1 1px solid; HEIGHT: 64px}
+.teamlist LI STRONG {DISPLAY: block; FONT-SIZE: 18px; LINE-HEIGHT: 25px; PADDING-TOP: 15px; HEIGHT: 25px}
+.highlight_1 a:link {color:#ff0000}
+.highlight_1 a:link,.highlight_1 a:visited{color:red}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+--> </style>
+<base target="_blank">
+<title>OpenHao123网址之家－－NBA</title>
+</head>
+<body>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="OpenHao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="900" height="51">
+    <tr>
+      <td width="290" height="51"><a href="/" target="_self" class="m"><img src="../images/logo.gif" alt="设为主页"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18> </td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()" onMouseDown="ClickMonkey.log('haoweb');" >网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()" onMouseDown="ClickMonkey.log('haomp3');" >MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()" onMouseDown="ClickMonkey.log('haoimg');" >图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()" onMouseDown="ClickMonkey.log('haopost');" >贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" onMouseDown="ClickMonkey.log('haozhidao');" >知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()" onMouseDown="ClickMonkey.log('haonews');" >新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()" onMouseDown="ClickMonkey.log('haovideo');">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action=http://www.baidu.com/s name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=OpenHao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=900 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=900 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.OpenHao123.cc" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.OpenHao123.cc/');return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="../images/home.gif" width="15" height="15" border="0" align="absmiddle"> 设为主页</a>　　<a href="/inc"><img src="../images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="/" target=_self style="color:#424242 ">首页</a> > <a href="http://www.OpenHao123.cc/sport.htm" style="color:#424242 ">体育资讯</a> > NBA</td></tr></table>
+</center></div>
+<div align="center"><center>
+<div class="t1 bgg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">NBA专题</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.nba.com/china">NBA中国官方站</a></td>
+		
+											<td  width="20%"><a href="http://sports.sina.com.cn/nba/">新浪NBA</a></td>
+		
+											<td  width="20%"><a href="http://sports.sohu.com/nba.shtml">搜狐NBA</a></td>
+		
+											<td  width="20%"><a href="http://sports.qq.com/nba/">腾讯NBA</a></td>
+		
+											<td  width="20%"><a href="http://www.zhibo8.com/">直播吧</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://video.baidu.com/v?word=NBA">百度NBA视频</a></td>
+		
+											<td  width="20%"><a href="http://www.hoopchina.com/">虎扑体育</a></td>
+		
+											<td  width="20%"><a href="http://sports.163.com/special/n/nba.html">网易NBA</a></td>
+		
+											<td  width="20%"><a href="http://sports.tom.com/nba/">鲨威体坛NBA</a></td>
+		
+											<td  width="20%"><a href="http://www.xinhuanet.com/sports/nba.htm">新华网NBA</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://post.baidu.com/f?kw=nba">百度NBA吧</a></td>
+		
+											<td  width="20%"><a href="http://sports.sina.com.cn/nba/video/">NBA视频</a></td>
+		
+											<td  width="20%"><a href="http://www.kuliwang.com/">苦力王篮球视频</a></td>
+		
+											<td  width="20%"><a href="http://nba.sports.sina.com.cn/">NBA赛程</a></td>
+		
+											<td  width="20%"><a href="http://sports.sohu.com/yaoming.shtml">姚明</a></td>
+		
+				</tr>
+<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://yijianlian.sina.com.cn/">易建联</a></td>
+		
+											<td  width="20%"><a href="http://kobe.sina.com.cn/">科比</a></td>
+		
+											<td  width="20%"><a href="http://sports.sina.com.cn/nba/1.shtml">火箭</a></td>
+		
+											<td  width="20%"><a href="http://sports.sina.com.cn/nba/14.shtml">奇才</a></td>
+		
+											<td  width="20%"><a href="http://sports.sina.com.cn/nba/5.shtml">湖人</a></td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">篮球</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://sports.sina.com.cn/basketball/">新浪篮球</a></td>
+		
+											<td  width="20%"><a href="http://cbachina.163.com/">CBA官网</a></td>
+		
+											<td  width="20%"><a href="http://www.cuba.com.cn/">CUBA</a></td>
+		
+											<td  width="20%"><a href="http://www.espnstar.com.cn/new/basketball/">ESPN篮球</a></td>
+		
+											<td  width="20%"><a href="http://sports.163.com/page04/">网易篮球</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://sports.sohu.com/lanqiu.shtml">搜狐篮球</a></td>
+		
+											<td  width="20%"><a href="http://www.cba.gov.cn/">中国篮协</a></td>
+		
+											<td  width="20%"><a href="http://bbs.x-kicks.com/">新新球鞋论坛</a></td>
+		
+											<td  width="20%"><a href="http://www.xinhuanet.com/sports/lqfb.htm">新华网篮球</a></td>
+		
+											<td  width="20%"><a href="http://tieba.baidu.com/f?kw=%C0%BA%C7%F2">百度篮球吧</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.bbboo.com/">包卜篮球网</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr>
+    <td height="20" colspan="2" align="left" vAlign="center" bgcolor="#D9EDDA" class="f9pt"><p align="center"><font color="#346F0E">球队</font></td>
+  </tr>
+<tr bgcolor="C5D5C5">
+  <td height="20" colspan="2" align="center" vAlign="center" bgcolor="#D9EDDA" class="f9pt"><table width="99%"  border="0" cellspacing="1" cellpadding="0" class=teamlist>
+    <tr>
+      <td width="50%" height="20" vAlign="center" bgcolor="2D6082" style="color:#fff">&nbsp;大西洋赛区</td>
+  <td width="50%" vAlign="center" bgcolor="761C26" style="color:#fff">&nbsp;西南赛区</td>
+    <td width="50%" vAlign="center" bgcolor="2D6082" style="color:#fff">&nbsp;中部赛区</td>
+    </tr>
+    <tr>
+      <td bgcolor="#EFF7F0"><LI><A href="http://nba.sports.163.com/team/home/26.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/1.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%B2%A8%CA%BF%B6%D9%BF%AD%B6%FB%CC%D8%C8%CB" target=_blank>凯尔特人吧</A></STRONG></td>
+      <td bgcolor="#EFF7F0"><LI><A href="http://nba.sports.163.com/team/home/2.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/4.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%BB%F0%BC%FD" target=_blank>火箭吧</A></STRONG></td>
+      <td bgcolor="#EFF7F0"><LI><A href="http://nba.sports.163.com/team/home/22.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/19.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%C3%DC%B6%FB%CE%D6%BB%F9%D0%DB%C2%B9" target=_blank>雄鹿吧</A></STRONG></td>
+    </tr>
+    <tr>
+      <td><LI><A href="http://nba.sports.163.com/team/home/30.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/3.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%D0%C2%D4%F3%CE%F7%CD%F8" target=_blank>篮网吧</A></STRONG></td>
+      <td><LI><A href="http://nba.sports.163.com/team/home/1.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/2.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%B4%EF%C0%AD%CB%B9%D0%A1%C5%A3" target=_blank>小牛吧</A></STRONG></td>
+      <td><LI><A href="http://nba.sports.163.com/team/home/21.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/13.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%BF%CB%C0%FB%B7%F2%C0%BC%C6%EF%CA%BF" target=_blank>骑士吧</A></STRONG></td>
+    </tr>
+    <tr>
+      <td bgcolor="#EFF7F0"><LI><A href="http://nba.sports.163.com/team/home/29.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/5.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%C5%A6%D4%BC%C4%E1%BF%CB%CB%B9" target=_blank>尼克斯吧</A></STRONG></td>
+      <td bgcolor="#EFF7F0"><LI><A href="http://nba.sports.163.com/team/home/5.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/6.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%C3%CF%B7%C6%CB%B9%BB%D2%D0%DC" target=_blank>灰熊吧</A></STRONG></td>
+      <td bgcolor="#EFF7F0"><LI><A href="http://nba.sports.163.com/team/home/25.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/15.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%B5%D7%CC%D8%C2%C9%BB%EE%C8%FB" target=_blank>活塞吧</A></STRONG></td>
+    </tr>
+    <tr>
+      <td><LI><A href="http://nba.sports.163.com/team/home/27.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/7.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=76%C8%CB" target=_blank>76人吧</A></STRONG></td>
+      <td><LI><A href="http://nba.sports.163.com/team/home/4.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/8.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%BB%C6%B7%E4" target=_blank>黄蜂吧</A></STRONG></td>
+      <td><LI><A href="http://nba.sports.163.com/team/home/24.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/17.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%D3%A1%B5%DA%B0%B2%C4%C9%B2%BD%D0%D0%D5%DF" target=_blank>步行者吧</A></STRONG></td>
+    </tr>
+    <tr>
+      <td bgcolor="#EFF7F0"><LI><A href="http://nba.sports.163.com/team/home/28.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/9.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%B6%E0%C2%D7%B6%E0%C3%CD%C1%FA" target=_blank>猛龙吧</A></STRONG></td>
+      <td bgcolor="#EFF7F0"><LI><A href="http://nba.sports.163.com/team/home/3.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/10.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%CA%A5%B0%B2%B6%AB%C4%E1%B0%C2%C2%ED%B4%CC" target=_blank>马刺吧</A></STRONG></td>
+      <td bgcolor="#EFF7F0"><LI><A href="http://nba.sports.163.com/team/home/23.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/11.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%D6%A5%BC%D3%B8%E7%B9%AB%C5%A3" target=_blank>公牛吧</A></STRONG></td>
+    </tr>
+    <tr>
+      <td height="20" bgcolor="2D6082" style="color:#fff">&nbsp;西北赛区</td>
+      <td bgcolor="761C26" style="color:#fff">&nbsp;东南赛区</td>
+      <td bgcolor="2D6082" style="color:#fff">&nbsp;太平洋赛区</td>
+    </tr>
+    <tr>
+      <td bgcolor="#EFF7F0"><LI><A href="http://nba.sports.163.com/team/home/6.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/12.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%B5%A4%B7%F0%BE%F2%BD%F0" target=_blank>掘金吧</A></STRONG></td>
+      <td bgcolor="#EFF7F0"><LI><A href="http://nba.sports.163.com/team/home/16.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/21.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%D1%C7%CC%D8%C0%BC%B4%F3%C0%CF%D3%A5" target=_blank>老鹰吧</A></STRONG></td>
+      <td bgcolor="#EFF7F0"><LI><A href="http://nba.sports.163.com/team/home/15.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/22.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%BD%F0%D6%DD%D3%C2%CA%BF" target=_blank>勇士吧</A></STRONG></td>
+    </tr>
+    <tr>
+      <td><LI><A href="http://nba.sports.163.com/team/home/10.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/14.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%C9%AD%C1%D6%C0%C7" target=_blank>森林狼吧</A></STRONG></td>
+      <td><LI><A href="http://nba.sports.163.com/team/home/20.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/23.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%CF%C4%C2%E5%CC%D8%C9%BD%C3%A8" target=_blank>山猫吧</A></STRONG></td>
+      <td><LI><A href="http://nba.sports.163.com/team/home/14.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/24.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%C2%E5%C9%BC%ED%B6%BF%EC%B4%AC" target=_blank>快船吧</A></STRONG></td>
+    </tr>
+    <tr bgcolor="#EFF7F0">
+      <td><LI><A href="http://nba.sports.163.com/team/home/7.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/16.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%B2%A8%CC%D8%C0%BC%BF%AA%CD%D8%D5%DF" target=_blank>开拓者吧</A></STRONG></td>
+      <td><LI><A href="http://nba.sports.163.com/team/home/18.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/25.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%C2%F5%B0%A2%C3%DC%C8%C8%BB%F0" target=_blank>热火吧</A></STRONG></td>
+      <td><LI><A href="http://nba.sports.163.com/team/home/12.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/26.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%C2%E5%C9%BC%ED%B6%BA%FE%C8%CB" target=_blank>湖人吧</A></STRONG></td>
+    </tr>
+    <tr>
+      <td><LI><A href="http://nba.sports.163.com/team/home/8.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/18.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%C0%D7%F6%AA" target=_blank>雷霆吧</A></STRONG></td>
+      <td><LI><A href="http://nba.sports.163.com/team/home/17.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/27.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%B0%C2%C0%BC%B6%E0%C4%A7%CA%F5" target=_blank>魔术吧</A></STRONG></td>
+      <td><LI><A href="http://nba.sports.163.com/team/home/11.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/28.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%B7%C6%C4%E1%BF%CB%CB%B9%CC%AB%D1%F4" target=_blank>太阳吧</A></STRONG></td>
+    </tr>
+    <tr bgcolor="#EFF7F0">
+      <td><LI><A href="http://nba.sports.163.com/team/home/9.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/20.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%D3%CC%CB%FB%BE%F4%CA%BF" target=_blank>爵士吧</A></STRONG></td>
+      <td><LI><A href="http://nba.sports.163.com/team/home/19.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/29.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%BB%AA%CA%A2%B6%D9%C6%E6%B2%C5" target=_blank>奇才吧</A></STRONG></td>
+      <td><LI><A href="http://nba.sports.163.com/team/home/13.html" target=_blank ><IMG 
+  alt="更多详情" src="images/nba/30.gif" border="0"></A><STRONG><A 
+  href="http://tieba.baidu.com/f?kw=%C8%F8%BF%CB%C0%AD%C3%C5%CD%D0%B9%FA%CD%F5" target=_blank>国王吧</A></STRONG></td>
+    </tr>
+  </table></td>
+</tr>
+</table>
+</div>
+</center></div>
+<br>
+<DIV align=center><br><a href="/" target="_self"><img src="../images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="OpenHao123-sport2-basketball";</script><script src="../js/monitor.js"></script>
+<span style="display:none"><script src="/js/tj.js"></script></span></body>
+</html>

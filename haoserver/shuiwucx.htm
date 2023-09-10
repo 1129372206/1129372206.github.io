@@ -1,0 +1,350 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+ td,body {  font-size: 16px; font-family:arial,sans-serif,宋体;}body{margin-top:0px;margin-left:0px;margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;}
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg{border-color:#8AB78A; width:898px}
+.f9pt{font-size: 12px;}
+#sfont a,#sfont b{font-size:13px;}
+.highlight_1 a:link,.highlight_1 a:visited{color:red}
+.wr{text-align:right}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+--> </style>
+<base target="_blank">
+<title>OpenHao123网址之家－－税务</title>
+</head>
+<body>
+<script src="../js/base.js"></script>
+<script src="../js/userdata.js"></script>
+<script src="../js/record.js"></script>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="OpenHao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		f.boxpos.value="OpenHao123-haoserver-shuiwucx"
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="900" height="51">
+    <tr>
+      <td width="290" height="51"><a href="/" target="_self" class="m"><img src="../images/logo.gif" alt="把OpenHao123设为主页"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18> </td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()" onMouseDown="ClickMonkey.log('haoweb');" >网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()" onMouseDown="ClickMonkey.log('haomp3');" >MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()" onMouseDown="ClickMonkey.log('haoimg');" >图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()" onMouseDown="ClickMonkey.log('haopost');" >贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" onMouseDown="ClickMonkey.log('haozhidao');" >知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()" onMouseDown="ClickMonkey.log('haonews');" >新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()" onMouseDown="ClickMonkey.log('haovideo');">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action=http://www.baidu.com/s name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=OpenHao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=boxpos><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=900 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=900 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.OpenHao123.cc" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.OpenHao123.cc/');return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="../images/home.gif" width="15" height="15" border="0" align="absmiddle"> 把OpenHao123设为主页</a>　　<a href="/inc"><img src="../images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="/" target=_self style="color:#424242 ">首页</a> > 税务</td></tr></table>
+</center></div>
+<div align="center" onMouseDown="bdRecord.scope(event)"><center>
+<div class="t1 bgg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<tr bgcolor="C5D5C5">
+        <td bgcolor="#D9EDDA" class="f9pt" height="20"><p align="center"><font color="#346F0E">各地国税/地税</font></td>
+      </tr>
+<tr bgcolor="#FFF8F0">
+	<td >
+		<table width="100%"  border="0" cellspacing="0" cellpadding="7">
+						<tr bgcolor="#FFF8F0">					<td  width="20%"><a href="http://www.chinatax.gov.cn/">国家税务总局</a></td>
+		
+											<td  width="20%"></td>
+		
+											<td  width="20%"></td>
+		
+											<td  width="20%"></td>
+		
+											<td  width="20%"></td>
+		
+				</tr>										</table>
+	</td>
+</tr><tr bgcolor="C5D5C5">
+<td width="100%" colspan="4" align="center" bgcolor="#FFF8F0"><img src="../images/guoshui.gif" border="0" usemap="#Map"><map name="Map">
+<area shape="rect" coords="343,138,371,152" href="http://www.bjsat.gov.cn/" alt="北京市国家税务局"></area>
+<area shape="rect" coords="366,156,391,169" href="http://www.tjsat.gov.cn/" alt="天津市国家税务局"></area>
+<area shape="rect" coords="326,165,352,178" href="http://www.he-n-tax.gov.cn/" alt="河北省国家税务局"></area>
+<area shape="rect" coords="298,183,329,199" href="http://www.tax.sx.cn/" alt="山西省国家税务局"></area>
+<area shape="rect" coords="265,142,313,159" href="http://www.nmgsj.gov.cn/" alt="内蒙古自治区国家税务局"></area>
+<area shape="rect" coords="384,123,415,138" href="http://ln-n-tax.gov.cn/" alt="辽宁省国家税务局"></area>
+<area shape="rect" coords="405,95,436,111" href="http://www.jl-n-tax.gov.cn/" alt="吉林省国家税务局"></area>
+<area shape="rect" coords="399,56,451,78" href="http://www.hl-n-tax.gov.cn/" alt="黑龙江省国家税务局"></area>
+<area shape="rect" coords="414,236,440,250" href="http://www.csj.sh.gov.cn/" alt="上海市国家税务局"></area>
+<area shape="rect" coords="379,210,408,223" href="http://www.js-n-tax.gov.cn/" alt="江苏省国家税务局"></area>
+<area shape="rect" coords="385,258,413,272" href="http://www.zjtax.gov.cn/" alt="浙江省国家税务局"></area>
+<area shape="rect" coords="355,236,383,248" href="http://www.ah-n-tax.gov.cn/" alt="安徽省国家税务局"></area>
+<area shape="rect" coords="369,293,396,306" href="http://www.fj-n-tax.gov.cn/" alt="福建省国家税务局"></area>
+<area shape="rect" coords="343,270,373,285" href="http://www.jx-n-tax.gov.cn/" alt="江西省国家税务局"></area>
+<area shape="rect" coords="348,183,380,199" href="http://www.sd-n-tax.gov.cn/" alt="山东省国家税务局"></area>
+<area shape="rect" coords="312,214,343,230" href="http://www.12366.ha.cn/" alt="河南省国家税务局"></area>
+<area shape="rect" coords="308,243,339,261" href="http://www.hb-n-tax.gov.cn/" alt="湖北省国家税务局"></area>
+<area shape="rect" coords="305,277,336,297" href="http://www.hntax.gov.cn/" alt="湖南省国家税务局"></area>
+<area shape="rect" coords="331,318,357,337" href="http://portal.gd-n-tax.gov.cn/" alt="广东省国家税务局"></area>
+<area shape="rect" coords="277,324,315,346" href="http://www.gxgs.gov.cn/" alt="广西自治区国家税务局"></area>
+<area shape="rect" coords="278,378,309,392" href="http://www.hitax.gov.cn/" alt="海南省国家税务局"></area>
+<area shape="rect" coords="254,264,283,282" href="http://www.cqsw.gov.cn/" alt="重庆市国家税务局"></area>
+<area shape="rect" coords="214,249,246,270" href="http://www.sc-n-tax.gov.cn/" alt="四川省国家税务局"></area>
+<area shape="rect" coords="265,295,291,310" href="http://www.gz-n-tax.gov.cn/" alt="贵州省国家税务局"></area>
+<area shape="rect" coords="210,319,240,339" href="http://www.yn-n-tax.gov.cn/" alt="云南省国家税务局"></area>
+<area shape="rect" coords="96,236,131,261" href="http://www.xztax.gov.cn/" alt="西藏自治区国家税务局"></area>
+<area shape="rect" coords="273,216,302,229" href="http://www.sn-n-tax.gov.cn/" alt="陕西省国家税务局"></area>
+<area shape="rect" coords="170,150,198,167" href="http://www.gs-n-tax.gov.cn/" alt="甘肃省国家税务局"></area>
+<area shape="rect" coords="159,191,205,223" href="http://www.qh-n-tax.gov.cn/" alt="青海省国家税务局"></area>
+<area shape="rect" coords="245,183,269,196" href="http://www.nxgs.gov.cn/" alt="宁夏自治区国家税务局"></area>
+<area shape="rect" coords="71,122,143,161" href="http://www.xj-n-tax.gov.cn/" alt="新疆自治区国家税务局"></area>
+</map>
+</td>
+</tr><tr bgcolor="C5D5C5">
+<td width="100%" colspan="4" align="center" bgcolor="#EFF7F0"><img src="../images/dishui.gif" border="0" usemap="#Map"><map name="Map">
+<area shape="rect" coords="343,138,371,152" href="http://www.tax861.gov.cn/" alt="北京市地方税务局"></area>
+<area shape="rect" coords="366,156,391,169" href="http://www.tjcs.gov.cn/" alt="天津市地方税务局"></area>
+<area shape="rect" coords="326,165,352,178" href="http://www.hebds.gov.cn/" alt="河北省地方税务局"></area>
+<area shape="rect" coords="298,183,329,199" href="http://www.sxs-l-tax.gov.cn/" alt="山西省地方税务局"></area>
+<area shape="rect" coords="265,142,313,159" href="http://www.nmds.gov.cn/" alt="内蒙古自治区地方税务局"></area>
+<area shape="rect" coords="384,123,415,138" href="http://www.lnsds.gov.cn/" alt="辽宁省地方税务局"></area>
+<area shape="rect" coords="405,95,436,111" href="http://www.jlds.gov.cn/" alt="吉林省地方税务局"></area>
+<area shape="rect" coords="399,56,451,78" href="http://www.hljtax.gov.cn/" alt="黑龙江省地方税务局"></area>
+<area shape="rect" coords="414,236,440,250" href="http://www.csj.sh.gov.cn/" alt="上海市地方税务局"></area>
+<area shape="rect" coords="379,210,408,223" href="http://www.jsds.gov.cn/" alt="江苏省地方税务局"></area>
+<area shape="rect" coords="385,258,413,272" href="http://www.zj-l-tax.gov.cn/" alt="浙江省地方税务局"></area>
+<area shape="rect" coords="355,236,383,248" href="http://www.ah-l-tax.gov.cn/" alt="安徽省地方税务局"></area>
+<area shape="rect" coords="369,293,396,306" href="http://www.fj-l-tax.gov.cn/" alt="福建省地方税务局"></area>
+<area shape="rect" coords="343,270,373,285" href="http://www.jxds.gov.cn/" alt="江西省地方税务局"></area>
+<area shape="rect" coords="348,183,380,199" href="http://www.sdds.gov.cn/" alt="山东省地方税务局"></area>
+<area shape="rect" coords="312,214,343,230" href="http://www.ha-l-tax.gov.cn/" alt="河南省地方税务局"></area>
+<area shape="rect" coords="308,243,339,261" href="http://www.hb-l-tax.gov.cn/" alt="湖北省地方税务局"></area>
+<area shape="rect" coords="305,277,336,297" href="http://www.hnds.gov.cn/" alt="湖南省地方税务局"></area>
+<area shape="rect" coords="331,318,357,337" href="http://www.gdltax.gov.cn/" alt="广东省地方税务局"></area>
+<area shape="rect" coords="277,324,315,346" href="http://www.gxds.gov.cn/" alt="广西自治区地方税务局"></area>
+<area shape="rect" coords="278,378,309,392" href="http://www.tax.hainan.gov.cn/" alt="海南省地方税务局"></area>
+<area shape="rect" coords="254,264,283,282" href="http://www.cq-l-tax.gov.cn/" alt="重庆市地方税务局"></area>
+<area shape="rect" coords="214,249,246,270" href="http://www.sc-n-tax.gov.cn/portal/site/site/portal/sc/index.jsp" alt="四川省地方税务局"></area>
+<area shape="rect" coords="265,295,291,310" href="http://www.gz-l-tax.gov.cn/" alt="贵州省地方税务局"></area>
+<area shape="rect" coords="210,319,240,339" href="http://www.ltax.yn.gov.cn/" alt="云南省地方税务局"></area>
+<area shape="rect" coords="273,216,302,229" href="http://www.12366sds.gov.cn/" alt="陕西省地方税务局"></area>
+<area shape="rect" coords="170,150,198,167" href="http://www.gs-l-tax.gov.cn/" alt="甘肃省地方税务局"></area>
+<area shape="rect" coords="159,191,205,223" href="http://www.qhds.gov.cn/" alt="青海省地方税务局"></area>
+<area shape="rect" coords="245,183,269,196" href="http://www.nxds.gov.cn/" alt="宁夏自治区地方税务局"></area>
+<area shape="rect" coords="71,122,143,161" href="http://www.xjds.gov.cn/" alt="新疆自治区地方税务局"></area>
+</map>
+</td>
+</tr></table>
+</div>
+</center></div>
+<DIV align=center><br><a href="/" target="_self"><img src="../images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="OpenHao123-haoserver-shuiwucx";</script><script src="../js/monitor.js"></script>
+<span style="display:none"><script src="/js/tj.js"></script></span></body>
+</html>

@@ -1,0 +1,601 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+ td,body {  font-size: 15px; font-family:arial,sans-serif,宋体;}body{margin-top:0px;margin-left:0px;margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{TEXT-DECORATION: none;padding-left:4px;} a:active{text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;}
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg{border-color:#8AB78A; width:898px}
+.f9pt{font-size: 12px;}
+#sfont a,#sfont b{font-size:13px;}
+..highlight_1 a:link {color:#ff0000}
+.highlight_1 a:link,.highlight_1 a:visited{color:red}
+.wr{text-align:right}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+--> </style>
+<base target="_blank">
+<title>OpenHao123网址之家－－游戏</title>
+</head>
+<body>
+<script src="http://www.OpenHao123.cc/js/base.js"></script>
+<script src="http://www.OpenHao123.cc/js/userdata.js"></script>
+<script src="http://www.OpenHao123.cc/js/record.js"></script>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="OpenHao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="900" height="51">
+    <tr>
+      <td width="290" height="51"><img src="images/logo.gif"    width="168" height="63" border="0"></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18> </td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()" onMouseDown="ClickMonkey.log('haoweb');" >网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()" onMouseDown="ClickMonkey.log('haomp3');" >MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()" onMouseDown="ClickMonkey.log('haoimg');" >图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()" onMouseDown="ClickMonkey.log('haopost');" >贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" onMouseDown="ClickMonkey.log('haozhidao');" >知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()" onMouseDown="ClickMonkey.log('haonews');" >新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()" onMouseDown="ClickMonkey.log('haovideo');">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action=http://www.baidu.com/s name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=OpenHao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=900 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=900 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.OpenHao123.cc" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.OpenHao123.cc/');return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="images/home.gif" width="15" height="15" border="0" align="absmiddle"> 把OpenHao123设为主页</a>　　<a href="inc/"><img src="images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td>
+<td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="/" target=_self style="color:#424242 ">首页</a> > 游戏</td></tr></table>
+</center></div>
+<div align="center" onMouseDown="bdRecord.scope(event)"><center>
+<div class="t1 bgg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">综合游戏</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.17173.com/">17173</a></td>
+		
+											<td  width="20%"    ><a href="http://games.sina.com.cn/">新浪游戏</a></td>
+		
+											<td  width="20%"    ><a href="http://www.pcgames.com.cn/">太平洋游戏网</a></td>
+		
+											<td  width="20%"    ><a href="http://qqgame.qq.com/">QQ游戏</a></td>
+		
+											<td  width="20%"    ><a href="http://www.ali213.net/">游侠网</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.20000n.com/">多玩游戏</a></td>
+		
+											<td  width="20%"    ><a href="http://www.gamersky.com/">游民星空</a></td>
+		
+											<td  width="20%"    ><a href="http://www.gamespot.com.cn/">游戏基地</a></td>
+		
+											<td  width="20%"    ><a href="http://youxi.baidu.com/">百度游戏</a></td>
+		
+											<td  width="20%"    ><a href="http://games.qq.com/">腾讯游戏</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.5173.com/">5173游戏交易</a></td>
+		
+											<td  width="20%"    ><a href="http://www.uuu9.com/">游久网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.52pk.com/">52PK游戏网</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">休闲游戏</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.20000n.com/">4399小游戏</a></td>
+		
+											<td  width="20%"    ><a href="http://www.75xyx.com/">7k7k小游戏</a></td>
+		
+											<td  width="20%"    ><a href="http://www.2144.cn/">2144小游戏</a></td>
+		
+											<td  width="20%"    ><a href="http://www.yx007.com/">小游戏007</a></td>
+		
+											<td  width="20%"    ><a href="http://www.3366.com/">3366小游戏</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://17roco.qq.com/">洛克王国</a></td>
+		
+											<td  width="20%"    ><a href="http://www.51mole.com/">摩尔庄园</a></td>
+		
+											<td  width="20%"    ><a href="http://hua.61.com/">小花仙</a></td>
+		
+											<td  width="20%"  class="gg_b"  ><a href="http://web.sanguosha.com/">三国杀网页版</a></td>
+		
+											<td  width="20%"    ><a href="http://www.aobi.com/">奥比岛</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.51seer.com/">赛尔号</a></td>
+		
+											<td  width="20%"    ><a href="http://www.9aola.com/">奥拉星</a></td>
+		
+											<td  width="20%"    ><a href="http://1314.qq.com/">玫瑰小镇</a></td>
+		
+											<td  width="20%"  class="gg"  ><a href="http://game.51.com/act/yxdq?from=hao_3">51游戏</a></td>
+		
+											<td  width="20%"    ><a href="http://my.4399.com/">4399游戏吧</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://xyx.kaixin001.com/index.html">开心网小游戏</a></td>
+		
+											<td  width="20%"    ><a href="http://xyx.OpenHao123.cc/">小游戏排行榜</a></td>
+		
+											<td  width="20%"    ><a href="http://www.ourgame.com/">联众世界</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%"  class="wr"  ><a href="http://www.OpenHao123.cc/flash.htm">更多 &raquo;</a></td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">网络游戏</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://cf.qq.com/">穿越火线</a></td>
+		
+											<td  width="20%"    ><a href="http://speed.qq.com/">QQ飞车</a></td>
+		
+											<td  width="20%"    ><a href="http://dnf.qq.com/">地下城与勇士</a></td>
+		
+											<td  width="20%"    ><a href="http://x5.qq.com/">QQ炫舞</a></td>
+		
+											<td  width="20%"    ><a href="http://ldj.changyou.com/">鹿鼎记</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.warcraftchina.com">魔兽世界</a></td>
+		
+											<td  width="20%"    ><a href="http://xyq.163.com/">梦幻西游</a></td>
+		
+											<td  width="20%"    ><a href="http://dn.sdo.com/">龙之谷</a></td>
+		
+											<td  width="20%"    ><a href="http://tl.changyou.com/">天龙八部2</a></td>
+		
+											<td  width="20%"    ><a href="http://lol.qq.com/">英雄联盟</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://popkart.tiancity.com/homepage/">跑跑卡丁车</a></td>
+		
+											<td  width="20%"    ><a href="http://csol.tiancity.com/">反恐精英OL</a></td>
+		
+											<td  width="20%"    ><a href="http://mxd.sdo.com/">冒险岛</a></td>
+		
+											<td  width="20%"    ><a href="http://www.asktao.com/">问道</a></td>
+		
+											<td  width="20%"    ><a href="http://xxz.qq.com/">QQ仙侠传</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://zhuxian.wanmei.com/">诛仙2</a></td>
+		
+											<td  width="20%"    ><a href="http://xcb.sdo.com/">星辰变</a></td>
+		
+											<td  width="20%"    ><a href="http://mg.9you.com/">劲舞团</a></td>
+		
+											<td  width="20%"    ><a href="http://wulin2.wanmei.com/">新武林外传</a></td>
+		
+											<td  width="20%"    ><a href="http://aion.sdo.com/">永恒之塔</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://jx3.xoyo.com/">剑网</a></td>
+		
+											<td  width="20%"    ><a href="http://xmhzx.wanmei.com/">梦幻诛仙</a></td>
+		
+											<td  width="20%"    ><a href="http://www.m3guo.com/">梦三国</a></td>
+		
+											<td  width="20%"  class="gg"  ><a href="http://ls.ztgame.com/OpenHao123.html">绿色征途</a></td>
+		
+											<td  width="20%"    ><a href="http://my.91.com/">魔域</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"  class="gg"  ><a href="http://xt.ztgame.com/OpenHao123.html">仙途</a></td>
+		
+											<td  width="20%"    ><a href="http://gd.9you.com/">sd敢达OL</a></td>
+		
+											<td  width="20%"    ><a href="http://wot.kongzhong.com/">坦克世界</a></td>
+		
+											<td  width="20%"    ><a href="http://www.fsjoy.com/">街头篮球</a></td>
+		
+											<td  width="20%"    ><a href="http://chd.sdo.com/">彩虹岛</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://nycs.syyx.com/">诺亚传说</a></td>
+		
+											<td  width="20%"    ><a href="http://sg.qq.com/">QQ三国</a></td>
+		
+											<td  width="20%"    ><a href="http://bnb.sdo.com/">泡泡堂</a></td>
+		
+											<td  width="20%"    ><a href="http://sw.henhaoji.com/">神武</a></td>
+		
+											<td  width="20%"  class="gg"  ><a href="http://sg.198game.net/">幻想三国</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"  class="gg"  ><a href="http://www.shumenol.com/?stat=307132">蜀门</a></td>
+		
+											<td  width="20%"  class="gg"  ><a href="http://www.zuixiaoyao.com/?stat=307131">醉逍遥</a></td>
+		
+											<td  width="20%"  class="gg"  ><a href="http://zt.ztgame.com/OpenHao123.html">征途</a></td>
+		
+											<td  width="20%"  class="gg"  ><a href="http://yb.linekong.com/">佣兵天下</a></td>
+		
+											<td  width="20%"  class="gg"  ><a href="http://www.aiaigame.com/recive/newindex/key/jz8fMx">极光世界</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"  class="gg"  ><a href="http://zt2.ztgame.com/OpenHao123.html">征途2</a></td>
+		
+											<td  width="20%"  class="gg"  ><a href="http://x5.51.com/default.htm">51新炫舞</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%"  class="wr"  ><a href="http://www.OpenHao123.cc/netgame.htm">更多 &raquo;</a></td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">掌机/手机游戏</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.tgbus.com/">电玩巴士</a></td>
+		
+											<td  width="20%"    ><a href="http://www.cngba.com/">玩家网</a></td>
+		
+											<td  width="20%"    ><a href="http://psp.tgbus.com/">PSP中文网</a></td>
+		
+											<td  width="20%"    ><a href="http://psp.duowan.com/">多玩psp</a></td>
+		
+											<td  width="20%"    ><a href="http://www.155.cn/">手游天下</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.mamecn.com/">街机中国</a></td>
+		
+											<td  width="20%"    ><a href="http://www.d.cn/">当乐手机游戏</a></td>
+		
+											<td  width="20%"    ><a href="http://www.nwbbs.com/">任天堂世界</a></td>
+		
+											<td  width="20%"    ><a href="http://bbs.a9vg.com/">A9VG电玩部落</a></td>
+		
+											<td  width="20%"    ><a href="http://nds.tgbus.com/">NDS中文网</a></td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">游戏相关</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.cga.com.cn/">浩方对战平台</a></td>
+		
+											<td  width="20%"    ><a href="http://www.vsa.com.cn/">VS竞技游戏平台</a></td>
+		
+											<td  width="20%"    ><a href="http://games.qq.com/esports/qqbattle/">QQ对战平台</a></td>
+		
+											<td  width="20%"    ><a href="http://youxi.baidu.com/game.xhtml">百度游戏大厅</a></td>
+		
+											<td  width="20%"    ><a href="http://www.yzz.cn/">叶子猪</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.jdyou.com/DownLoad/DownLoad.aspx">简单游</a></td>
+		
+											<td  width="20%"    ><a href="http://www.sdo.com/">盛大在线</a></td>
+		
+											<td  width="20%"    ><a href="http://media.17173.com/">17173游戏视频</a></td>
+		
+											<td  width="20%"    ><a href="http://www.178.com/">178游戏网</a></td>
+		
+											<td  width="20%"    ><a href="http://bbs.houdao.com/">猴岛</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.yy.com/">YY语音</a></td>
+		
+											<td  width="20%"    ><a href="http://www.5211game.com/">11对战平台</a></td>
+		
+											<td  width="20%"    ><a href="http://www.gamefy.cn/">游戏风云</a></td>
+		
+											<td  width="20%"    ><a href="http://www.aipai.com/download/baobao.html">爱拍游戏</a></td>
+		
+											<td  width="20%"    ><a href="http://www.hxgame.net/">幻想游戏</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://mxd.766.com/">766冒险岛</a></td>
+		
+											<td  width="20%"    ><a href="http://xyq.cbg.163.com/">梦幻西游藏宝阁</a></td>
+		
+											<td  width="20%"    ><a href="http://games.sina.com.cn/esports/">电子竞技-新浪游戏</a></td>
+		
+											<td  width="20%"    ><a href="http://fight.pcgames.com.cn/">电子竞技-太平洋游戏网</a></td>
+		
+											<td  width="20%"    ><a href="http://bbs.3996.com/">3996游戏社区</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://bbs.3dmgame.com/">3dm游戏论坛</a></td>
+		
+											<td  width="20%"    ><a href="http://www.kuaikuai.cn/">金山快快</a></td>
+		
+											<td  width="20%"    ><a href="http://ka.sina.com.cn/">新浪新手卡</a></td>
+		
+											<td  width="20%"    ><a href="http://www.jcard.cn/">骏网一卡通</a></td>
+		
+											<td  width="20%"    ><a href="http://www.jdbbx.com/">简单百宝箱</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.battlenet.com.cn/">战网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.shiwan.com/">试玩网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.xskhome.com/">新手卡之家</a></td>
+		
+											<td  width="20%"    ><a href="http://www.plu.cn/">plu游戏视频</a></td>
+		
+											<td  width="20%"    ><a href="http://www.tyjsq.com/">统一加速器</a></td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">单机游戏</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.OpenHao123.cc/game/9xdfc.htm">侠盗飞车</a></td>
+		
+											<td  width="20%"    ><a href="http://www.OpenHao123.cc/game/22cs.htm">反恐精英CS</a></td>
+		
+											<td  width="20%"    ><a href="http://www.OpenHao123.cc/game/12jpfc.htm">极品飞车</a></td>
+		
+											<td  width="20%"    ><a href="/game/dzjs.htm">植物大战僵尸</a></td>
+		
+											<td  width="20%"    ><a href="http://www.OpenHao123.cc/game/15llk.htm">连连看</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.OpenHao123.cc/game/8hongjing.htm">红色警戒</a></td>
+		
+											<td  width="20%"    ><a href="http://www.OpenHao123.cc/game/25xjzb.htm">星际争霸</a></td>
+		
+											<td  width="20%"    ><a href="http://xyx.OpenHao123.cc/pic/pic_0_0_1_91_0.html">斗地主</a></td>
+		
+											<td  width="20%"    ><a href="http://www.OpenHao123.cc/game/14supermarry.htm">超级玛丽</a></td>
+		
+											<td  width="20%"    ><a href="http://www.OpenHao123.cc/game/20qipai.htm">棋牌</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.OpenHao123.cc/game/5mszb.htm">魔兽争霸</a></td>
+		
+											<td  width="20%"    ><a href="http://www.OpenHao123.cc/game/26dgsd.htm">帝国时代</a></td>
+		
+											<td  width="20%"    ><a href="http://www.OpenHao123.cc/game/4zuma.htm">祖玛</a></td>
+		
+											<td  width="20%"    ><a href="http://www.OpenHao123.cc/game/17ahphs2.htm">暗黑破坏神II</a></td>
+		
+											<td  width="20%"    ><a href="http://www.7k7k.com/special/angrybirds/">愤怒的小鸟</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://box.4399.com/download.php">4399游戏盒</a></td>
+		
+											<td  width="20%"    ><a href="http://www.kuaiwan.com/">快玩游戏</a></td>
+		
+											<td  width="20%"    ><a href="http://xyx.OpenHao123.com/pic/pic_0_0_1_78_0.html">双人小游戏</a></td>
+		
+											<td  width="20%"    ><a href="http://xyx.OpenHao123.com/pic/pic_0_0_1_38_0.html">喜羊羊与灰太狼</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+</table>
+</div>
+</center></div>
+<DIV align=center><br>
+  <a href="http://www.OpenHao123.cc/" target="_self"><img src="http://www.OpenHao123.cc/images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="OpenHao123-game";</script></script>
+</body>
+</html>

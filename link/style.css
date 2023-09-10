@@ -1,0 +1,37 @@
+.title {
+	FONT-SIZE: 10px; COLOR: #ffffff
+}
+BODY {
+	 MARGIN: 0; BACKGROUND-POSITION-X: center;BACKGROUND-IMAGE: url(images/bg.jpg); FONT-FAMILY: 宋体, Arial; BACKGROUND-COLOR: #EEEEEE
+}
+TD {
+	FONT-SIZE: 12px; COLOR: #333333; line-height: 120%
+}
+A:link {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #FF6600; TEXT-DECORATION: none
+}
+.menu {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: 宋体,arial; TEXT-DECORATION: none; line-height: 120%
+}
+.menu:link {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: 宋体,arial; TEXT-DECORATION: none
+}
+.menu:visited {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: 宋体,arial; TEXT-DECORATION: none
+}
+.menu:active {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: 宋体,arial; TEXT-DECORATION: none
+}
+.menu:hover {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: 宋体,arial; TEXT-DECORATION: underline
+}
+.textbox {BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 1px; BACKGROUND: #Ffffff; BORDER-LEFT: #cccccc 1px solid; COLOR: #444444; PADDING-TOP: 2px; BORDER-BOTTOM: #cccccc 1px solid; LETTER-SPACING: 0px; HEIGHT: 20px; font-family: 宋体,arial; font-size: 12px;}

@@ -1,0 +1,895 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+ td,body {  font-size: 16px; font-family:arial,sans-serif,宋体;}body{margin-top:0px; margin-left:0px; margin-right:0px;background:#fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;} .bgg{background-color:#80B080; width:778px;}
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg{border-color:#8AB78A; width:898px}
+.f9pt{font-size: 12px;}
+.f14{font-size: 14px;}
+#sfont a,#sfont b{font-size:13px;}
+.highlight_1 a:link,.highlight_1 a:visited{color:red}
+.wr{text-align:right}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+--> </style>
+<base target="_blank">
+<title>OpenHao123网址之家－－手机</title>
+</head>
+<body>
+<script src="js/base.js"></script>
+<script src="js/userdata.js"></script>
+<script src="js/record.js"></script>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="OpenHao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="900" height="51">
+    <tr>
+      <td width="290" height="51"><a href="/" target="_self" class="m"><img src="images/logo.gif" alt="把OpenHao123设为主页"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18> </td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()" onMouseDown="ClickMonkey.log('haoweb');" >网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()" onMouseDown="ClickMonkey.log('haomp3');" >MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()" onMouseDown="ClickMonkey.log('haoimg');" >图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()" onMouseDown="ClickMonkey.log('haopost');" >贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" onMouseDown="ClickMonkey.log('haozhidao');" >知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()" onMouseDown="ClickMonkey.log('haonews');" >新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()" onMouseDown="ClickMonkey.log('haovideo');">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action=http://www.baidu.com/s name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=OpenHao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=900 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=900 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.OpenHao123.cc" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.OpenHao123.cc/');return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="images/home.gif" width="15" height="15" border="0" align="absmiddle"> 把OpenHao123设为主页</a>　　<a href="inc/"><img src="images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="/" target=_self style="color:#424242 ">首页</a> > 手机</td></tr></table>
+</center></div>
+<div align="center" onMouseDown="bdRecord.scope(event)"><center>
+<div class="t1 bgg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">手机综合</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://tech.sina.com.cn/mobile/">新浪手机</a></td>
+		
+											<td  width="20%"><a href="http://www.imobile.com.cn/">手机之家</a></td>
+		
+											<td  width="20%"><a href="http://mobile.pconline.com.cn/">太平洋手机</a></td>
+		
+											<td  width="20%"><a href="http://mobile.zol.com.cn/">ZOL手机</a></td>
+		
+											<td  width="20%"><a href="http://mobile.163.com/">网易手机</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.younet.com/">友人网</a></td>
+		
+											<td  width="20%"><a href="http://www.cnmo.com/">手机中国</a></td>
+		
+											<td  width="20%"><a href="http://www.3533.com/phone/">3533手机世界</a></td>
+		
+											<td  width="20%"><a href="http://www.139shop.com/">北斗手机网</a></td>
+		
+											<td  width="20%"><a href="http://mobile.pcpop.com/">泡泡手机</a></td>
+		
+				</tr>
+<tr bgcolor="#EFF7F0">					<td  width="20%"><a href="http://www.shouji.com.cn/">手机乐园</a></td>
+		
+											<td  width="20%"><a href="http://www.tompda.com/">tompda手机网</a></td>
+		
+											<td  width="20%"></td>
+		
+											<td  width="20%"></td>
+		
+											<td  width="20%"></td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#EFF7F0">
+      <tr>
+        <td width="20%" valign="top"><br>
+            <fieldset align="center" style="border:1px dashed #8AC188; width:94%"  >
+            <legend class="f9pt" style="color:#346F0E; font-weight:bold" align="center">运营商</legend>
+            <table width="100%"  border="0" cellspacing="1" cellpadding="5">
+              <tr>
+                <td><a href="http://10086.cn/service/">中国移动网上营业厅</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.10010.com/">中国联通网上营业厅</a></td>              
+              </tr>
+              <tr>
+                <td><a href="http://www.ct10000.com/">中国电信网上营业厅</a></td>              
+              </tr>
+              <tr>
+                <td><a href="http://www.OpenHao123.cc/haoserver/showjicc.htm">手机号码归属地查询</a></td>              
+              </tr>
+              <tr>
+                <td><a href="http://s8.taobao.com/browse/search_auction.htm?q=%BB%B0%B7%D1&pid=mm_16596268_0_0&search_type=auction&commend=all&at_topsearch=1">淘宝话费充值</a></td>              </tr>
+              <tr>
+                <td><a href="http://jf.10086.cn/">移动积分商城</a></td>
+              </tr>
+			  <tr>
+                <td><a href="http://mypim.monternet.com/">移动号簿管家 </a></td>
+              </tr>
+              <tr>
+                <td><a href="http://jf.ct10000.com/">中国电信积分商城</a></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+            </table>
+            </fieldset>
+           </td>
+        <td width="20%" valign="top"><br>
+            <fieldset align="center" style="border:1px dashed #8AC188; width:94%"  >
+            <legend class="f9pt" style="color:#346F0E; font-weight:bold" align="center">诺基亚</legend>
+            <table width="100%"  border="0" cellspacing="1" cellpadding="5">
+              <tr>
+                <td><A href="http://www.nokia.com.cn/">诺基亚官网</A></td>
+              </tr>
+              <tr>
+                <td><a href="http://bbs.dospy.com/">塞班论坛</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.nokiabbs.com/">诺基亚论坛</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.opda.net.cn/">OPDA论坛</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://cer.dospy.com/">塞班证书</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://store.ovi.com/">ovi 商店</a></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+			  <tr>
+                <td>&nbsp;</td>
+              </tr>
+			  <tr>
+			    <td>&nbsp;</td>
+			    </tr>
+			  <tr>
+			    <td>&nbsp;</td>
+			    </tr>
+			  <tr>
+			    <td>&nbsp;</td>
+			    </tr>
+			  <tr>
+			    <td>&nbsp;</td>
+			    </tr>
+            </table>
+            </fieldset>
+            </td>
+        <td width="20%" valign="top"><br>
+            <fieldset align="center" style="border:1px dashed #8AC188; width:94%"  >
+            <legend class="f9pt" style="color:#346F0E; font-weight:bold" align="center">谷歌android系统</legend>
+            <table width="100%"  border="0" cellspacing="1" cellpadding="5">
+              <tr>
+                <td><a href="http://www.hiapk.com/">安卓网</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://bbs.gfan.com/">机锋网</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.htc.com/cn/">HTC</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://bbs.goapk.com/">安智网</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://bbs.xda.cn/">xda手机中文网</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://bbs.fengbao.com/">风暴数码论坛</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.miui.cn/">miui官网</a></td>
+              </tr>
+			  <tr>
+                <td><a href="http://www.mumayi.com/">木蚂蚁应用市场</a></td>
+              </tr>
+			  <tr>
+			    <td><a href="http://www.wandoujia.com/">豌豆荚手机精灵</a></td>
+			    </tr>
+			  <tr>
+			    <td><a href="http://www.nduoa.com/">n多市场</a></td>
+			    </tr>
+			  <tr>
+			    <td><a href="http://www.yingyonghui.com/">掌上应用汇</a></td>
+			    </tr>
+			  <tr>
+			    <td><a href="http://android.tgbus.com/">Android中文网</a></td>
+			    </tr>
+            </table>
+            </fieldset>
+          </td>
+        <td width="20%" valign="top"><br>
+            <fieldset align="center" style="border:1px dashed #8AC188; width:94%"  >
+            <legend class="f9pt" style="color:#346F0E; font-weight:bold" align="center">苹果iphone</legend>
+            <table width="100%"  border="0" cellspacing="1" cellpadding="5">
+              <tr>
+                <td><a href="http://www.apple.com.cn/iphone/">苹果官网</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://bbs.weiphone.com/">威锋网</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://iphone.tgbus.com/">iphone中文网</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.apple.com.cn/itunes/download">iTunes</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.apple.com.cn/store/">苹果在线商店</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://ifan.178.com/">ipad论坛</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://iphone.sj.91.com/">91 iPhone网</a></td>
+              </tr>
+			  <tr>
+                <td><a href="http://www.iapps.im/">爱Apps</a></td>
+              </tr>
+			  <tr>
+			    <td>&nbsp;</td>
+			    </tr>
+			  <tr>
+			    <td>&nbsp;</td>
+			    </tr>
+			  <tr>
+			    <td>&nbsp;</td>
+			    </tr>
+			  <tr>
+			    <td>&nbsp;</td>
+			    </tr>
+            </table>
+            </fieldset>
+           </td>
+        <td width="20%" valign="top"><br>
+            <fieldset align="center" style="border:1px dashed #8AC188; width:94%"  >
+            <legend class="f9pt" style="color:#346F0E; font-weight:bold" align="center">日韩手机</legend>
+            <table width="100%"  border="0" cellspacing="1" cellpadding="5">
+              <tr>
+                <td><a href="http://cn.samsungmobile.com/">三星官网</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://samsungbbs.cnmo.com/">三星论坛</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.sonyericsson.com.cn/">索尼爱立信</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://sebbs.it168.com/">IT168索爱论坛</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.lg.com/cn/mobile-phones/index.jsp?countryCd=cn">LG官网</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.52lg.com/">我爱LG手机论坛</a></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+			  <tr>
+                <td>&nbsp;</td>
+              </tr>
+			  <tr>
+			    <td>&nbsp;</td>
+			    </tr>
+			  <tr>
+			    <td>&nbsp;</td>
+			    </tr>
+			  <tr>
+			    <td>&nbsp;</td>
+			    </tr>
+			  <tr>
+			    <td>&nbsp;</td>
+			    </tr>
+            </table>
+            </fieldset>
+            </td>
+      </tr>
+    </table>
+	
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#EFF7F0">
+      <tr>
+        <td width="20%" valign="top"><br>
+            <fieldset align="center" style="border:1px dashed #8AC188; width:94%"  >
+            <legend class="f9pt" style="color:#346F0E; font-weight:bold" align="center">国产手机</legend>
+            <table width="100%"  border="0" cellspacing="1" cellpadding="5">
+              <tr>
+                <td><a href="http://www.meizu.com/">魅族官网</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://bbs.meizu.com/">魅族论坛</a></td>              
+              </tr>
+              <tr>
+                <td><a href="http://www.meizumi.com/">魅族迷</a></td>              
+              </tr>
+              <tr>
+                <td><a href="http://www.lenovomobile.com/">联想官网</a></td>              
+              </tr>
+              <tr>
+                <td><a href="http://bbs.lephone.cc/">乐phone之家</a></td>              
+              </tr>
+              <tr>
+                <td><a href="http://www.k-touch.cn/">天语官网</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.bbkmobile.com/">步步高官网</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.oppo.com/">OPPO</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.in189.com/">添翼圈</a></td>
+              </tr>
+			  <tr>
+                <td><a href="http://www.m9meizu.com/">魅族m9论坛</a></td>
+              </tr>
+
+            </table>
+            </fieldset>
+           </td>
+        <td width="20%" valign="top"><br>
+            <fieldset align="center" style="border:1px dashed #8AC188; width:94%"  >
+            <legend class="f9pt" style="color:#346F0E; font-weight:bold" align="center">其他机型</legend>
+            <table width="100%"  border="0" cellspacing="1" cellpadding="5">
+              <tr>
+                <td><a href="http://www.motorola.com.cn/">摩托罗拉官网</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.motobbs.com/">摩托罗拉论坛</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://moto.it168.com/">IT168摩托罗拉论坛</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://berrytimes.cn/">黑莓时光</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.52blackberry.com/">黑莓手机论坛</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://bbs.maxpda.com/">Maxpda黑莓论坛</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://bbs.tompda.com/">Tompda手机论坛</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://bbs.pdafans.com/">口袋数码论坛</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://phone.younet.com/">友人网</a></td>
+              </tr>
+			  <tr>
+                <td><a href="http://cn.blackberry.com/">黑莓手机官网</a></td>
+              </tr>
+
+            </table>
+            </fieldset>
+            </td>
+        <td width="20%" valign="top"><br>
+            <fieldset align="center" style="border:1px dashed #8AC188; width:94%"  >
+            <legend class="f9pt" style="color:#346F0E; font-weight:bold" align="center">主题/铃声/电子书</legend>
+            <table width="100%"  border="0" cellspacing="1" cellpadding="5">
+              <tr>
+                <td><a href="http://www.moxiu.com/">魔秀手机主题</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.ownskin.com/">吾主题</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.cnwav.com/bbs.php">手机铃声之家</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.v3gp.com/">最牛铃声网</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.mozhao.net/">魔爪铃声网</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://theme.oppo.com/">OPPO手机主题 </a></td>
+              </tr>
+               <tr>
+                <td><a href="http://www.feiku.com/">飞库电子书</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.52eshu.com/">我爱电子书</a></td>
+              </tr>
+			  <tr>
+                <td><a href="http://www.3g37.com/">炫主题</a></td>
+              </tr>
+			  <tr>
+			    <td><a href="http://www.izhuti.com/">爱主题</a></td>
+			    </tr>
+            </table>
+            </fieldset>
+          </td>
+        <td width="20%" valign="top"><br>
+            <fieldset align="center" style="border:1px dashed #8AC188; width:94%"  >
+            <legend class="f9pt" style="color:#346F0E; font-weight:bold" align="center">手机游戏</legend>
+            <table width="100%"  border="0" cellspacing="1" cellpadding="5">
+              <tr>
+                <td><a href="http://www.d.cn/">当乐网</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://game.3533.com/">3533手机游戏</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.joyes.com/">捉鱼</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.shouji.com.cn/">手机乐园</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.9game.cn/">九游手机游戏</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.155.cn/">155手游天下</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.soxan.cn/">手闲网</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.sjxyx.com/">手机小游戏</a></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+			  <tr>
+                <td>&nbsp;</td>
+              </tr>
+
+            </table>
+            </fieldset>
+           </td>
+        <td width="20%" valign="top"><br>
+            <fieldset align="center" style="border:1px dashed #8AC188; width:94%"  >
+            <legend class="f9pt" style="color:#346F0E; font-weight:bold" align="center">手机商城</legend>
+            <table width="100%"  border="0" cellspacing="1" cellpadding="5">
+              <tr>
+                <td><a href="http://product.pconline.com.cn/mobile/">太平洋手机报价</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://s8.taobao.com/search?cat=1512&commend=all&s=0&sort=coefp&pid=mm_16596268_0_0&mode=86&style=grid&tab=coefp&style=grid">淘宝手机频道</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://count.chanet.com.cn/click.cgi?a=212181&d=79872&u=&e=&url=http://www.360buy.com/digital.html">京东商城手机</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://count.chanet.com.cn/click.cgi?a=212181&d=117825&u=&e=&url=http://category.dangdang.com/3c">当当网手机</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://count.chanet.com.cn/click.cgi?a=212181&d=192700&u=&e=&url=http://www.newegg.com.cn/Mobile.htm">新蛋手机</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.dixintong.com/">迪信通</a></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+			  <tr>
+                <td>&nbsp;</td>
+              </tr>
+
+            </table>
+            </fieldset>
+            </td>
+      </tr>
+    </table>	
+	
+	
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#EFF7F0">
+      <tr>
+        <td width="20%" valign="top"><br>
+            <fieldset align="center" style="border:1px dashed #8AC188; width:94%"  >
+            <legend class="f9pt" style="color:#346F0E; font-weight:bold" align="center">软件下载站</legend>
+            <table width="100%"  border="0" cellspacing="1" cellpadding="5">
+              <tr>
+                <td><a href="http://www.waptw.com/">天网手机软件</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.paojiao.cn/">泡椒网</a></td>              
+              </tr>
+              <tr>
+                <td><a href="http://www.51spsoft.com/">无忧智能</a></td>              
+              </tr>
+              <tr>
+                <td><a href="http://mm.10086.cn/">移动MM</a></td>              
+              </tr>
+              <tr>
+                <td><a href="http://www.baoruan.com/">宝软网</a></td>              
+              </tr>
+              <tr>
+                <td><a href="http://www.ruan8.com/">软吧手机软件</a></td>
+              </tr>
+			  <tr>
+                <td>&nbsp;</td>
+              </tr>
+			   <tr>
+                <td>&nbsp;</td>
+              </tr>
+			   <tr>
+                <td>&nbsp;</td>
+              </tr>
+            </table>
+            </fieldset>
+           </td>
+        <td width="20%" valign="top"><br>
+            <fieldset align="center" style="border:1px dashed #8AC188; width:94%"  >
+            <legend class="f9pt" style="color:#346F0E; font-weight:bold" align="center">电脑端软件</legend>
+            <table width="100%"  border="0" cellspacing="1" cellpadding="5">
+              <tr>
+                <td><a href="http://soft.sj.91.com/91helper/">91手机助手</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.nokia.com.cn/get-support-and-software">诺基亚PC套件</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://support.samsungmobile.com.cn/">三星PC套件</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.sonyericsson.com/cws/support/phones/topic/updateserviceapplication?cc=cn&lc=zh">索爱PC套件</a></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+            </table>
+            </fieldset>
+            </td>
+        <td width="20%" valign="top"><br>
+            <fieldset align="center" style="border:1px dashed #8AC188; width:94%"  >
+            <legend class="f9pt" style="color:#346F0E; font-weight:bold" align="center">手机聊天/社交</legend>
+            <table width="100%"  border="0" cellspacing="1" cellpadding="5">
+              <tr>
+                <td><a href="http://mobile.qq.com/">手机版QQ</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://feixin.10086.cn/">飞信</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://3g.msn.cn/">手机MSN</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.taobao.com/wangwang/2010_fp/mobile.php">阿里旺旺</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://news.sina.com.cn/wap/wbclient.html">新浪微博</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://jiepang.com/">街旁</a></td>
+              </tr>
+			  <tr>
+                <td><a href="http://www.lexun.com/">乐讯手机网</a></td>
+              </tr>
+			   <tr>
+                <td><a href="http://www.miliao.com/">米聊</a></td>
+              </tr>
+			  <tr>
+                <td><a href="http://weixin.qq.com/">微信</a></td>
+              </tr>
+            </table>
+            </fieldset>
+          </td>
+        <td width="20%" valign="top"><br>
+            <fieldset align="center" style="border:1px dashed #8AC188; width:94%"  >
+            <legend class="f9pt" style="color:#346F0E; font-weight:bold" align="center">手机端软件</legend>
+            <table width="100%"  border="0" cellspacing="1" cellpadding="5">
+              <tr>
+                <td><a href="http://www.uc.cn/">UCWEB</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.ttpod.com/">天天动听</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.opera.com/">opera浏览器</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.blovestorm.com/">来电通</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.ddong.com/">手机酷狗</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://soft.sj.91.com/pandareader">熊猫看书</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.navidog.cn/">导航犬</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.OpenHao123.cc/soft/shouji/default.htm">更多>></a></td>
+              </tr>
+			  <tr>
+                <td>&nbsp;</td>
+              </tr>
+            </table>
+            </fieldset>
+           </td>
+        <td width="20%" valign="top"><br>
+            <fieldset align="center" style="border:1px dashed #8AC188; width:94%"  >
+            <legend class="f9pt" style="color:#346F0E; font-weight:bold" align="center">手机视频</legend>
+            <table width="100%"  border="0" cellspacing="1" cellpadding="5">
+              <tr>
+                <td><a href="http://www.formatoz.com/CN_index.html">格式工厂</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://zm.baofeng.com/">暴风转码</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://jm.wmzhe.com/">完美解码</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://mobile.youku.com/">优酷手机客户端</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.a67.com/">A67手机电影</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.22mp4.com/">丫丫手机电影</a></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+			  <tr>
+                <td>&nbsp;</td>
+              </tr>
+			  <tr>
+                <td>&nbsp;</td>
+              </tr>
+            </table>
+            </fieldset>
+            </td>
+      </tr>
+    </table>
+	
+	
+	
+	
+	
+	</td>
+</tr>
+
+</table>
+</div>
+</center></div>
+<DIV align=center><br><a href="/" target="_self"><img src="images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="OpenHao123-shouji";</script><script src="js/monitor.js"></script>
+<span style="display:none"><script src="js/tj.js"></script></span>
+</body>
+</html>
